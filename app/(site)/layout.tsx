@@ -1,19 +1,17 @@
 import { ReactNode } from 'react';
-// import { Mulish } from 'next/font/google';
+import { Mulish } from 'next/font/google';
 import localFont from 'next/font/local';
 
-// import classNames from 'classnames';
-
-import { Header, Footer } from '@/layout';
+// import { Header, Footer } from '@/layout';
 
 import './globals.css';
 
-// const mulish = Mulish({
-//   subsets: ['cyrillic'],
-//   weight: ['400', '600', '800'],
-//   display: 'swap',
-//   variable: '--font-mulish',
-// });
+const mulish = Mulish({
+  subsets: ['cyrillic'],
+  weight: ['400', '600', '800'],
+  display: 'swap',
+  variable: '--font-mulish',
+});
 
 const geologica = localFont({
   src: [
@@ -39,10 +37,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk">
-      <body className={`${geologica.variable}`}>
-        <Header />
+      <body className={`${mulish.variable} ${geologica.variable}`}>
+        {/* <Header /> */}
         <main>{children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
