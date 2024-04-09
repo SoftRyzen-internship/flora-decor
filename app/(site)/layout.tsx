@@ -2,9 +2,7 @@ import { ReactNode } from 'react';
 import { Mulish } from 'next/font/google';
 import localFont from 'next/font/local';
 
-// import classNames from 'classnames';
-
-import { Header, Footer } from '@/layout';
+// import { Header, Footer } from '@/layout';
 
 import './globals.css';
 
@@ -40,9 +38,9 @@ export default function RootLayout({
   return (
     <html lang="uk">
       <body className={`${mulish.variable} ${geologica.variable}`}>
-        <Header />
+        {/* <Header /> */}
         <main>{children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

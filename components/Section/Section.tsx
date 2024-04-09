@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 import classNames from 'classnames';
 
-import { SectionProps } from './type';
+type SectionProps = {
+  children: ReactNode;
+  sectionId?: string;
+  className?: string;
+  isHeroSection?: boolean;
+  isFlowerPotsSection?: boolean;
+  isAboutOrContactSection?: boolean;
+  isOtherSection?: boolean;
+};
 
 export const Section: React.FC<SectionProps> = ({
   children,
