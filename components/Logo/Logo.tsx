@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import LogoIcon from '@/public/icons/logo.svg';
 
 type LogoProps = {
-  isHeader?: boolean;
+  isHeader: boolean;
   isFooter?: boolean;
   onClick?: () => void;
 };
@@ -23,14 +23,12 @@ export const Logo = ({ isHeader, isFooter, onClick }: LogoProps) => {
   );
 
   return (
-    <div className="">
-      <Link href="/" className={LinkClassName} onClick={onClick}>
-        <LogoIcon
-          className={logoClassName}
-          strokeMiterlimit="10"
-          strokeWidth="0.5"
-        />
-      </Link>
-    </div>
+    <Link href="/" className={LinkClassName} onClick={onClick}>
+      <LogoIcon
+        className={logoClassName}
+        strokeMiterlimit="10"
+        strokeWidth="0.5"
+      />
+    </Link>
   );
 };
