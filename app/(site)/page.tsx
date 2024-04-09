@@ -9,6 +9,7 @@ import {
   Questions,
   Contacts,
 } from '@/sections';
+import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Reviews />
       <Questions />
       <Contacts />
+      <EXAMPLE />
     </>
   );
 }
