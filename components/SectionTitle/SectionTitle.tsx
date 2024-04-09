@@ -2,7 +2,12 @@ import React from 'react';
 
 import classNames from 'classnames';
 
-import { SectionTitleProps } from './type';
+type SectionTitleProps = {
+  label: string;
+  className?: string;
+  center: 'left' | 'center';
+  variant: 'contactTitle' | 'otherTitle';
+};
 
 export const SectionTitle: React.FC<SectionTitleProps> = ({
   label,
@@ -11,7 +16,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
   variant,
 }) => {
   const stylesSectionTitle = classNames(
-    'not-italic text-main',
+    'font-geologica not-italic text-main',
     {
       'text-titleSm': variant === 'otherTitle',
       'text-left': center === 'left',

@@ -1,19 +1,20 @@
-import {
-  Hero,
-  Advantages,
-  About,
-  Flowerpots,
-  Goods,
-  Gallery,
-  Reviews,
-  Questions,
-  Contacts,
-} from '@/sections';
+// import {
+//   Hero,
+//   Advantages,
+//   About,
+//   Flowerpots,
+//   Goods,
+//   Gallery,
+//   Reviews,
+//   Questions,
+//   Contacts,
+// } from '@/sections';
+import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      {/* <Hero />
       <Advantages />
       <About />
       <Flowerpots />
@@ -21,7 +22,8 @@ export default function Home() {
       <Gallery />
       <Reviews />
       <Questions />
-      <Contacts />
+      <Contacts /> */}
+      <EXAMPLE />
     </>
   );
 }

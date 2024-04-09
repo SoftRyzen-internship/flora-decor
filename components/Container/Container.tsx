@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import classNames from 'classnames';
 
-import { ContainerProps } from './type';
+type ContainerProps = {
+  children: ReactNode;
+  className?: string;
+};
 
 export const Container: React.FC<ContainerProps> = ({
   children,
