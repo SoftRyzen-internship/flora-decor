@@ -17,7 +17,7 @@ export const About = () => {
           variant="otherTitle"
           className="text-red-500"
         />
-        <h3 className="text-green-700">hellllloooooo</h3>
+        <h3 className="text-green-700 font-geologica">hellllloo geologica</h3>
       </Container>
     </Section>
   );

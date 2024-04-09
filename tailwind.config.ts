@@ -29,10 +29,9 @@ const config: Config = {
         },
       },
 
-      // fontFamily: {
-      //   mulish: ['var(--font-mulish'],
-      //   geologica: ['var(--font-geologica'],
-      // },
+      fontFamily: {
+        mulish: ['var(--font-geologica)'],
+      },
 
       colors: {
         main: '#224722',

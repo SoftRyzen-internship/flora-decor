@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 // import { Mulish } from 'next/font/google';
-// import localFont from 'next/font/local';
+import localFont from 'next/font/local';
 
 // import classNames from 'classnames';
 
@@ -15,22 +15,22 @@ import './globals.css';
 //   variable: '--font-mulish',
 // });
 
-// const geologica = localFont({
-//   src: [
-//     {
-//       path: '../../public/fonts/Geologica-Medium.woff2',
-//       weight: '500',
-//       style: 'normal',
-//     },
-//     {
-//       path: '../../public/fonts/Geologica-SemiBold.woff2',
-//       weight: '600',
-//       style: 'normal',
-//     },
-//   ],
-//   display: 'swap',
-//   variable: '--font-geologica',
-// });
+const geologica = localFont({
+  src: [
+    {
+      path: '../../public/fonts/Geologica-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Geologica-SemiBold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+  ],
+  display: 'swap',
+  variable: '--font-geologica',
+});
 
 export default function RootLayout({
   children,
@@ -39,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk">
-      <body>
+      <body className={`${geologica.variable}`}>
         <Header />
         <main>{children}</main>
         <Footer />
