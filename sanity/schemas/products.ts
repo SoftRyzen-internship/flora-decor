@@ -27,14 +27,7 @@ export const products = defineType({
       type: 'image',
       title: 'Зображення',
       description: 'Додайте зображення товару',
-      options: { hotspot: true },
-      fields: [
-        {
-          name: 'alt',
-          title: 'Назва товару',
-          type: 'string',
-        },
-      ],
+      // options: { hotspot: true },
     }),
     defineField({
       name: 'volumes',
@@ -50,10 +43,12 @@ export const products = defineType({
             list: [
               { title: '11', value: '11' },
               { title: '12', value: '12' },
+              { title: '13', value: '13' },
               { title: '14', value: '14' },
               { title: '15', value: '15' },
               { title: '17', value: '17' },
               { title: '19', value: '19' },
+              { title: '23', value: '23' },
             ],
           },
         }),
