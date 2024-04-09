@@ -20,7 +20,12 @@ export const urlForImageDesktop = (source: Image) => {
     .url();
 };
 export const urlForImageTabletAndMobileLarge = (source: Image) => {
-  return imageBuilder?.image(source).auto('format').fit('max').url();
+  return imageBuilder
+    ?.image(source)
+    .auto('format')
+    .fit('max')
+    .size(524, 639)
+    .url();
 };
 export const urlForImageTabletAndMobile = (source: Image) => {
   return imageBuilder
