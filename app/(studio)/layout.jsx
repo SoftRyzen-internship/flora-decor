@@ -1,8 +1,10 @@
 import React from 'react';
 
+import data from '@/data/common.json';
+
 export const metadata = {
-  title: 'Career Consultant адміністратор',
-  description: 'Career Consultant панель адміністратора',
+  title: `${data.metadataAdmin.title}`,
+  description: `${data.metadataAdmin.description}`,
 };
 
 export default function RootLayout({ children }) {

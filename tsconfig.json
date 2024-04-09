@@ -24,7 +24,7 @@
       "@/sections/*": ["./sections/*"],
       "@/layout/*": ["./layout/*"],
       "@/utils/*": ["./utils/*"],
-      "@/types/*": ["./types/*"],
+      "@/hooks/*": ["./hooks/*"],
       "@/data/*": ["./data/*"],
       "@/public/*": ["./public/*"]
     }
