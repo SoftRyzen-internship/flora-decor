@@ -1,6 +1,7 @@
 import { SectionTitle } from '@/components';
 
 import { Logo } from '@/components/Logo';
+import { SocialLinks } from '@/components/SocialLinks';
 export const EXAMPLE = () => {
   return (
     <section>
@@ -15,6 +16,9 @@ export const EXAMPLE = () => {
         center="left"
         variant="contactTitle"
       />
+      <div className="bg-[#224722]">
+        <SocialLinks />
+      </div>
     </section>
   );
 };
