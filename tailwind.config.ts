@@ -48,6 +48,7 @@ const config: Config = {
         button: '#FF9729',
         buttonIcon: '#FF752A',
         error: '#F00',
+        backdropCol: 'rgba(48, 48, 54, 0.25)',
       },
 
       fontSize: {
