@@ -37,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk">
-      <body className={`${mulish.variable} ${geologica.variable}`}>
+      <body className={`${mulish.variable} ${geologica.variable} box-border`}>
         {/* <Header /> */}
         <main>{children}</main>
         {/* <Footer /> */}
