@@ -3,6 +3,7 @@ import { getProducts } from '@/sanity/requests/getProducts';
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
+import { Navbar } from '@/components/Navbar';
 
 import { Logo } from '@/components/Logo';
 export const EXAMPLE = async () => {
@@ -11,6 +12,7 @@ export const EXAMPLE = async () => {
     <Section sectionId="hero" variant="heroSection">
       <Container>
         <Logo isHeader />
+        <Navbar />
         <SectionTitle
           label="Section Title"
           center="center"
