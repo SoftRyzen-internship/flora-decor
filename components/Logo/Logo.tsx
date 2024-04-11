@@ -14,7 +14,7 @@ export const Logo = ({ isHeader, isFooter }: LogoProps) => {
   });
 
   const LinkClassName = classNames(
-    'cursor-pointer inline-block  hover:text-subtitle focus:text-subtitle transition-all duration-300',
+    'cursor-pointer inline-block  hover:text-subtitle focus:text-subtitle transition',
     {
       'text-main': isHeader,
       'text-white': isFooter,
