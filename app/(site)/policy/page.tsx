@@ -1,4 +1,4 @@
-import { Policy } from '@/sections';
+import { Policy } from '@/sections/Policy';
 
 const page = () => {
   return <Policy />;
