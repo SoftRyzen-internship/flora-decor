@@ -9,8 +9,8 @@ type LogoProps = {
 
 export const Logo = ({ isHeader, isFooter }: LogoProps) => {
   const logoClassName = classNames(' stroke-current fill-current', {
-    'w-51px h-54px xl:w-20 xl:h-20': isHeader,
-    'w-123px h-130px': isFooter,
+    'w-[51px] h-[54px] xl:w-20 xl:h-20': isHeader,
+    'w-[123px] h-[130px]': isFooter,
   });
 
   const LinkClassName = classNames(

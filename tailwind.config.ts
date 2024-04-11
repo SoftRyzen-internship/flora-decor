@@ -118,14 +118,6 @@ const config: Config = {
           },
         ],
       },
-      width: {
-        '51px': '51px',
-        '123px': '123px',
-      },
-      height: {
-        '54px': '54px',
-        '130px': '130px',
-      },
     },
   },
   plugins: [require('@tailwindcss/typography')],
