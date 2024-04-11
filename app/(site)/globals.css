@@ -7,3 +7,33 @@
     @apply transition-all duration-300 ease-out;
   }
 }
+
+/*Buttons styles*/
+
+.order-link::after {
+  content: '';
+  width: 45px;
+  height: 45px;
+  @apply bg-buttonIcon;
+  border-radius: 36px;
+}
+
+.order-link:active::after {
+  @apply bg-button;
+}
+
+.order-link-disabled::after {
+  content: '';
+  width: 45px;
+  height: 45px;
+  @apply bg-secondDisabledBtn;
+  border-radius: 36px;
+}
+
+@layer components {
+  .custom-button {
+    @apply font-geologica text-subtitleMd w-full flex text-bgMain items-center justify-between sm:w-[231px] py-[5px] pr-[5px] pl-[30px] relative;
+  }
+}
+
+/*Buttons styles end*/
