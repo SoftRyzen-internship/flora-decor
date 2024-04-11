@@ -32,7 +32,6 @@
     "react-hook-form": "^7.51.2",
     "react-scroll": "^1.9.0",
     "sanity": "^3.36.4",
-    "styled-components": "^6.1.8",
     "swiper": "^11.1.0",
     "yup": "^1.4.0"
   },
