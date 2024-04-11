@@ -8,30 +8,6 @@ const imageBuilder = createImageUrlBuilder({
   dataset: dataset || '',
 });
 
-export const urlForImageDesktopLarge = (source: Image) => {
+export const urlForImage = (source: Image) => {
   return imageBuilder?.image(source).auto('format').fit('max').url();
-};
-export const urlForImageDesktop = (source: Image) => {
-  return imageBuilder
-    ?.image(source)
-    .auto('format')
-    .fit('max')
-    .size(344, 420)
-    .url();
-};
-export const urlForImageTabletAndMobileLarge = (source: Image) => {
-  return imageBuilder
-    ?.image(source)
-    .auto('format')
-    .fit('max')
-    .size(524, 639)
-    .url();
-};
-export const urlForImageTabletAndMobile = (source: Image) => {
-  return imageBuilder
-    ?.image(source)
-    .auto('format')
-    .fit('max')
-    .size(262, 320)
-    .url();
 };
