@@ -48,6 +48,11 @@ const config: Config = {
         button: '#FF9729',
         buttonIcon: '#FF752A',
         error: '#F00',
+        btnHover: '#FFAD58',
+        btnSecondHover: '#D8E3C4',
+        btnSecondActive: '#BAC8A2',
+        disabledBtn: '#C1C0C0',
+        secondDisabledBtn: '#797979',
         backdropCol: 'rgba(48, 48, 54, 0.25)',
       },
 
@@ -60,34 +65,8 @@ const config: Config = {
           },
         ],
 
-        titleContactSm: [
-          '20px',
-          {
-            lineHeight: '1.2',
-            fontWeight: '600',
-            letterSpacing: '-0.4px',
-          },
-        ],
-
         titleMd: [
           '50px',
-          {
-            lineHeight: '1.1',
-            fontWeight: '600',
-          },
-        ],
-
-        titleContactMd: [
-          '30px',
-          {
-            lineHeight: '1.2',
-            fontWeight: '600',
-            letterSpacing: '-0.6px',
-          },
-        ],
-
-        titleXl: [
-          '60px',
           {
             lineHeight: '1.1',
             fontWeight: '600',
@@ -127,30 +106,12 @@ const config: Config = {
           },
         ],
 
-        subtitleSm: [
-          '14px',
-          {
-            lineHeight: '1.4',
-            fontWeight: '500',
-            letterSpacing: '-0.28px',
-          },
-        ],
-
         subtitleMd: [
           '16px',
           {
             lineHeight: '1.4',
             fontWeight: '500',
             letterSpacing: '-0.32px',
-          },
-        ],
-
-        heroButton: [
-          '16px',
-          {
-            lineHeight: '1.5',
-            fontWeight: '800',
-            letterSpacing: '0.64px',
           },
         ],
 

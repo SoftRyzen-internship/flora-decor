@@ -1,0 +1,8 @@
+{
+  "navlinks": [
+    { "title": "Про нас", "path": "#about" },
+    { "title": "Товари", "path": "#goods" },
+    { "title": "Відгуки", "path": "#reviews" },
+    { "title": "Контакти", "path": "#contacts" }
+  ]
+}
