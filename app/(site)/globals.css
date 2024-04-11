@@ -7,3 +7,9 @@
     @apply transition-all duration-300 ease-out;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .custom-width {
+    width: calc(100% / 3);
+  }
+}

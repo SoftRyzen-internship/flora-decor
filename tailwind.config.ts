@@ -117,6 +117,20 @@ const config: Config = {
             letterSpacing: '-0.5px',
           },
         ],
+        description: [
+          '18px',
+          {
+            lineHeight: '1.3',
+            fontWeight: '500',
+          },
+        ],
+        descriptionDesktop: [
+          '24px',
+          {
+            lineHeight: '1.3',
+            fontWeight: '500',
+          },
+        ],
       },
     },
   },
