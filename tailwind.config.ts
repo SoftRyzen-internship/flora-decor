@@ -59,34 +59,8 @@ const config: Config = {
           },
         ],
 
-        titleContactSm: [
-          '20px',
-          {
-            lineHeight: '1.2',
-            fontWeight: '600',
-            letterSpacing: '-0.4px',
-          },
-        ],
-
         titleMd: [
           '50px',
-          {
-            lineHeight: '1.1',
-            fontWeight: '600',
-          },
-        ],
-
-        titleContactMd: [
-          '30px',
-          {
-            lineHeight: '1.2',
-            fontWeight: '600',
-            letterSpacing: '-0.6px',
-          },
-        ],
-
-        titleXl: [
-          '60px',
           {
             lineHeight: '1.1',
             fontWeight: '600',
@@ -126,30 +100,12 @@ const config: Config = {
           },
         ],
 
-        subtitleSm: [
-          '14px',
-          {
-            lineHeight: '1.4',
-            fontWeight: '500',
-            letterSpacing: '-0.28px',
-          },
-        ],
-
         subtitleMd: [
           '16px',
           {
             lineHeight: '1.4',
             fontWeight: '500',
             letterSpacing: '-0.32px',
-          },
-        ],
-
-        heroButton: [
-          '16px',
-          {
-            lineHeight: '1.5',
-            fontWeight: '800',
-            letterSpacing: '0.64px',
           },
         ],
 
