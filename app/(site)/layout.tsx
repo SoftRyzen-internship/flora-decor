@@ -1,7 +1,8 @@
 import { Mulish, Geologica } from 'next/font/google';
 import { ReactNode } from 'react';
 
-import { Header, Footer } from '@/layout';
+import { Header } from '@/layout/Header';
+import { Footer } from '@/layout/Footer';
 
 import './globals.css';
 

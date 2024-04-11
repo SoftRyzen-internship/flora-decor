@@ -1,14 +1,3 @@
-// import {
-//   Hero,
-//   Advantages,
-//   About,
-//   Flowerpots,
-//   Goods,
-//   Gallery,
-//   Reviews,
-//   Questions,
-//   Contacts,
-// } from '@/sections';
 import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
 
 export default function Home() {
