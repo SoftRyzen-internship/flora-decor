@@ -6,7 +6,6 @@ import { Logo } from '@/components/Logo';
 import { InputField } from '@/components/InputField';
 export const EXAMPLE = async () => {
   const products = await getProducts();
-  console.log(products);
 
   return (
     <section className="bg-bgSecond">
