@@ -48,6 +48,13 @@ const config: Config = {
         button: '#FF9729',
         buttonIcon: '#FF752A',
         error: '#F00',
+        btnHover: '#FFAD58',
+        btnSecondHover: '#D8E3C4',
+        btnSecondActive: '#BAC8A2',
+        disabledBtn: '#C1C0C0',
+        secondDisabledBtn: '#797979',
+        backdropCol: 'rgba(48, 48, 54, 0.25)',
+        activeLink: '#D5DDC9',
       },
 
       fontSize: {

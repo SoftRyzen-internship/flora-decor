@@ -1,0 +1,16 @@
+{
+  "pathToFeedback": "feedback",
+  "logoAriaText": "логотип",
+  "socials": [
+    {
+      "name": "facebook",
+      "path": "https://m.facebook.com/profile.php/?id=100024849397472",
+      "ariaLabel": "посилання на сторінку в Фейсбук"
+    },
+    {
+      "name": "instagram",
+      "path": "https://www.instagram.com/olena8826?igsh=amkyYzRyYWZpNnhw",
+      "ariaLabel": "посилання на сторінку в Інстаграм"
+    }
+  ]
+}

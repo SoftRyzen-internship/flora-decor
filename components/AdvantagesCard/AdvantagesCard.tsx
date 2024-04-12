@@ -24,7 +24,7 @@ export const AdvantagesCard = ({
   const stylesClassName = classNames('flex flex-col gap-[30px] items-center ', {
     'pb-[35px] md:pb-0 md:pr-[41px] xl:pr-[61px]': isFirstCard,
     'pt-[35px] md:pt-0 md:pl-[41px] xl:pl-[61px]': isLastCard,
-    'pb-[35px] pt-[35px] md:pb-0 md:pt-0 md:px-[41px] xl:px-[61px] border-y-[0.5px] border-[#8EA58E] md:border-y-0 border-x-[0.5px]':
+    'pb-[35px] pt-[35px] md:pb-0 md:pt-0 md:px-[41px] xl:px-[61px] border-y-[0.5px] border-[#8EA58E] md:border-y-0 md:border-x-[0.5px]':
       isMiddleCard,
   });
 
