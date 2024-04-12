@@ -14,10 +14,11 @@ import { AdvantagesCard } from '@/components/AdvantagesCard';
 
 import React from 'react';
 
-import { icons } from '@/utils/icons';
+import advantages from '@/data/advantages.json';
 
 export const EXAMPLE = async () => {
   // const products = await getProducts();
+  const { icons } = advantages;
   return (
     <Section sectionId="hero" variant="heroSection">
       <Container>
@@ -99,8 +100,6 @@ export const EXAMPLE = async () => {
                 <AdvantagesCard
                   description={icon.text}
                   icon={icon.component}
-                  iconWidth={icon.width}
-                  iconHeight={icon.height}
                   isFirstCard={icon.isFirstCard}
                   isMiddleCard={icon.isMiddleCard}
                   isLastCard={icon.isLastCard}
