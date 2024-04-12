@@ -11,7 +11,7 @@ type SectionTitleProps = {
 
 export const SectionTitle: React.FC<SectionTitleProps> = ({
   label,
-  className,
+  className = '',
   center,
   variant,
 }) => {

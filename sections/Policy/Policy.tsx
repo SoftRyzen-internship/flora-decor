@@ -1,5 +1,13 @@
-import { Container } from '@/components';
+import { Container } from '@/components/Container';
+import { Section } from '@/components/Section';
+import { Navbar } from '@/components/Navbar';
 
 export const Policy = () => {
-  return <Container>Example Policy</Container>;
+  return (
+    <Section variant="policySection">
+      <Container>
+        <Navbar />
+      </Container>
+    </Section>
+  );
 };
