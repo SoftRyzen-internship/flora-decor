@@ -12,11 +12,11 @@ const config: Config = {
     screens: {
       sm: '480px',
       md: '768px',
-      xl: '1280px',
+      xl: '1400px',
 
       smOnly: { max: '767.98px' },
       mdOnly: { min: '768px', max: '1279.98px' },
-      notXL: { max: '1279.98px' },
+      notXL: { max: '1399.98px' },
     },
 
     extend: {
@@ -26,7 +26,7 @@ const config: Config = {
           DEFAULT: '20px',
           sm: '20px',
           md: '42px',
-          xl: '60px',
+          xl: '40px',
         },
       },
 
