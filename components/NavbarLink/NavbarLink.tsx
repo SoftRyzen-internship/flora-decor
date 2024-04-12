@@ -38,10 +38,10 @@ export const NavbarLink: React.FC<NavbarLinkProps> = ({
         <ScrollLink
           to={path}
           smooth={true}
+          href="/"
           offset={-10}
           spy={true}
           duration={500}
-          ignoreCancelEvents={false}
           onClick={onClickCloseModal}
           className={stylesLink}
         >
