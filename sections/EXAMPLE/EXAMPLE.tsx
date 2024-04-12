@@ -1,15 +1,16 @@
-import Image from 'next/image';
-import { getProducts } from '@/sanity/requests/getProducts';
+'use client';
+// import Image from 'next/image';
+// import { getProducts } from '@/sanity/requests/getProducts';
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
 import { Navbar } from '@/components/Navbar';
-
+import { Modal } from '@/components/Modal/Modal';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/Button';
 
 export const EXAMPLE = async () => {
-  const products = await getProducts();
+  // const products = await getProducts();
   return (
     <Section sectionId="hero" variant="heroSection">
       <Container>
@@ -25,7 +26,7 @@ export const EXAMPLE = async () => {
           center="left"
           variant="contactTitle"
         />
-        <div className="flex flex-row justify-center  gap-11">
+        {/* <div className="flex flex-row justify-center  gap-11">
           <Image
             width={344}
             height={420}
@@ -44,7 +45,7 @@ export const EXAMPLE = async () => {
             placeholder="blur"
             blurDataURL={products[1].image}
           />
-        </div>
+        </div> */}
         <div className="flex flex-col gap-2 mt-5">
           <p> Лінк в хедері/ розміри тільки для десктопу</p>
           <Button isLink isHeaderLink isDisabled={false}>
@@ -71,6 +72,16 @@ export const EXAMPLE = async () => {
             Замовити
           </Button>
         </div>
+        <Modal
+          isOpen={true}
+          ariaLabel="закрити"
+          closeBtnStyles=""
+          modalStyles={'w-[300px] h-[200px] bg-white'}
+          isBurgerMenu={true}
+          isPopUp={false}
+        >
+          <p>Modal</p>
+        </Modal>
       </Container>
     </Section>
   );

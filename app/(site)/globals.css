@@ -37,3 +37,7 @@
 }
 
 /*Buttons styles end*/
+
+.backdrop-filter {
+  backdrop-filter: blur(12.5px);
+}
