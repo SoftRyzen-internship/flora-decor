@@ -9,6 +9,7 @@ import { Modal } from '@/components/Modal/Modal';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/Button';
 
+import { SocialLinks } from '@/components/SocialLinks';
 export const EXAMPLE = async () => {
   // const products = await getProducts();
   return (
@@ -83,6 +84,9 @@ export const EXAMPLE = async () => {
           <p>Modal</p>
         </Modal>
       </Container>
+      <div className="bg-[#224722]">
+        <SocialLinks />
+      </div>
     </Section>
   );
 };
