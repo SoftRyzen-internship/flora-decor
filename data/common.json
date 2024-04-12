@@ -2,5 +2,7 @@
   "pathToFeedback": "feedback",
   "logoAriaText": "логотип",
   "instagramAriaText": "посилання на сторінку в Інстаграм",
-  "facebookAriaText": "посилання на сторінку в Фейсбук"
+  "facebookAriaText": "посилання на сторінку в Фейсбук",
+  "facebookLink": "https://m.facebook.com/profile.php/?id=100024849397472",
+  "instagramLink": "https://www.instagram.com/olena8826?igsh=amkyYzRyYWZpNnhw"
 }

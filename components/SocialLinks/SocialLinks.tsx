@@ -5,28 +5,33 @@ import InstagramIcon from '@/public/icons/instagram.svg';
 import common from '@/data/common.json';
 
 export const SocialLinks = () => {
-  const { facebookAriaText, instagramAriaText } = common;
+  const { facebookAriaText, instagramAriaText, facebookLink, instagramLink } =
+    common;
 
   return (
-    <div className="flex gap-6">
-      <Link
-        href="https://m.facebook.com/profile.php/?id=100024849397472"
-        aria-label={facebookAriaText}
-        target="_blank"
-        rel="noopener noreferrer nofollow"
-        className="inline-flex text-bgMain hover:text-bgSecond focus:text-bgSecond active:text-[#D5DDC9] transition"
-      >
-        <FacebookIcon width={40} height={40} className="fill-current" />
-      </Link>
-      <Link
-        href="https://www.instagram.com/olena8826?igsh=amkyYzRyYWZpNnhw"
-        aria-label={instagramAriaText}
-        target="_blank"
-        rel="noopener noreferrer nofollow"
-        className="inline-flex text-bgMain hover:text-bgSecond focus:text-bgSecond active:text-[#D5DDC9] transition"
-      >
-        <InstagramIcon width={40} height={40} className="fill-current" />
-      </Link>
-    </div>
+    <ul className="flex gap-6">
+      <li>
+        <Link
+          href={facebookLink}
+          aria-label={facebookAriaText}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="inline-flex text-bgMain hover:text-bgSecond focus:text-bgSecond active:text-[#D5DDC9] transition"
+        >
+          <FacebookIcon width={40} height={40} className="fill-current" />
+        </Link>
+      </li>
+      <li>
+        <Link
+          href={instagramLink}
+          aria-label={instagramAriaText}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="inline-flex text-bgMain hover:text-bgSecond focus:text-bgSecond active:text-[#D5DDC9] transition"
+        >
+          <InstagramIcon width={40} height={40} className="fill-current" />
+        </Link>
+      </li>
+    </ul>
   );
 };
