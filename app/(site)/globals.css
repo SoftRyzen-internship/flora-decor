@@ -32,7 +32,7 @@
 
 @layer components {
   .custom-button {
-    @apply font-geologica text-subtitleMd w-full flex text-bgMain items-center justify-between sm:w-[231px] py-[5px] pr-[5px] pl-[30px] relative;
+    @apply font-geologica text-subtitleMd w-full flex text-bgMain items-center justify-between sm:w-[440px] md:w-[231px] py-[5px] pr-[5px] pl-[30px] relative;
   }
 }
 
@@ -41,3 +41,55 @@
 .backdrop-filter {
   backdrop-filter: blur(12.5px);
 }
+
+@media screen and (min-width: 768px) {
+  .custom-width {
+    width: calc(100% / 3);
+  }
+}
+
+/*advantages*/
+
+@media screen and (max-width: 767px) {
+  .advantages-card::before {
+    content: '';
+    width: 320px;
+    height: 0.5px;
+    @apply bg-border absolute top-[-35px];
+  }
+
+  .advantages-card::after {
+    content: '';
+    width: 320px;
+    height: 0.5px;
+    @apply bg-border absolute bottom-[-35px];
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages-card::before {
+    content: '';
+    width: 0.5px;
+    height: 235px;
+    @apply bg-border absolute left-[-41px];
+  }
+
+  .advantages-card::after {
+    content: '';
+    width: 0.5px;
+    height: 235px;
+    @apply bg-border absolute right-[-41px];
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .advantages-card::before {
+    @apply bg-border absolute left-[-62px];
+  }
+
+  .advantages-card::after {
+    @apply bg-border absolute right-[-62px];
+  }
+}
+
+/*advantages end*/
