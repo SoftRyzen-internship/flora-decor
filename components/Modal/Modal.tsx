@@ -3,6 +3,8 @@ import { Fragment, ReactNode, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import classNames from 'classnames';
 
+import { Logo } from '../Logo';
+
 import CloseIcon from '@/public/icons/close.svg';
 
 type ModalPropsTypes = {
@@ -78,21 +80,25 @@ export const Modal = ({
                   modalStyles)
                 }
               >
-                <button
-                  type="button"
-                  onClick={closeModal}
-                  className={classNames(
-                    'ml-auto block text-main hover:text-btnSecondHover focus:text-btnSecondHover active:text-btnSecondActive transition-all duration-300',
-                    closeBtnStyles,
-                  )}
-                  aria-label={ariaLabel}
-                >
-                  <CloseIcon
-                    width={24}
-                    height={24}
-                    className="stroke-current"
-                  />
-                </button>
+                <div className="flex items-center">
+                  {isBurgerMenu && <Logo isHeader />}
+                  <button
+                    type="button"
+                    onClick={closeModal}
+                    className={classNames(
+                      'ml-auto block text-main hover:text-btnSecondHover focus:text-btnSecondHover active:text-btnSecondActive transition-all duration-300',
+                      closeBtnStyles,
+                    )}
+                    aria-label={ariaLabel}
+                  >
+                    <CloseIcon
+                      width={24}
+                      height={24}
+                      className="stroke-current"
+                    />
+                  </button>
+                </div>
+
                 {children}
               </Dialog.Panel>
             </Transition.Child>
