@@ -8,6 +8,16 @@
   }
 }
 
+.error-message::before {
+  position: absolute;
+  content: '';
+  left: -20px;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  background-image: url('/icons/fail-icon.svg');
+}
+
 /*Buttons styles*/
 
 .order-link::after {

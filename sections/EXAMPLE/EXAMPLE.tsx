@@ -7,6 +7,7 @@ import { SectionTitle } from '@/components/SectionTitle';
 import { Navbar } from '@/components/Navbar';
 import { Modal } from '@/components/Modal/Modal';
 import { Logo } from '@/components/Logo';
+
 import { Button } from '@/components/Button';
 
 import { SocialLinks } from '@/components/SocialLinks';
