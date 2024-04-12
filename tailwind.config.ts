@@ -55,6 +55,7 @@ const config: Config = {
         secondDisabledBtn: '#797979',
         backdropCol: 'rgba(48, 48, 54, 0.25)',
         activeLink: '#D5DDC9',
+        border: '#8EA58E',
       },
 
       fontSize: {
@@ -122,6 +123,20 @@ const config: Config = {
             lineHeight: '1.2',
             fontWeight: '600',
             letterSpacing: '-0.5px',
+          },
+        ],
+        description: [
+          '18px',
+          {
+            lineHeight: '1.3',
+            fontWeight: '500',
+          },
+        ],
+        descriptionDesktop: [
+          '24px',
+          {
+            lineHeight: '1.3',
+            fontWeight: '500',
           },
         ],
       },
