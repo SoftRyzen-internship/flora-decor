@@ -54,6 +54,7 @@ const config: Config = {
         disabledBtn: '#C1C0C0',
         secondDisabledBtn: '#797979',
         backdropCol: 'rgba(48, 48, 54, 0.25)',
+        activeLink: '#D5DDC9',
       },
 
       fontSize: {
