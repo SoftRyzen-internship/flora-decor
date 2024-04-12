@@ -3,25 +3,19 @@
     {
       "component": "plant",
       "text": "Великий асортимент рослин",
-      "isFirstCard": true,
       "isMiddleCard": false,
-      "isLastCard": false,
       "id": 1
     },
     {
       "component": "percentage",
       "text": "Знижки при купівлі декількох вазонів",
-      "isFirstCard": false,
       "isMiddleCard": true,
-      "isLastCard": false,
       "id": 2
     },
     {
       "component": "support",
       "text": "Консультативна підтримка після продажу",
-      "isFirstCard": false,
       "isMiddleCard": false,
-      "isLastCard": true,
       "id": 3
     }
   ]

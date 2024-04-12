@@ -7,23 +7,16 @@ import SupportIcon from '@/public/icons/support-icon.svg';
 type AdvantagesCardPropsType = {
   description: string;
   icon: string;
-  isFirstCard: boolean;
   isMiddleCard: boolean;
-  isLastCard: boolean;
 };
 
 export const AdvantagesCard = ({
   icon,
   description,
-  isFirstCard,
   isMiddleCard,
-  isLastCard,
 }: AdvantagesCardPropsType) => {
   const stylesClassName = classNames('flex flex-col gap-[30px] items-center ', {
-    'pb-[35px] md:pb-0 md:pr-[41px] xl:pr-[61px]': isFirstCard,
-    'pt-[35px] md:pt-0 md:pl-[41px] xl:pl-[61px]': isLastCard,
-    'pb-[35px] pt-[35px] md:pb-0 md:pt-0 md:px-[41px] xl:px-[61px] advantages-card relative':
-      isMiddleCard,
+    'advantages-card relative': isMiddleCard,
   });
 
   return (
