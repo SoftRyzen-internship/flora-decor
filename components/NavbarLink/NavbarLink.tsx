@@ -21,7 +21,7 @@ export const NavbarLink: React.FC<NavbarLinkProps> = ({
   const pathname = usePathname();
 
   const stylesLink = classNames(
-    'cursor-pointer text-xl xl:text-subtitleMd leading-6 not-italic font-semibold font-geologica tracking-[-0.4px] text-main hover:text-buttonIcon focus:outline-text-buttonIcon transition',
+    'cursor-pointer text-xl xl:text-subtitleMd leading-6 not-italic font-semibold font-geologica tracking-[-0.4px] text-main hover:text-buttonIcon focus:text-buttonIcon transition',
   );
 
   return (
