@@ -27,6 +27,8 @@ export const products = defineType({
       type: 'image',
       title: 'Зображення',
       description: 'Додайте зображення товару',
+      validation: rule =>
+        rule.required().error("Зображення є обов'язковим полем"),
       // options: { hotspot: true },
     }),
     defineField({
@@ -34,7 +36,17 @@ export const products = defineType({
       title: 'Об`єми',
       type: 'array',
       description: 'Оберіть наявні об`єми вазонів',
-      validation: rule => rule.required().error("Об`єми є обов'язковим полем"),
+      validation: rule =>
+        rule
+          .required()
+          .error("Об`єми є обов'язковим полем")
+          .unique()
+          .error("Об'єми повинні бути унікальними")
+          .min(1)
+          .error("Оберіть об'єми: від 1 до 4")
+          .max(4)
+          .error("Кількість об'ємів не більше 4"),
+
       of: [
         defineArrayMember({
           type: 'string',
@@ -51,6 +63,8 @@ export const products = defineType({
               { title: '23', value: '23' },
             ],
           },
+          validation: rule =>
+            rule.regex(/^.+$/).error('Поле об`єму не повинно бути пустим.'),
         }),
       ],
     }),
