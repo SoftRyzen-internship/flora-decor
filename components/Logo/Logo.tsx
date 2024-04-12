@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import classNames from 'classnames';
+
 import LogoIcon from '@/public/icons/logo.svg';
+
+import common from '@/data/common.json';
 
 type LogoProps = {
   isHeader: boolean;
@@ -8,6 +11,8 @@ type LogoProps = {
 };
 
 export const Logo = ({ isHeader, isFooter }: LogoProps) => {
+  const { logoAriaText } = common;
+
   const logoClassName = classNames(' stroke-current fill-current', {
     'w-[51px] h-[54px] xl:w-20 xl:h-20': isHeader,
     'w-[123px] h-[130px]': isFooter,
@@ -22,7 +27,7 @@ export const Logo = ({ isHeader, isFooter }: LogoProps) => {
   );
 
   return (
-    <Link href="/" className={LinkClassName}>
+    <Link href="/" className={LinkClassName} aria-label={logoAriaText}>
       <LogoIcon
         className={logoClassName}
         strokeMiterlimit="10"

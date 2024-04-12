@@ -1,8 +1,9 @@
-import { Container, Section } from '@/components';
+import { Container } from '@/components/Container';
+import { Section } from '@/components/Section';
 
 export const Advantages = () => {
   return (
-    <Section isOtherSection>
+    <Section variant="otherSection">
       <Container>Example Advantages Section</Container>
     </Section>
   );

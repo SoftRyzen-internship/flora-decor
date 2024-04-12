@@ -2,12 +2,16 @@ import Link from 'next/link';
 import FacebookIcon from '@/public/icons/facebook.svg';
 import InstagramIcon from '@/public/icons/instagram.svg';
 
+import common from '@/data/common.json';
+
 export const SocialLinks = () => {
+  const { facebookAriaText, instagramAriaText } = common;
+
   return (
     <div className="flex gap-6">
       <Link
         href="https://m.facebook.com/profile.php/?id=100024849397472"
-        aria-label="посилання на сторінку в Фейсбук"
+        aria-label={facebookAriaText}
         target="_blank"
         rel="noopener noreferrer nofollow"
         className="inline-flex text-bgMain hover:text-bgSecond focus:text-bgSecond active:text-[#D5DDC9] transition"
@@ -16,7 +20,7 @@ export const SocialLinks = () => {
       </Link>
       <Link
         href="https://www.instagram.com/olena8826?igsh=amkyYzRyYWZpNnhw"
-        aria-label="посилання на сторінку в Інстаграм"
+        aria-label={instagramAriaText}
         target="_blank"
         rel="noopener noreferrer nofollow"
         className="inline-flex text-bgMain hover:text-bgSecond focus:text-bgSecond active:text-[#D5DDC9] transition"
