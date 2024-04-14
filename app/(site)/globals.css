@@ -7,15 +7,39 @@
     @apply transition-all duration-300 ease-out;
   }
 }
-
+/*Form styles*/
 .error-message::before {
   position: absolute;
   content: '';
   left: -20px;
-  top: 3px;
+  top: 0px;
   width: 16px;
   height: 16px;
   background-image: url('/icons/fail-icon.svg');
+}
+.custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: -5px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #224722;
+  outline: none;
+}
+.custom-checkbox:focus {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background-color: #527252;
+}
+input[type='checkbox']:checked + label .custom-checkbox {
+  position: absolute;
+  background-image: url(/icons/checkmark.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #224722;
 }
 
 /*Buttons styles*/

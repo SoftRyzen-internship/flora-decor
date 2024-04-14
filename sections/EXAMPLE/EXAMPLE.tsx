@@ -5,21 +5,22 @@ import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
 import { Navbar } from '@/components/Navbar';
-import { Modal } from '@/components/Modal/Modal';
+// import { Modal } from '@/components/Modal/Modal';
 import { Logo } from '@/components/Logo';
 
-import { Button } from '@/components/Button';
+// import { Button } from '@/components/Button';
 
-import { SocialLinks } from '@/components/SocialLinks';
-import { AdvantagesCard } from '@/components/AdvantagesCard';
+// import { SocialLinks } from '@/components/SocialLinks';
+// import { AdvantagesCard } from '@/components/AdvantagesCard';
 
 import React from 'react';
 
-import advantages from '@/data/advantages.json';
+// import advantages from '@/data/advantages.json';
+import { Form } from '@/components/Form';
 
 export const EXAMPLE = async () => {
   // const products = await getProducts();
-  const { icons } = advantages;
+  // const { icons } = advantages;
   return (
     <Section sectionId="hero" variant="heroSection">
       <Container>
@@ -55,7 +56,7 @@ export const EXAMPLE = async () => {
             blurDataURL={products[1].image}
           />
         </div> */}
-        <div className="flex flex-col gap-2 mt-5">
+        {/* <div className="flex flex-col gap-2 mt-5">
           <p> Лінк в хедері/ розміри тільки для десктопу</p>
           <Button isLink isHeaderLink isDisabled={false}>
             Залишити заявку
@@ -106,7 +107,10 @@ export const EXAMPLE = async () => {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
+        <div className="xl:w-[541px] flex flex-col gap-5 bg-bgSecond p-10">
+          <Form />
+        </div>
       </Container>
     </Section>
   );
