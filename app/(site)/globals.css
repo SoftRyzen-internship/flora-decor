@@ -17,10 +17,22 @@
   height: 16px;
   background-image: url('/icons/fail-icon.svg');
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .custom-checkbox {
   position: absolute;
   top: 0;
-  left: -5px;
+  left: -40px;
   width: 24px;
   height: 24px;
   background-color: white;
@@ -28,10 +40,11 @@
   border: 1px solid #224722;
   outline: none;
 }
+
 .custom-checkbox-error {
   position: absolute;
   top: 0;
-  left: -5px;
+  left: -40px;
   width: 24px;
   height: 24px;
   background-color: white;

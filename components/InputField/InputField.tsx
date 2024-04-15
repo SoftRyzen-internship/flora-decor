@@ -29,7 +29,6 @@ export const InputField: React.FC<InputFieldPropsType> = ({
       <div className="relative flex flex-col gap-1">
         <label className="font-geologica text-[16px] leading-[1.3] font-medium md:text-subtitleMd text-subtitle">
           {label}
-          <span className="text-inputRequired"> *</span>
         </label>
         <textarea
           {...register(name)}
@@ -49,7 +48,6 @@ export const InputField: React.FC<InputFieldPropsType> = ({
     <div className="relative flex flex-col w-full gap-1">
       <label className="font-geologica text-[16px] leading-[1.3] font-medium md:text-subtitleMd text-subtitle">
         {label}
-        <span className="text-inputRequired"> *</span>
       </label>
       <input
         type={type}

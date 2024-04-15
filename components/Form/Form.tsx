@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useForm, FormProvider, SubmitHandler } from 'react-hook-form';
+import useFormPersist from 'react-hook-form-persist';
 
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -19,6 +20,7 @@ export const Form: React.FC = () => {
     resolver: yupResolver(formSchema),
   });
   const { errors } = methods.formState;
+  const { watch, setValue } = methods;
 
   const formData = form as {
     inputFieldsUp: FormInput[];
@@ -26,9 +28,16 @@ export const Form: React.FC = () => {
     checkText: string;
   };
   const { inputFieldsUp, inputFieldsDown, checkText } = formData;
+
+  useFormPersist('FormData', {
+    watch,
+    setValue,
+  });
+
   const onSubmit: SubmitHandler<FormData> = data => {
-    sessionStorage.setItem('formData', JSON.stringify(data));
     methods.reset();
+    sessionStorage.removeItem('FormData');
+    console.log(data);
   };
 
   const [isDisabled, setIsDisabled] = useState<boolean>(true);
@@ -72,12 +81,12 @@ export const Form: React.FC = () => {
               );
             })}
           </div>
-          <div className="relative flex flex-row  ml-[5px] mb-[30px] md:mb-[40px]">
+          <div className="relative flex flex-row  ml-10 mb-[30px] md:mb-[40px]">
             <input
               type="checkbox"
               {...methods.register('checkbox')}
               id="checkbox"
-              className="checkbox mr-4 "
+              className="mr-4 visually-hidden"
             />
             <label htmlFor="checkbox" className="">
               <span className=" cursor-pointer text-justify font-geologica text-[14px] leading-[1.4] tracking-[-0.28px] font-medium md:text-subtitleMd   text-main">
