@@ -1,7 +1,10 @@
+'use client';
+
 import React from 'react';
 
 import { Modal } from '@/components/Modal';
 import { Navbar } from '@/components/Navbar';
+import { Button } from '@/components/Button';
 
 type BurgerMenuProps = {
   isBurgerOpen: boolean;
@@ -19,9 +22,18 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({
       isOpen={isBurgerOpen}
       closeBtnStyles=""
       ariaLabel=""
-      modalStyles=""
+      modalStyles="text-center w-full bg-bgMain h-[640px] md:h-[610px]"
     >
-      <Navbar />
+      <Navbar onClickCloseModal={onBurgerMenuClose} />
+      <Button
+        isLink
+        isHeaderLink
+        isDisabled={false}
+        onClick={onBurgerMenuClose}
+        className="mt-[100px]"
+      >
+        Залишити заявку
+      </Button>
     </Modal>
   );
 };

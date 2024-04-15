@@ -2,13 +2,11 @@
 
 // import Image from 'next/image';
 // import { getProducts } from '@/sanity/requests/getProducts';
-import React, { useState } from 'react';
+import React from 'react';
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
-import { Navbar } from '@/components/Navbar';
-import { Modal } from '@/components/Modal/Modal';
-import { Logo } from '@/components/Logo';
+// import { Modal } from '@/components/Modal/Modal';
 
 import { Button } from '@/components/Button';
 
@@ -25,25 +23,22 @@ import data from '@/data/pots.json';
 // import { Ultra } from 'next/font/google';
 
 export const EXAMPLE = async () => {
-  const [isOpenModal, setIsOpenModal] = useState(false);
+  // const [isOpenModal, setIsOpenModal] = useState(false);
   // const products = await getProducts();
   const { icons } = advantages;
   const { pots } = data;
 
-  const openModal = () => {
-    setIsOpenModal(true);
-  };
+  // const openModal = () => {
+  //   setIsOpenModal(true);
+  // };
 
-  const CloseModal = () => {
-    setIsOpenModal(false);
-  };
+  // const closeModal = () => {
+  //   setIsOpenModal(false);
+  // };
 
   return (
     <Section sectionId="hero" variant="heroSection">
       <Container>
-        <Logo isHeader />
-
-        <Navbar />
         <SectionTitle
           label="Section Title"
           center="center"
@@ -103,11 +98,11 @@ export const EXAMPLE = async () => {
         <div className="bg-[#224722]">
           <SocialLinks />
         </div>
-        <button onClick={openModal}>OPEN MODAL</button>
+        {/* <button onClick={openModal}>OPEN MODAL</button>
         {isOpenModal && (
           <Modal
             isOpen={isOpenModal}
-            closeModal={CloseModal}
+            closeModal={closeModal}
             ariaLabel="закрити"
             closeBtnStyles=""
             modalStyles={'w-[300px] h-[200px] bg-white'}
@@ -115,8 +110,8 @@ export const EXAMPLE = async () => {
             isPopUp={true}
           >
             <p>Modal</p>
-          </Modal>
-        )}
+          </Modal> */}
+        {/* )} */}
         <ul className="flex flex-col md:flex-row  md:mx-[2px] gap-[70px] md:gap-[82px] xl:gap-[124px]">
           {icons.map(icon => {
             return (

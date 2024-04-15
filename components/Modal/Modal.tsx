@@ -29,7 +29,7 @@ export const Modal = ({
   isPopUp,
 }: ModalPropsTypes) => {
   const styesName = classNames({
-    'fixed inset-y-0 right-0 flex max-w-full': isBurgerMenu,
+    'fixed inset-y-0 right-0 flex w-[360px]': isBurgerMenu,
     'flex min-h-full items-center justify-center': isPopUp,
   });
 
@@ -48,7 +48,7 @@ export const Modal = ({
           <div className="fixed inset-0 bg-backdropCol backdrop-filter" />
         </Transition.Child>
 
-        <div className="fixed inset-0 overflow-y-auto">
+        <div className="fixed inset-0 overflow-y-aut">
           <div className={styesName}>
             <Transition.Child
               as={Fragment}
@@ -73,11 +73,11 @@ export const Modal = ({
             >
               <Dialog.Panel
                 className={
-                  (classNames('transform overflow-hidden transition-all'),
+                  (classNames('transform overflow-hidden transition-al'),
                   modalStyles)
                 }
               >
-                <div className="flex items-center">
+                <div className="flex items-center justify-between container py-[15px] mb-[50px]">
                   {isBurgerMenu && <Logo isHeader />}
                   <button
                     type="button"

@@ -1,4 +1,3 @@
-'use client';
 import { ReactNode } from 'react';
 
 import { Link as ScrollLink } from 'react-scroll';
@@ -37,7 +36,7 @@ export const Button = ({
     className,
     'uppercase rounded-[100px] transition-all duration-300',
     {
-      'font-mulish text-heroButton text-main bg-bgSecond inline-block w-[240px] tracking-[0.63px] py-4 px-[30px]  hover:bg-btnSecondHover focus:bg-btnSecondHover active:bg-btnSecondActive ':
+      'font-mulish text-base font-extrabold text-main bg-bgSecond inline-block w-[320px] xl:w-[240px] tracking-[0.64px] py-4 px-[30px] xl:px-[28px] hover:bg-btnSecondHover focus:bg-btnSecondHover active:bg-btnSecondActive ':
         isHeaderLink,
       'custom-button bg-button order-link hover:bg-btnHover focus:bg-btnHover active:bg-btnHover':
         isOrderLink || (isBtn && !isDisabled),
