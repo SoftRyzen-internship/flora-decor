@@ -12,15 +12,23 @@ import { Logo } from '@/components/Logo';
 
 import { Button } from '@/components/Button';
 
+import { type PotPropsType } from '@/components/PotWithVolume/PotWithVolume';
+
 import { SocialLinks } from '@/components/SocialLinks';
 import { AdvantagesCard } from '@/components/AdvantagesCard';
 
 import advantages from '@/data/advantages.json';
 
+import { PotWithVolume } from '@/components/PotWithVolume';
+
+import data from '@/data/pots.json';
+// import { Ultra } from 'next/font/google';
+
 export const EXAMPLE = async () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   // const products = await getProducts();
   const { icons } = advantages;
+  const { pots } = data;
 
   const openModal = () => {
     setIsOpenModal(true);
@@ -112,14 +120,18 @@ export const EXAMPLE = async () => {
         <ul className="flex flex-col md:flex-row  md:mx-[2px] gap-[70px] md:gap-[82px] xl:gap-[124px]">
           {icons.map(icon => {
             return (
-              <li key={icon.id} className="custom-width">
-                <AdvantagesCard
-                  description={icon.text}
-                  icon={icon.component}
-                  isMiddleCard={icon.isMiddleCard}
-                />
-              </li>
+              <AdvantagesCard
+                key={icon.id}
+                description={icon.text}
+                icon={icon.component}
+                isMiddleCard={icon.isMiddleCard}
+              />
             );
+          })}
+        </ul>
+        <ul className="flex items-end gap-[50px] md:gap-[76px] w-[1096px] md:w-[1320px]">
+          {pots.map((pot: PotPropsType) => {
+            return <PotWithVolume key={pot.volume} volume={pot.volume} />;
           })}
         </ul>
       </Container>
