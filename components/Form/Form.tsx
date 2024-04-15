@@ -1,6 +1,6 @@
-// 'use client';
+'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import { useForm, FormProvider, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -17,6 +17,8 @@ export const Form: React.FC = () => {
   const methods = useForm<FormData>({
     resolver: yupResolver(formSchema),
   });
+  const { errors } = methods.formState;
+
   const formData = form as {
     inputFieldsUp: FormInput[];
     inputFieldsDown: FormInput[];
@@ -24,9 +26,15 @@ export const Form: React.FC = () => {
   };
   const { inputFieldsUp, inputFieldsDown, checkText } = formData;
   const onSubmit: SubmitHandler<FormData> = data => {
-    console.log(data);
+    sessionStorage.setItem('formData', JSON.stringify(data));
     methods.reset();
   };
+
+  const [isDisabled, setIsDisabled] = useState<boolean>(true);
+
+  methods.watch(data => {
+    setIsDisabled(!data.checkbox);
+  });
 
   return (
     <div>
@@ -65,20 +73,22 @@ export const Form: React.FC = () => {
               type="checkbox"
               {...methods.register('checkbox')}
               id="checkbox"
-              className="mr-4"
+              className="checkbox mr-4"
             />
             <label htmlFor="checkbox">
               <span className=" cursor-pointer font-geologica text-[14px] leading-[1.4] tracking-[-0.28px] font-medium md:text-subtitleMd   text-main">
                 {checkText}
               </span>
-              <span className="custom-checkbox"></span>
+              <span
+                className={`${errors.checkbox ? 'custom-checkbox-error' : 'custom-checkbox'} `}
+              ></span>
             </label>
           </div>
           <Button
             isLink={false}
             onClick={() => {}}
             isBtn
-            isDisabled={false}
+            isDisabled={isDisabled}
             type="submit"
           >
             Замовити

@@ -23,5 +23,8 @@ export const formSchema = yup.object().shape({
     .string()
     .required("Ваше повідомлення обов'язкове")
     .max(500, 'У тексті має бути не більше 500 символів.'),
-  checkbox: yup.boolean().required(),
+  checkbox: yup
+    .boolean()
+    .required('required')
+    .oneOf([true], "Обов'язкове поле для підтвердження"),
 });
