@@ -15,12 +15,15 @@ export const AdvantagesCard = ({
   description,
   isMiddleCard,
 }: AdvantagesCardPropsType) => {
-  const stylesClassName = classNames('flex flex-col gap-[30px] items-center ', {
-    'advantages-card relative': isMiddleCard,
-  });
+  const stylesClassName = classNames(
+    'flex flex-col gap-[30px] items-center custom-width',
+    {
+      'advantages-card relative': isMiddleCard,
+    },
+  );
 
   return (
-    <div className={stylesClassName}>
+    <li className={stylesClassName}>
       {icon === 'plant' && (
         <PlantIcon width={95} height={95} className="md:mt-[20.5px] xl:mt-6" />
       )}
@@ -41,6 +44,6 @@ export const AdvantagesCard = ({
       <p className="font-geologica tracking-normal text-subtitleMd text-subtitle w-[222px] md:w-[172px] xl:w-[319px] md:text-description xl:text-descriptionDesktop text-center">
         {description}
       </p>
-    </div>
+    </li>
   );
 };
