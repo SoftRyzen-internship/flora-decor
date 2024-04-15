@@ -105,13 +105,12 @@ export const EXAMPLE = async () => {
         <ul className="flex flex-col md:flex-row  md:mx-[2px] gap-[70px] md:gap-[82px] xl:gap-[124px]">
           {icons.map(icon => {
             return (
-              <li key={icon.id} className="custom-width">
-                <AdvantagesCard
-                  description={icon.text}
-                  icon={icon.component}
-                  isMiddleCard={icon.isMiddleCard}
-                />
-              </li>
+              <AdvantagesCard
+                key={icon.id}
+                description={icon.text}
+                icon={icon.component}
+                isMiddleCard={icon.isMiddleCard}
+              />
             );
           })}
         </ul>
