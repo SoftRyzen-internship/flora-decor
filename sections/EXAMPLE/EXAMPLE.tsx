@@ -9,9 +9,17 @@ import { Modal } from '@/components/Modal/Modal';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/Button';
 
+import { type PotPropsType } from '@/components/PotWithVolume/PotWithVolume';
+
 import { SocialLinks } from '@/components/SocialLinks';
+import { PotWithVolume } from '@/components/PotWithVolume';
+
+import data from '@/data/pots.json';
+// import { Ultra } from 'next/font/google';
+
 export const EXAMPLE = async () => {
   // const products = await getProducts();
+  const { pots } = data;
   return (
     <Section sectionId="hero" variant="heroSection">
       <Container>
@@ -83,6 +91,11 @@ export const EXAMPLE = async () => {
         >
           <p>Modal</p>
         </Modal>
+        <ul className="flex items-end gap-[40px]">
+          {pots.map((pot: PotPropsType) => {
+            return <PotWithVolume key={pot.volume} volume={pot.volume} />;
+          })}
+        </ul>
       </Container>
       <div className="bg-[#224722]">
         <SocialLinks />
