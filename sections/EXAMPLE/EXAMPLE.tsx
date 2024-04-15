@@ -110,8 +110,8 @@ export const EXAMPLE = async () => {
             isPopUp={true}
           >
             <p>Modal</p>
-          </Modal> */}
-        {/* )} */}
+          </Modal>
+        )} */}
         <ul className="flex flex-col md:flex-row  md:mx-[2px] gap-[70px] md:gap-[82px] xl:gap-[124px]">
           {icons.map(icon => {
             return (
