@@ -8,9 +8,6 @@
   }
 }
 /*Form styles*/
-.textarea {
-  padding-top: 0;
-}
 .error-message::before {
   position: absolute;
   content: '';

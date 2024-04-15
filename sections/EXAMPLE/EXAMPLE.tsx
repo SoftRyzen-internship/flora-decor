@@ -22,7 +22,7 @@ export const EXAMPLE = async () => {
   // const products = await getProducts();
   // const { icons } = advantages;
   return (
-    <Section sectionId="hero" variant="heroSection">
+    <Section sectionId="hero" className="bg-bgSecond" variant="heroSection">
       <Container>
         <Logo isHeader />
         <Navbar />
@@ -108,7 +108,7 @@ export const EXAMPLE = async () => {
             );
           })}
         </ul> */}
-        <div className="xl:w-[541px] flex flex-col gap-5 bg-bgSecond p-10">
+        <div className=" py-10">
           <Form />
         </div>
       </Container>

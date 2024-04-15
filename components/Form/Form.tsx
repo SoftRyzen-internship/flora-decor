@@ -1,17 +1,18 @@
 'use client';
 
 import React, { useState } from 'react';
-
 import { useForm, FormProvider, SubmitHandler } from 'react-hook-form';
+
 import { yupResolver } from '@hookform/resolvers/yup';
-import { formSchema } from '@/utils/formSchema';
+
 import { FormData } from '../InputField/types';
+import { FormInput } from './types';
+
 import { InputField } from '../InputField';
 import { Button } from '../Button';
 
+import { formSchema } from '@/utils/formSchema';
 import form from '@/data/form.json';
-
-import { FormInput } from './types';
 
 export const Form: React.FC = () => {
   const methods = useForm<FormData>({
@@ -39,8 +40,11 @@ export const Form: React.FC = () => {
   return (
     <div>
       <FormProvider {...methods}>
-        <form onSubmit={methods.handleSubmit(onSubmit)}>
-          <div className="flex flex-col xl:flex-row gap-5 mb-5 md:mb-[30px] md:gap-[30px] xl:gap-[17px]">
+        <form
+          onSubmit={methods.handleSubmit(onSubmit)}
+          className="w-full xl:w-[541px]"
+        >
+          <div className="w-full flex flex-col xl:flex-row  justify-center gap-5 mb-5 md:mb-[30px] md:gap-[30px] xl:gap-[17px]">
             {' '}
             {inputFieldsUp.map(input => {
               return (
@@ -68,15 +72,15 @@ export const Form: React.FC = () => {
               );
             })}
           </div>
-          <div className="relative mb-[30px] md:mb-[40px]">
+          <div className="relative flex flex-row  ml-[5px] mb-[30px] md:mb-[40px]">
             <input
               type="checkbox"
               {...methods.register('checkbox')}
               id="checkbox"
-              className="checkbox mr-4"
+              className="checkbox mr-4 "
             />
-            <label htmlFor="checkbox">
-              <span className=" cursor-pointer font-geologica text-[14px] leading-[1.4] tracking-[-0.28px] font-medium md:text-subtitleMd   text-main">
+            <label htmlFor="checkbox" className="">
+              <span className=" cursor-pointer text-justify font-geologica text-[14px] leading-[1.4] tracking-[-0.28px] font-medium md:text-subtitleMd   text-main">
                 {checkText}
               </span>
               <span
@@ -84,13 +88,7 @@ export const Form: React.FC = () => {
               ></span>
             </label>
           </div>
-          <Button
-            isLink={false}
-            onClick={() => {}}
-            isBtn
-            isDisabled={isDisabled}
-            type="submit"
-          >
+          <Button isLink={false} isBtn isDisabled={isDisabled} type="submit">
             Замовити
           </Button>{' '}
         </form>
