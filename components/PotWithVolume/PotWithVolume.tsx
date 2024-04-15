@@ -7,43 +7,28 @@ import PotBottomIcon from '@/public/icons/pot-bottom.svg';
 
 export type PotPropsType = {
   volume: string;
-  //   width: string;
-  //   bottomWidth: string;
-  //   height: string;
 };
 
 export const PotWithVolume = ({ volume }: PotPropsType) => {
   const stylesName = classNames(
-    'flex flex-col gap-[4px] items-center relative',
+    'flex flex-col  items-center justify-between relative',
     {
-      'w-[120px] h-[114px]': volume === '11',
-      'w-[130px] h-[123px]': volume === '12',
+      'w-[100px] h-[95px] md:w-[120px] md:h-[114px] ': volume === '11',
+      'w-[112px] md:w-[130px] h-[106px] md:h-[123px] ': volume === '12',
+      'w-[125px] md:w-[150px] h-[118px] md:h-[142px]': volume === '14',
+      'w-[133px] md:w-[160px] h-[126px] md:h-[152px]': volume === '15',
+      'w-[150px] md:w-[180px] h-[143px] md:h-[172px]': volume === '17',
+      'w-[166px] md:w-[200px] h-[158px] md:h-[190px]': volume === '19',
     },
   );
 
-  const stylesBottomName = classNames({
-    'w-[98px]': volume === '11',
-    'w-[106px]': volume === '12',
-  });
-  //   const potStyles = `w-[${width}] h-[${height}]  flex flex-col gap-[5px] items-center relative`;
-  //   const bottomStyles = `w-[${bottomWidth}]`;
-
-  //    'w-[120px] h-[114px]  flex flex-col gap-[5px] items-center relative';
   return (
     <li className={stylesName}>
-      <PotTopIcon />
-      <div className={stylesBottomName}>
-        <PotBottomIcon />
-      </div>
+      <PotTopIcon width={'100%'} />
+      <PotBottomIcon width={'81.62%'} />
       <p className="absolute top-1/2 bottom-1/2 translate-[-50%, -50%] text-bgSecond font-geologica text-descriptionDesktop">
         {volume}
       </p>
     </li>
   );
 };
-//  {
-//       "volume": "14",
-//       "width": "150px",
-//       "bottomWidth": "122px",
-//       "height": "142px"
-//     }

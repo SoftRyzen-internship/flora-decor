@@ -1,0 +1,22 @@
+{
+  "icons": [
+    {
+      "component": "plant",
+      "text": "Великий асортимент рослин",
+      "isMiddleCard": false,
+      "id": 1
+    },
+    {
+      "component": "percentage",
+      "text": "Знижки при купівлі декількох вазонів",
+      "isMiddleCard": true,
+      "id": 2
+    },
+    {
+      "component": "support",
+      "text": "Консультативна підтримка після продажу",
+      "isMiddleCard": false,
+      "id": 3
+    }
+  ]
+}
