@@ -1,6 +1,8 @@
 'use client';
+
 // import Image from 'next/image';
 // import { getProducts } from '@/sanity/requests/getProducts';
+import React, { useState } from 'react';
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
@@ -13,17 +15,26 @@ import { Button } from '@/components/Button';
 import { SocialLinks } from '@/components/SocialLinks';
 import { AdvantagesCard } from '@/components/AdvantagesCard';
 
-import React from 'react';
-
 import advantages from '@/data/advantages.json';
 
 export const EXAMPLE = async () => {
+  const [isOpenModal, setIsOpenModal] = useState(false);
   // const products = await getProducts();
   const { icons } = advantages;
+
+  const openModal = () => {
+    setIsOpenModal(true);
+  };
+
+  const CloseModal = () => {
+    setIsOpenModal(false);
+  };
+
   return (
     <Section sectionId="hero" variant="heroSection">
       <Container>
         <Logo isHeader />
+
         <Navbar />
         <SectionTitle
           label="Section Title"
@@ -84,16 +95,20 @@ export const EXAMPLE = async () => {
         <div className="bg-[#224722]">
           <SocialLinks />
         </div>
-        <Modal
-          isOpen={true}
-          ariaLabel="закрити"
-          closeBtnStyles=""
-          modalStyles={'w-[300px] h-[200px] bg-white'}
-          isBurgerMenu={true}
-          isPopUp={false}
-        >
-          <p>Modal</p>
-        </Modal>
+        <button onClick={openModal}>OPEN MODAL</button>
+        {isOpenModal && (
+          <Modal
+            isOpen={isOpenModal}
+            closeModal={CloseModal}
+            ariaLabel="закрити"
+            closeBtnStyles=""
+            modalStyles={'w-[300px] h-[200px] bg-white'}
+            isBurgerMenu={false}
+            isPopUp={true}
+          >
+            <p>Modal</p>
+          </Modal>
+        )}
         <ul className="flex flex-col md:flex-row  md:mx-[2px] gap-[70px] md:gap-[82px] xl:gap-[124px]">
           {icons.map(icon => {
             return (
