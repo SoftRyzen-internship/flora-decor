@@ -7,15 +7,64 @@
     @apply transition-all duration-300 ease-out;
   }
 }
-
+/*Form styles*/
 .error-message::before {
   position: absolute;
   content: '';
   left: -20px;
-  top: 3px;
+  top: 0px;
   width: 16px;
   height: 16px;
   background-image: url('/icons/fail-icon.svg');
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #224722;
+  outline: none;
+}
+
+.custom-checkbox-error {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #f00;
+  outline: none;
+}
+
+input[type='checkbox']:focus + label .custom-checkbox {
+  outline: 3px solid #527252;
+}
+input[type='checkbox']:checked + label .custom-checkbox {
+  position: absolute;
+  background-image: url(/icons/checkmark.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #224722;
+}
+input[type='checkbox']:checked:focus + label .custom-checkbox {
+  outline: 3px solid #527252;
 }
 
 /*Buttons styles*/
@@ -52,23 +101,17 @@
   backdrop-filter: blur(12.5px);
 }
 
-@media screen and (min-width: 768px) {
-  .custom-width {
-    width: calc(100% / 3);
-  }
-}
-
 /*advantages*/
 
 @media screen and (max-width: 767px) {
-  .advantages-card::before {
+  .advantages-card:nth-child(2):before {
     content: '';
     width: 320px;
     height: 0.5px;
     @apply bg-border absolute top-[-35px];
   }
 
-  .advantages-card::after {
+  .advantages-card:nth-child(2)::after {
     content: '';
     width: 320px;
     height: 0.5px;
@@ -77,14 +120,14 @@
 }
 
 @media screen and (min-width: 768px) {
-  .advantages-card::before {
+  .advantages-card:nth-child(2)::before {
     content: '';
     width: 0.5px;
     height: 235px;
     @apply bg-border absolute left-[-41px];
   }
 
-  .advantages-card::after {
+  .advantages-card:nth-child(2)::after {
     content: '';
     width: 0.5px;
     height: 235px;
@@ -93,11 +136,11 @@
 }
 
 @media screen and (min-width: 1400px) {
-  .advantages-card::before {
+  .advantages-card:nth-child(2)::before {
     @apply bg-border absolute left-[-62px];
   }
 
-  .advantages-card::after {
+  .advantages-card:nth-child(2)::after {
     @apply bg-border absolute right-[-62px];
   }
 }

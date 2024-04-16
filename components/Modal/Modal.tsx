@@ -3,8 +3,6 @@ import { Fragment, ReactNode } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import classNames from 'classnames';
 
-import { Logo } from '../Logo';
-
 import CloseIcon from '@/public/icons/close.svg';
 
 type ModalPropsTypes = {
@@ -77,13 +75,12 @@ export const Modal = ({
                   modalStyles)
                 }
               >
-                <div className="flex items-center justify-between container py-[15px] mb-[50px]">
-                  {isBurgerMenu && <Logo isHeader />}
+                <div className="relative">
                   <button
                     type="button"
                     onClick={closeModal}
                     className={classNames(
-                      'ml-auto block text-main hover:text-btnSecondHover focus:text-btnSecondHover active:text-btnSecondActive transition-all duration-300',
+                      'absolute block text-main hover:text-btnSecondHover focus:text-btnSecondHover active:text-btnSecondActive transition-all duration-300',
                       closeBtnStyles,
                     )}
                     aria-label={ariaLabel}
@@ -94,9 +91,8 @@ export const Modal = ({
                       className="stroke-current"
                     />
                   </button>
+                  {children}
                 </div>
-
-                {children}
               </Dialog.Panel>
             </Transition.Child>
           </div>

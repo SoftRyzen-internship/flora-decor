@@ -1,5 +1,6 @@
 {
-  "inputFields": [
+  "checkText": "Даю згоду на обробку персональних даних",
+  "inputFieldsUp": [
     {
       "name": "name",
       "label": "Ім’я *",
@@ -11,7 +12,9 @@
       "label": "Телефон *",
       "placeholder": "+380988888545",
       "type": "phone"
-    },
+    }
+  ],
+  "inputFieldsDown": [
     {
       "name": "email",
       "label": "Пошта *",
