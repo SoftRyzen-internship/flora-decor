@@ -131,6 +131,10 @@
 @media (min-width: 768px) {
   .hero {
     background-image: url('../../public/images/hero/heroBG-tablet.jpg');
+    background-size:
+      1046px 536px,
+      cover;
+    background-position: top 0px right 0px;
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -142,9 +146,18 @@
   }
 }
 
+@media (min-width: 1046px) {
+  .hero {
+    background-position: center top 0px;
+  }
+}
+
 @media (min-width: 1400px) {
   .hero {
     background-image: url('../../public/images/hero/heroBG-desktop.jpg');
+    background-size:
+      1440px 800px,
+      cover;
   }
 
   @media (min-device-pixel-ratio: 2),
