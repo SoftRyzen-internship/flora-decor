@@ -1,5 +1,6 @@
-import data from '@/data/common.json';
 import { SocialsItem } from '../SocialsItem';
+
+import data from '@/data/common.json';
 
 export const SocialLinks = () => {
   const { socials } = data;
