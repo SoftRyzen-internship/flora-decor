@@ -5,29 +5,32 @@ import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
 import { Navbar } from '@/components/Navbar';
-import { Modal } from '@/components/Modal/Modal';
+import { Modal } from '@/components/Modal';
 import { Logo } from '@/components/Logo';
 
 import { Button } from '@/components/Button';
 
-import { type PotPropsType } from '@/components/PotWithVolume/PotWithVolume';
-
 import { SocialLinks } from '@/components/SocialLinks';
 import { AdvantagesCard } from '@/components/AdvantagesCard';
 
-import React from 'react';
-
-import advantages from '@/data/advantages.json';
+import React, { useState } from 'react';
 
 import { PotWithVolume } from '@/components/PotWithVolume';
 
-import data from '@/data/pots.json';
+import { advantagesIcons } from '@/data/advantagesIcons';
 // import { Ultra } from 'next/font/google';
 
-export const EXAMPLE = async () => {
+export const EXAMPLE = () => {
   // const products = await getProducts();
-  const { icons } = advantages;
-  const { pots } = data;
+
+  const pots = ['11', '12', '13', '14', '15', '17', '19', '23'];
+
+  const [isOpenModal, setIsOpenModal] = useState(true);
+
+  function closeModal() {
+    setIsOpenModal(false);
+  }
+
   return (
     <Section sectionId="hero" variant="heroSection">
       <Container>
@@ -93,30 +96,30 @@ export const EXAMPLE = async () => {
           <SocialLinks />
         </div>
         <Modal
-          isOpen={true}
+          isOpen={isOpenModal}
+          closeModal={closeModal}
           ariaLabel="закрити"
-          closeBtnStyles=""
+          closeBtnStyles="top-[30px] right-[30px]"
           modalStyles={'w-[300px] h-[200px] bg-white'}
-          isBurgerMenu={true}
-          isPopUp={false}
+          isBurgerMenu={false}
+          isPopUp={true}
         >
-          <p>Modal</p>
+          <p>Children</p>
         </Modal>
         <ul className="flex flex-col md:flex-row  md:mx-[2px] gap-[70px] md:gap-[82px] xl:gap-[124px]">
-          {icons.map(icon => {
+          {advantagesIcons.map((icon, id) => {
             return (
               <AdvantagesCard
-                key={icon.id}
+                key={id}
                 description={icon.text}
                 icon={icon.component}
-                isMiddleCard={icon.isMiddleCard}
               />
             );
           })}
         </ul>
-        <ul className="flex items-end gap-[50px] md:gap-[76px] w-[1096px] md:w-[1320px]">
-          {pots.map((pot: PotPropsType) => {
-            return <PotWithVolume key={pot.volume} volume={pot.volume} />;
+        <ul className="flex items-end gap-[40px] md:gap-[70px] w-[1482px] md:w-[1786px]">
+          {pots.map((pot: string) => {
+            return <PotWithVolume key={pot} volume={pot} />;
           })}
         </ul>
       </Container>
