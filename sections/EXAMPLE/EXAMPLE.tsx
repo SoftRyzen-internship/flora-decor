@@ -10,7 +10,7 @@ import { Logo } from '@/components/Logo';
 
 import { Button } from '@/components/Button';
 
-import { type PotPropsType } from '@/components/PotWithVolume/PotWithVolume';
+// import { type PotPropsType } from '@/components/PotWithVolume/PotWithVolume';
 
 import { SocialLinks } from '@/components/SocialLinks';
 import { AdvantagesCard } from '@/components/AdvantagesCard';
@@ -19,15 +19,15 @@ import React from 'react';
 
 import advantages from '@/data/advantages.json';
 
-import { PotWithVolume } from '@/components/PotWithVolume';
+// import { PotWithVolume } from '@/components/PotWithVolume';
 
-import data from '@/data/pots.json';
+// import data from '@/data/pots.json';
 // import { Ultra } from 'next/font/google';
 
 export const EXAMPLE = async () => {
   // const products = await getProducts();
   const { icons } = advantages;
-  const { pots } = data;
+  // const { pots } = data;
   return (
     <Section sectionId="hero" variant="heroSection">
       <Container>
@@ -114,11 +114,11 @@ export const EXAMPLE = async () => {
             );
           })}
         </ul>
-        <ul className="flex items-end gap-[50px] md:gap-[76px] w-[1096px] md:w-[1320px]">
+        {/* <ul className="flex items-end gap-[50px] md:gap-[76px] w-[1096px] md:w-[1320px]">
           {pots.map((pot: PotPropsType) => {
             return <PotWithVolume key={pot.volume} volume={pot.volume} />;
           })}
-        </ul>
+        </ul> */}
       </Container>
     </Section>
   );

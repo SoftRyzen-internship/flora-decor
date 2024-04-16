@@ -116,6 +116,14 @@ const config: Config = {
             letterSpacing: '-0.32px',
           },
         ],
+        subtitleXs: [
+          '14px',
+          {
+            lineHeight: '1.4',
+            fontWeight: '500',
+            letterSpacing: '-0.28px',
+          },
+        ],
 
         titleAboutMd: [
           '25px',
@@ -125,7 +133,7 @@ const config: Config = {
             letterSpacing: '-0.5px',
           },
         ],
-        description: [
+        descriptionFontSize: [
           '18px',
           {
             lineHeight: '1.3',

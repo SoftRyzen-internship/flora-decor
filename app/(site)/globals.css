@@ -103,3 +103,57 @@
 }
 
 /*advantages end*/
+
+/*-----Hero styles start-------*/
+.hero {
+  background-image: url('../../public/images/hero/heroBG-mobile.jpg');
+  background-repeat: no-repeat;
+  background-position: top 0px right 0px;
+  background-size:
+    480px 184px,
+    cover;
+  @apply bg-bgSecond;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url('../../public/images/hero/heroBG-mobile@2.jpg');
+  }
+}
+@media (min-width: 480px) {
+  .hero {
+    background-position: center top 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: url('../../public/images/hero/heroBG-tablet.jpg');
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: url('../../public/images/hero/heroBG-tablet@2.jpg');
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero {
+    background-image: url('../../public/images/hero/heroBG-desktop.jpg');
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: url('../../public/images/hero/heroBG-desktop@2.jpg');
+    }
+  }
+}
+
+/*-----Hero styles end-------*/
