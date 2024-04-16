@@ -117,6 +117,14 @@ const config: Config = {
             letterSpacing: '-0.32px',
           },
         ],
+        heroButton: [
+          '16px',
+          {
+            lineHeight: '1.5',
+            fontWeight: '800',
+            letterSpacing: '0.64',
+          },
+        ],
         subtitleXs: [
           '14px',
           {
