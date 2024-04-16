@@ -1,11 +1,12 @@
+import { Advantages } from '@/sections/Advantages';
 import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
 
 export default function Home() {
   return (
     <>
-      {/* <Hero />
+      {/* <Hero /> */}
       <Advantages />
-      <About />
+      {/* <About />
       <Flowerpots />
       <Goods />
       <Gallery />
