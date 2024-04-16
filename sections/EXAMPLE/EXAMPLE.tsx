@@ -117,7 +117,7 @@ export const EXAMPLE = () => {
             );
           })}
         </ul>
-        <ul className="flex items-end gap-[40px] md:gap-[70px] w-[1482px] md:w-[1786px]">
+        <ul className="flex items-end gap-[40px] gap:md-[70px] xl:gap-[76px] w-[1601px] md:w-[1817] xl:w-[1853px]">
           {pots.map((pot: string) => {
             return <PotWithVolume key={pot} volume={pot} />;
           })}
