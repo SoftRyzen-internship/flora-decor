@@ -1,11 +1,11 @@
-'use client';
+// 'use client';
 // import Image from 'next/image';
-// import { getProducts } from '@/sanity/requests/getProducts';
+import { getProducts } from '@/sanity/requests/getProducts';
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
 import { Navbar } from '@/components/Navbar';
-import { Modal } from '@/components/Modal/Modal';
+// import { Modal } from '@/components/Modal/Modal';
 import { Logo } from '@/components/Logo';
 
 import { Button } from '@/components/Button';
@@ -22,14 +22,24 @@ import advantages from '@/data/advantages.json';
 import { PotWithVolume } from '@/components/PotWithVolume';
 
 import data from '@/data/pots.json';
+import { ProductCard } from '@/components/ProductCard';
 // import { Ultra } from 'next/font/google';
 
+type Product = {
+  _id: string;
+  product: string;
+  image: string;
+  volumes: string[];
+  price: string;
+};
+
 export const EXAMPLE = async () => {
-  // const products = await getProducts();
+  const products = await getProducts();
+
   const { icons } = advantages;
   const { pots } = data;
   return (
-    <Section sectionId="hero" variant="heroSection">
+    <Section sectionId="hero" variant="heroSection" className="bg-bgSecond">
       <Container>
         <Logo isHeader />
         <Navbar />
@@ -43,26 +53,23 @@ export const EXAMPLE = async () => {
           center="left"
           variant="contactTitle"
         />
-        {/* <div className="flex flex-row justify-center  gap-11">
-          <Image
-            width={344}
-            height={420}
-            alt={products[0].product}
-            src={products[0].image}
-            priority={true}
-            placeholder="blur"
-            blurDataURL={products[0].image}
-          />
-          <Image
-            width={262}
-            height={320}
-            alt={products[1].product}
-            src={products[1].image}
-            priority={true}
-            placeholder="blur"
-            blurDataURL={products[1].image}
-          />
-        </div> */}
+        <div className="m-auto">
+          <div className="flex flex-row flex-wrap justify-between items-start xl:justify-start  gap-2">
+            {products.map(
+              ({ _id, product, image, volumes, price }: Product) => {
+                return (
+                  <ProductCard
+                    key={_id}
+                    product={product}
+                    image={image}
+                    volumes={volumes}
+                    price={price}
+                  />
+                );
+              },
+            )}
+          </div>
+        </div>
         <div className="flex flex-col gap-2 mt-5">
           <p> Лінк в хедері/ розміри тільки для десктопу</p>
           <Button isLink isHeaderLink isDisabled={false}>
@@ -92,7 +99,7 @@ export const EXAMPLE = async () => {
         <div className="bg-[#224722]">
           <SocialLinks />
         </div>
-        <Modal
+        {/* <Modal
           isOpen={true}
           ariaLabel="закрити"
           closeBtnStyles=""
@@ -101,7 +108,7 @@ export const EXAMPLE = async () => {
           isPopUp={false}
         >
           <p>Modal</p>
-        </Modal>
+        </Modal> */}
         <ul className="flex flex-col md:flex-row  md:mx-[2px] gap-[70px] md:gap-[82px] xl:gap-[124px]">
           {icons.map(icon => {
             return (
