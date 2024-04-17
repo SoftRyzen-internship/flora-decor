@@ -1,0 +1,31 @@
+{
+  "checkText": "Даю згоду на обробку персональних даних",
+  "inputFieldsUp": [
+    {
+      "name": "name",
+      "label": "Ім’я *",
+      "placeholder": "Іван Іванов",
+      "type": "text"
+    },
+    {
+      "name": "phone",
+      "label": "Телефон *",
+      "placeholder": "+380988888545",
+      "type": "phone"
+    }
+  ],
+  "inputFieldsDown": [
+    {
+      "name": "email",
+      "label": "Пошта *",
+      "placeholder": "ivanovivan@gmail.com",
+      "type": "email"
+    },
+    {
+      "name": "message",
+      "label": "Залиш повідомлення *",
+      "placeholder": "Залиш повідомлення",
+      "type": "textarea"
+    }
+  ]
+}

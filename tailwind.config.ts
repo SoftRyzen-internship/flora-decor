@@ -12,11 +12,11 @@ const config: Config = {
     screens: {
       sm: '480px',
       md: '768px',
-      xl: '1280px',
+      xl: '1400px',
 
       smOnly: { max: '767.98px' },
       mdOnly: { min: '768px', max: '1279.98px' },
-      notXL: { max: '1279.98px' },
+      notXL: { max: '1399.98px' },
     },
 
     extend: {
@@ -26,7 +26,7 @@ const config: Config = {
           DEFAULT: '20px',
           sm: '20px',
           md: '42px',
-          xl: '60px',
+          xl: '40px',
         },
       },
 
@@ -53,6 +53,9 @@ const config: Config = {
         btnSecondActive: '#BAC8A2',
         disabledBtn: '#C1C0C0',
         secondDisabledBtn: '#797979',
+        backdropCol: 'rgba(48, 48, 54, 0.25)',
+        activeLink: '#D5DDC9',
+        border: '#8EA58E',
       },
 
       fontSize: {
@@ -113,6 +116,14 @@ const config: Config = {
             letterSpacing: '-0.32px',
           },
         ],
+        heroButton: [
+          '16px',
+          {
+            lineHeight: '1.5',
+            fontWeight: '800',
+            letterSpacing: '0.64',
+          },
+        ],
 
         titleAboutMd: [
           '25px',
@@ -120,6 +131,20 @@ const config: Config = {
             lineHeight: '1.2',
             fontWeight: '600',
             letterSpacing: '-0.5px',
+          },
+        ],
+        description: [
+          '18px',
+          {
+            lineHeight: '1.3',
+            fontWeight: '500',
+          },
+        ],
+        descriptionDesktop: [
+          '24px',
+          {
+            lineHeight: '1.3',
+            fontWeight: '500',
           },
         ],
       },
