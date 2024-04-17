@@ -26,16 +26,11 @@ export const Modal = ({
   isBurgerMenu,
   isPopUp,
 }: ModalPropsTypes) => {
-  // const [isOpenModal, setIsOpenModal] = useState(isOpen);
-
   const styesName = classNames({
-    'fixed inset-y-0 right-0 flex max-w-full': isBurgerMenu,
+    'fixed inset-y-0 right-0 flex w-[360px]': isBurgerMenu,
     'flex min-h-full items-center justify-center': isPopUp,
   });
 
-  // function closeModal() {
-  //   setIsOpenModal(false);
-  // }
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={closeModal}>

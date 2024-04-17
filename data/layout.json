@@ -6,6 +6,9 @@
     { "title": "Контакти", "path": "#contacts" }
   ],
 
+  "ariaLBurger": "Відкрити мобільне меню",
+  "ariaLMenuMobileClose": "Закрити мобільне меню",
+  "labelLink": "Залишити заявку",
   "location": {
     "label": "Львів, Майорівка.",
     "labelSpan": "Вул. Пасічна 53"
