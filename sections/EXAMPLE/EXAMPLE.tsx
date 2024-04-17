@@ -1,4 +1,4 @@
-// 'use client';
+'use client';
 import Image from 'next/image';
 import { getProducts } from '@/sanity/requests/getProducts';
 import { Section } from '@/components/Section';

@@ -1,3 +1,4 @@
+'use client';
 import { ReactNode } from 'react';
 
 import { Link as ScrollLink } from 'react-scroll';
