@@ -125,7 +125,7 @@ const config: Config = {
             letterSpacing: '-0.5px',
           },
         ],
-        description: [
+        descriptionFontSize: [
           '18px',
           {
             lineHeight: '1.3',

@@ -152,3 +152,55 @@ input[type='checkbox']:checked:focus + label .custom-checkbox {
 }
 
 /*advantages end*/
+
+/*about section */
+
+.about {
+  height: 868px;
+  background-color: #e7eddd;
+  background-image: url('../../public/images/about/aboutBG-mobile.jpg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size:
+    480px 347px,
+    cover;
+  /* clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); */
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .about {
+    background-image: url('../../public/images/about/aboutBG-mobile@2.jpg');
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .about {
+    background-position: center top;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about {
+    height: 874px;
+    background-color: #e7eddd;
+    background-image: url('../../public/images/about/aboutBG-tablet.jpg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size:
+      768px 429px,
+      cover;
+  }
+}
+@media (min-width: 1400px) {
+  .about {
+    height: 700px;
+    background-image: url('../../public/images/about/aboutBG-desktop.jpg');
+
+    background-position:
+      right calc(200% - 112px) top 0,
+      top;
+    background-size: 1043px 700px;
+    /* auto; */
+  }
+}
+/*about section end*/

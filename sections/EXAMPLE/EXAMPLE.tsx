@@ -23,6 +23,7 @@ import { Form } from '@/components/Form';
 import { PotWithVolume } from '@/components/PotWithVolume';
 
 import data from '@/data/pots.json';
+import { About } from '../About';
 // import { Ultra } from 'next/font/google';
 
 export const EXAMPLE = async () => {
@@ -32,46 +33,48 @@ export const EXAMPLE = async () => {
   const { pots } = data;
 
   return (
-    <Section sectionId="hero" className="bg-bgSecond" variant="heroSection">
-      <Container>
-        <Logo isHeader />
-        <Navbar />
-        <SectionTitle
-          label="Section Title"
-          center="center"
-          variant="otherTitle"
-        />
-        <SectionTitle
-          label="Section Title for contacts"
-          center="left"
-          variant="contactTitle"
-        />
+    <>
+      <About />
+      <Section sectionId="hero" className="bg-bgSecond" variant="heroSection">
+        <Container>
+          <Logo isHeader />
+          <Navbar />
+          <SectionTitle
+            label="Section Title"
+            center="center"
+            variant="otherTitle"
+          />
+          <SectionTitle
+            label="Section Title for contacts"
+            center="left"
+            variant="contactTitle"
+          />
 
-        <div className=" py-10">
-          <Form />
-        </div>
+          <div className=" py-10">
+            <Form />
+          </div>
 
-        <div className="flex flex-row flex-wrap gap-2">
-          {products.map((product: any) => {
-            return (
-              <div
-                key={product.product}
-                className="rounded-xl bg-white overflow-hidden w-[320px] h-[360px] xl:w-[430px]  xl:h-[500px]  "
-              >
-                <Image
-                  width={430}
-                  height={500}
-                  alt={product.product}
-                  src={product.image}
-                  priority={true}
-                  placeholder="blur"
-                  blurDataURL={product.image}
-                />
-              </div>
-            );
-          })}
-        </div>
-        {/* <div className="flex flex-col gap-2 mt-5">
+          <div className="flex flex-row flex-wrap gap-2">
+            {products.map((product: any) => {
+              return (
+                <div
+                  key={product.product}
+                  className="rounded-xl bg-white overflow-hidden w-[320px] h-[360px] xl:w-[430px]  xl:h-[500px]  "
+                >
+                  <Image
+                    width={430}
+                    height={500}
+                    alt={product.product}
+                    src={product.image}
+                    priority={true}
+                    placeholder="blur"
+                    blurDataURL={product.image}
+                  />
+                </div>
+              );
+            })}
+          </div>
+          {/* <div className="flex flex-col gap-2 mt-5">
           <p> Лінк в хедері/ розміри тільки для десктопу</p>
           <Button isLink isHeaderLink isDisabled={false}>
             Залишити заявку
@@ -124,12 +127,13 @@ export const EXAMPLE = async () => {
 
         </ul> */}
 
-        <ul className="flex items-end gap-[50px] md:gap-[76px] w-[1096px] md:w-[1320px]">
-          {pots.map((pot: PotPropsType) => {
-            return <PotWithVolume key={pot.volume} volume={pot.volume} />;
-          })}
-        </ul>
-      </Container>
-    </Section>
+          <ul className="flex items-end gap-[50px] md:gap-[76px] w-[1096px] md:w-[1320px]">
+            {pots.map((pot: PotPropsType) => {
+              return <PotWithVolume key={pot.volume} volume={pot.volume} />;
+            })}
+          </ul>
+        </Container>
+      </Section>
+    </>
   );
 };
