@@ -6,7 +6,7 @@ import LogoIcon from '@/public/icons/logo.svg';
 import common from '@/data/common.json';
 
 type LogoProps = {
-  isHeader: boolean;
+  isHeader?: boolean;
   isFooter?: boolean;
 };
 
