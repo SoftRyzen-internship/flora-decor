@@ -5,13 +5,13 @@ import { useMediaQuery } from 'react-responsive';
 
 import { Container } from '@/components/Container';
 import { Logo } from '@/components/Logo';
+import { BurgerMenu } from '@/components/BurgerMenu';
+import { Navbar } from '@/components/Navbar';
+import { Button } from '@/components/Button';
 
 import Burger from '@/public/icons/menu.svg';
 
 import data from '@/data/layout.json';
-import { BurgerMenu } from '@/components/BurgerMenu';
-import { Navbar } from '@/components/Navbar';
-import { Button } from '@/components/Button';
 
 export const Header = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false);
@@ -25,9 +25,8 @@ export const Header = () => {
   const { ariaLBurger } = data;
 
   return (
-    <header className="py-[10px] xl:py-5 bg-bgMain fixed top-0 left-0 w-full">
+    <header className="py-[10px] xl:py-5 bg-bgMain fixed top-0 left-0 w-full z-10">
       <Container className="flex items-center justify-between">
-        {/* {isDesktop && <Navbar />} */}
         <Navbar className="notXL:hidden" />
         <Logo isHeader />
         <Button
