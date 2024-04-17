@@ -46,7 +46,7 @@ export const Modal = ({
           <div className="fixed inset-0 bg-backdropCol backdrop-filter" />
         </Transition.Child>
 
-        <div className="fixed inset-0 overflow-y-aut">
+        <div className="fixed inset-0 overflow-y-auto">
           <div className={styesName}>
             <Transition.Child
               as={Fragment}
@@ -71,7 +71,7 @@ export const Modal = ({
             >
               <Dialog.Panel
                 className={
-                  (classNames('transform overflow-hidden transition-al'),
+                  (classNames('transform overflow-hidden transition-all'),
                   modalStyles)
                 }
               >

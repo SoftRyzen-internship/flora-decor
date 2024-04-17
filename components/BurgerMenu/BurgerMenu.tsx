@@ -31,7 +31,7 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({
       modalStyles="w-full bg-bgMain h-[640px] md:h-[610px] pt-[15px] z-50"
     >
       <Container>
-        <Logo isHeader onClick={onBurgerMenuClose} className="" />
+        <Logo isHeader onClick={onBurgerMenuClose} />
         <Navbar onClickCloseModal={onBurgerMenuClose} className="mt-[65px]" />
         <Button
           isLink

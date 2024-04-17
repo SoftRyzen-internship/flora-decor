@@ -6,7 +6,7 @@
     { "title": "Контакти", "path": "#contacts" }
   ],
 
-  "ariaLBurger": "іконка відкриття мобільного меню",
-  "ariaLMenuMobileClose": "іконка закриття мобільного меню",
+  "ariaLBurger": "Відкрити мобільне меню",
+  "ariaLMenuMobileClose": "Закрити мобільне меню",
   "labelLink": "Залишити заявку"
 }

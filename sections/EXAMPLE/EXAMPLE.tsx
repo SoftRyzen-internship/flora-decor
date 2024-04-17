@@ -111,7 +111,7 @@ export const EXAMPLE = async () => {
           })}
         </ul> */}
 
-        <ul className="flex flex-col items-end gap-[40px] md:gap-[70px] w-[50%] mt-8">
+        <ul className="flex flex-col items-end gap-[40px] md:gap-[70px] w-1/2 mt-8">
           {pots.map((pot: string) => {
             return <PotWithVolume key={pot} volume={pot} />;
           })}
