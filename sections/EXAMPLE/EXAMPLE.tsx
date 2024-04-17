@@ -15,7 +15,7 @@ import { Logo } from '@/components/Logo';
 
 import React from 'react';
 import { Form } from '@/components/Form';
-import { PotWithVolume } from '@/components/PotWithVolume';
+// import { PotWithVolume } from '@/components/PotWithVolume';
 
 // import { advantagesIcons } from '@/data/advantagesIcons';
 // import { Ultra } from 'next/font/google';
@@ -24,7 +24,7 @@ export const EXAMPLE = async () => {
   const products = await getProducts();
 
   // const { icons } = advantages;
-  const pots = ['11', '12', '13', '14', '15', '17', '19', '23'];
+  // const pots = ['11', '12', '13', '14', '15', '17', '19', '23'];
 
   // const [isOpenModal, setIsOpenModal] = useState(true);
 
@@ -124,11 +124,11 @@ export const EXAMPLE = async () => {
           })}
         </ul> */}
 
-        <ul className="flex items-end gap-[40px] md:gap-[70px] w-[1482px] md:w-[1786px]">
+        {/* <ul className="flex items-end gap-[40px] md:gap-[70px] w-[1482px] md:w-[1786px] xl:w-[1853]">
           {pots.map((pot: string) => {
             return <PotWithVolume key={pot} volume={pot} />;
           })}
-        </ul>
+        </ul> */}
       </Container>
     </Section>
   );
