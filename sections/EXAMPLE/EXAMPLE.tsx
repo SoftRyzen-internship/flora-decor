@@ -4,11 +4,6 @@ import { getProducts } from '@/sanity/requests/getProducts';
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
-import { Navbar } from '@/components/Navbar';
-// import { Modal } from '@/components/Modal/Modal';
-import { Logo } from '@/components/Logo';
-
-// import { Button } from '@/components/Button';
 
 // import { SocialLinks } from '@/components/SocialLinks';
 // import { AdvantagesCard } from '@/components/AdvantagesCard';
@@ -26,17 +21,9 @@ export const EXAMPLE = async () => {
   // const { icons } = advantages;
   const pots = ['11', '12', '13', '14', '15', '17', '19', '23'];
 
-  // const [isOpenModal, setIsOpenModal] = useState(true);
-
-  // function closeModal() {
-  //   setIsOpenModal(false);
-  // }
-
   return (
     <Section sectionId="hero" className="bg-bgSecond" variant="heroSection">
       <Container>
-        <Logo isHeader />
-        <Navbar />
         <SectionTitle
           label="Section Title"
           center="center"
@@ -124,7 +111,7 @@ export const EXAMPLE = async () => {
           })}
         </ul> */}
 
-        <ul className="flex items-end gap-[40px] md:gap-[70px] w-[1482px] md:w-[1786px]">
+        <ul className="flex flex-col items-end gap-[40px] md:gap-[70px] w-1/2 mt-8">
           {pots.map((pot: string) => {
             return <PotWithVolume key={pot} volume={pot} />;
           })}

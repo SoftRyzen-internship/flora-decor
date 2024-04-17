@@ -8,7 +8,7 @@ type ContainerProps = {
 
 export const Container: React.FC<ContainerProps> = ({
   children,
-  className,
+  className = '',
 }) => {
   return <div className={classNames('container', className)}>{children}</div>;
 };
