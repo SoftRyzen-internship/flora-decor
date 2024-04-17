@@ -4,5 +4,9 @@
     { "title": "Товари", "path": "#goods" },
     { "title": "Відгуки", "path": "#reviews" },
     { "title": "Контакти", "path": "#contacts" }
-  ]
+  ],
+
+  "ariaLBurger": "Відкрити мобільне меню",
+  "ariaLMenuMobileClose": "Закрити мобільне меню",
+  "labelLink": "Залишити заявку"
 }
