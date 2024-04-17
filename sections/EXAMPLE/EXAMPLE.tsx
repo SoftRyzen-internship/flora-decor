@@ -1,44 +1,32 @@
-'use client';
+// 'use client';
 import Image from 'next/image';
 import { getProducts } from '@/sanity/requests/getProducts';
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
-import { Navbar } from '@/components/Navbar';
-// import { Modal } from '@/components/Modal/Modal';
-import { Logo } from '@/components/Logo';
-
-// import { Button } from '@/components/Button';
-
-// import { type PotPropsType } from '@/components/PotWithVolume/PotWithVolume';
 
 // import { SocialLinks } from '@/components/SocialLinks';
 // import { AdvantagesCard } from '@/components/AdvantagesCard';
 
 import React from 'react';
-
-// import advantages from '@/data/advantages.json';
 import { Form } from '@/components/Form';
-
-// import { PotWithVolume } from '@/components/PotWithVolume';
-
-// import data from '@/data/pots.json';
+import { PotWithVolume } from '@/components/PotWithVolume';
 import { About } from '../About';
+
+// import { advantagesIcons } from '@/data/advantagesIcons';
 // import { Ultra } from 'next/font/google';
 
 export const EXAMPLE = async () => {
   const products = await getProducts();
 
   // const { icons } = advantages;
-  // const { pots } = data;
+  const pots = ['11', '12', '13', '14', '15', '17', '19', '23'];
 
   return (
     <>
       <About />
       <Section sectionId="hero" className="bg-bgSecond" variant="heroSection">
         <Container>
-          <Logo isHeader />
-          <Navbar />
           <SectionTitle
             label="Section Title"
             center="center"
@@ -99,39 +87,38 @@ export const EXAMPLE = async () => {
           <Button isLink={false} isBtn isDisabled={true} type="submit">
             Замовити
           </Button>
-        </div>
-        <div className="bg-[#224722]">
+        </div> */}
+          {/* <div className="bg-[#224722]">
           <SocialLinks />
-        </div>
-        <Modal
-          isOpen={true}
+        </div> */}
+          {/* <Modal
+          isOpen={isOpenModal}
+          closeModal={closeModal}
           ariaLabel="закрити"
-          closeBtnStyles=""
+          closeBtnStyles="top-[30px] right-[30px]"
           modalStyles={'w-[300px] h-[200px] bg-white'}
-          isBurgerMenu={true}
-          isPopUp={false}
+          isBurgerMenu={false}
+          isPopUp={true}
         >
-          <p>Modal</p>
-        </Modal>
-        <ul className="flex flex-col md:flex-row  md:mx-[2px] gap-[70px] md:gap-[82px] xl:gap-[124px]">
-          {icons.map(icon => {
+          <p>Children</p>
+        </Modal> */}
+          {/* <ul className="flex flex-col md:flex-row  md:mx-[2px] gap-[70px] md:gap-[82px] xl:gap-[124px]">
+          {advantagesIcons.map((icon, id) => {
             return (
               <AdvantagesCard
-                key={icon.id}
+                key={id}
                 description={icon.text}
                 icon={icon.component}
-                isMiddleCard={icon.isMiddleCard}
               />
             );
           })}
-
         </ul> */}
 
-          {/* <ul className="flex items-end gap-[50px] md:gap-[76px] w-[1096px] md:w-[1320px]">
-            {pots.map((pot: PotPropsType) => {
-              return <PotWithVolume key={pot.volume} volume={pot.volume} />;
+          <ul className="flex flex-col items-end gap-[40px] md:gap-[70px] w-1/2 mt-8">
+            {pots.map((pot: string) => {
+              return <PotWithVolume key={pot} volume={pot} />;
             })}
-          </ul> */}
+          </ul>
         </Container>
       </Section>
     </>
