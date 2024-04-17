@@ -11,11 +11,12 @@ export const About = () => {
     <Section
       sectionId="about"
       variant="aboutOrContactSection"
-      className="about pt-[377px]  pb-[60px] md:pt-[459px] md:pb-[70px] xl:py-[133px]"
+      className="bg-bgSecond pt-[377px]   md:pt-[459px]  xl:py-[133px]"
     >
-      {/* <div className="mb-[30px] h-[347px] bg-bgSecond  overflow-hidden rounded-br-[90px]"></div> */}
       <Container>
-        <div className=" w-full  md:m-auto md:w-[561px] xl:ml-auto xl:mr-[63px] xl:w-[589px]">
+        <div className=" relative w-full  md:m-auto md:w-[561px] xl:ml-[688px] xl:mr-[63px] xl:w-[589px]">
+          <div className=" about "></div>
+
           <SectionTitle
             className="w-full text-[20px] leading-[1.2] font-semibold tracking-[-0.4px] md:text-titleAboutMd mb-[15px] md:mb-5  md:w-[561px] xl:w-[589px]"
             label={label}
@@ -28,7 +29,7 @@ export const About = () => {
           <p className="w-[304px] mb-[30px] md:mb-[40px]  md:w-[450px]  text-description text-[14px] leading-[1.4] tracking-[-0.28px] font-geologica font-medium xl:text-subtitleMd  text-left  xl:w-[490px]">
             {text2}
           </p>
-          <Button isLink isBtn isDisabled={false}>
+          <Button isBtn isDisabled={false}>
             Замовити
           </Button>
         </div>

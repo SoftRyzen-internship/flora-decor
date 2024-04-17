@@ -156,15 +156,15 @@ input[type='checkbox']:checked:focus + label .custom-checkbox {
 /*about section */
 
 .about {
-  height: 868px;
-  background-color: #e7eddd;
+  position: absolute;
+  top: -377px;
+  left: calc(100% - 460px);
+  height: 347px;
+  width: 480px;
   background-image: url('../../public/images/about/aboutBG-mobile.jpg');
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size:
-    480px 347px,
-    cover;
-  /* clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); */
+  background-position: center;
+  background-size: cover;
+  border-bottom-right-radius: 230px;
 }
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
@@ -174,33 +174,47 @@ input[type='checkbox']:checked:focus + label .custom-checkbox {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .about {
-    background-position: center top;
-  }
-}
 @media screen and (min-width: 768px) {
   .about {
-    height: 874px;
-    background-color: #e7eddd;
+    position: absolute;
+    top: -459px;
+    left: -106px;
+    height: 429px;
+    width: 768px;
     background-image: url('../../public/images/about/aboutBG-tablet.jpg');
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size:
-      768px 429px,
-      cover;
+    background-position: bottom;
+    background-size: cover;
+    border-bottom-right-radius: 300px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .about {
+      background-image: url('../../public/images/about/aboutBG-tablet@2.jpg');
+    }
   }
 }
+
 @media (min-width: 1400px) {
   .about {
+    position: absolute;
+    top: -133px;
+    left: -1155px;
     height: 700px;
+    width: 1043px;
     background-image: url('../../public/images/about/aboutBG-desktop.jpg');
+    background-position: center;
+    background-size: cover;
+    border-bottom-right-radius: 400px;
+  }
 
-    background-position:
-      right calc(200% - 112px) top 0,
-      top;
-    background-size: 1043px 700px;
-    /* auto; */
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .about {
+      background-image: url('../../public/images/about/aboutBG-desktop@2.jpg');
+    }
   }
 }
+
 /*about section end*/
