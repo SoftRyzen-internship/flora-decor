@@ -11,6 +11,7 @@ import { SectionTitle } from '@/components/SectionTitle';
 import React from 'react';
 import { Form } from '@/components/Form';
 import { PotWithVolume } from '@/components/PotWithVolume';
+import { Slider } from '@/components/Slider';
 
 // import { advantagesIcons } from '@/data/advantagesIcons';
 // import { Ultra } from 'next/font/google';
@@ -116,6 +117,7 @@ export const EXAMPLE = async () => {
             return <PotWithVolume key={pot} volume={pot} />;
           })}
         </ul>
+        <Slider />
       </Container>
     </Section>
   );
