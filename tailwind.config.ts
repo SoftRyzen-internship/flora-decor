@@ -56,6 +56,7 @@ const config: Config = {
         backdropCol: 'rgba(48, 48, 54, 0.25)',
         activeLink: '#D5DDC9',
         border: '#8EA58E',
+        subtitleMdCol: '#407040',
       },
 
       fontSize: {
@@ -122,6 +123,14 @@ const config: Config = {
             lineHeight: '1.5',
             fontWeight: '800',
             letterSpacing: '0.64',
+          },
+        ],
+        subtitleXs: [
+          '14px',
+          {
+            lineHeight: '1.4',
+            fontWeight: '500',
+            letterSpacing: '-0.28px',
           },
         ],
 
