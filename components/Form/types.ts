@@ -4,5 +4,5 @@ export type FormInput = {
   name: keyof FormData;
   label: string;
   placeholder: string;
-  type?: 'text' | 'phone' | 'email' | 'textarea' | 'checkbox';
+  type: 'text' | 'phone' | 'email' | 'textarea' | 'checkbox';
 };
