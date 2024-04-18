@@ -6,7 +6,7 @@ import { SectionTitle } from '@/components/SectionTitle';
 
 // import { AdvantagesCard } from '@/components/AdvantagesCard';
 
-import { Form } from '@/components/Form';
+// import { Form } from '@/components/Form';
 import { PotWithVolume } from '@/components/PotWithVolume';
 import { Goods } from '../Goods';
 
@@ -33,9 +33,9 @@ export const EXAMPLE = () => {
             variant="contactTitle"
           />
 
-          <div className=" py-10">
+          {/* <div className=" py-10">
             <Form />
-          </div>
+          </div> */}
 
           {/* <div className="flex flex-col gap-2 mt-5">
           <p> Лінк в хедері/ розміри тільки для десктопу</p>
