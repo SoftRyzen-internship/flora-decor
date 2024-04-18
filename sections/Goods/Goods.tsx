@@ -41,7 +41,13 @@ export const Goods = async () => {
           })}
         </div>
 
-        <Button isLink={false} isBtn isDisabled={false} type="button">
+        <Button
+          isLink={false}
+          isBtn
+          isDisabled={false}
+          type="button"
+          className="xl:hidden"
+        >
           Більше
         </Button>
       </Container>

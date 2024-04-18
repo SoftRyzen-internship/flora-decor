@@ -1,33 +1,40 @@
 'use client';
 
-import { Section } from '@/components/Section';
-import { Container } from '@/components/Container';
-import { Modal } from '@/components/Modal/Modal';
+import { useState } from 'react';
 
-import React, { useState } from 'react';
+import { Modal } from '@/components/Modal';
 
 export const ExampleModal = () => {
-  const [isOpenModal, setIsOpenModal] = useState(true);
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+  function openModal() {
+    setIsOpenModal(true);
+  }
 
   function closeModal() {
     setIsOpenModal(false);
   }
 
   return (
-    <Section sectionId="hero" className="bg-bgSecond" variant="heroSection">
-      <Container>
-        <Modal
-          isOpen={isOpenModal}
-          closeModal={closeModal}
-          ariaLabel="закрити"
-          closeBtnStyles="top-[30px] right-[30px]"
-          modalStyles={'w-[300px] h-[200px] bg-white'}
-          isBurgerMenu={false}
-          isPopUp={true}
-        >
-          <p>Children</p>
-        </Modal>
-      </Container>
-    </Section>
+    <>
+      <button
+        type="button"
+        onClick={openModal}
+        className="uppercase text-main text-base"
+      >
+        OPEN EXAMPLE MODAL
+      </button>
+      <Modal
+        isOpen={isOpenModal}
+        closeModal={closeModal}
+        ariaLabel="закрити"
+        closeBtnStyles="top-[30px] right-[30px]"
+        modalStyles={'w-[300px] h-[200px] bg-white'}
+        isBurgerMenu={false}
+        isPopUp={true}
+      >
+        <p>Children</p>
+      </Modal>
+    </>
   );
 };

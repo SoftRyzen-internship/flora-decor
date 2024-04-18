@@ -1,13 +1,11 @@
-// 'use client';
+import React from 'react';
 
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
 
-// import { SocialLinks } from '@/components/SocialLinks';
 // import { AdvantagesCard } from '@/components/AdvantagesCard';
 
-import React from 'react';
 import { Form } from '@/components/Form';
 import { PotWithVolume } from '@/components/PotWithVolume';
 import { Goods } from '../Goods';
@@ -22,7 +20,6 @@ export const EXAMPLE = () => {
   return (
     <>
       <Goods />
-
       <Section sectionId="hero" className="bg-bgSecond" variant="heroSection">
         <Container>
           <SectionTitle
@@ -81,6 +78,10 @@ export const EXAMPLE = () => {
           <p>Children</p>
         </Modal> */}
           {/* <ul className="flex flex-col md:flex-row  md:mx-[2px] gap-[70px] md:gap-[82px] xl:gap-[124px]">
+
+
+        {/* <ul className="flex flex-col md:flex-row  md:mx-[2px] gap-[70px] md:gap-[82px] xl:gap-[124px]">
+
           {advantagesIcons.map((icon, id) => {
             return (
               <AdvantagesCard
