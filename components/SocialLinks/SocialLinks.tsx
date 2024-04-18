@@ -6,7 +6,7 @@ export const SocialLinks = () => {
   const { socials } = data;
 
   return (
-    <ul className="flex gap-6 justify-center mb-[90px]">
+    <ul className="flex gap-6 justify-center smOnly:mb-[90px] md:justify-start">
       {socials.map(item => (
         <SocialsItem
           key={item.name}

@@ -57,6 +57,7 @@ const config: Config = {
         activeLink: '#D5DDC9',
         border: '#8EA58E',
         subtitleMdCol: '#407040',
+        footerColor: '#ABB999',
       },
 
       fontSize: {
