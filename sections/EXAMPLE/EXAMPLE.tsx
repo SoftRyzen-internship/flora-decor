@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Goods } from '../Goods';
+import { About } from '../About';
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
@@ -8,7 +10,6 @@ import { SectionTitle } from '@/components/SectionTitle';
 
 // import { Form } from '@/components/Form';
 import { PotWithVolume } from '@/components/PotWithVolume';
-import { Goods } from '../Goods';
 
 // import { advantagesIcons } from '@/data/advantagesIcons';
 // import { Ultra } from 'next/font/google';
@@ -19,6 +20,7 @@ export const EXAMPLE = () => {
 
   return (
     <>
+      <About />
       <Goods />
       <Section sectionId="hero" className="bg-bgSecond" variant="heroSection">
         <Container>
