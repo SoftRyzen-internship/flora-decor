@@ -10,16 +10,19 @@ export type PotPropsType = {
 };
 
 export const PotWithVolume = ({ volume }: PotPropsType) => {
-  const stylesName = classNames('flex flex-col  items-center justify-between', {
-    'w-[120px] h-[116px]': volume === '11',
-    'w-[130px] h-[125px]': volume === '12',
-    'w-[140px] h-[134px]': volume === '13',
-    'w-[150px] h-[143px]': volume === '14',
-    'w-[160px] h-[152px]': volume === '15',
-    'w-[180px] h-[170px]': volume === '17',
-    'w-[201px] h-[188px]': volume === '19',
-    'w-[240px] h-[224px]': volume === '23',
-  });
+  const stylesName = classNames(
+    'flex flex-col  items-center justify-between mb-[36px] md:mb-[56px] xl:mb-[70px]',
+    {
+      'w-[120px] h-[116px]': volume === '11',
+      'w-[130px] h-[125px]': volume === '12',
+      'w-[140px] h-[134px]': volume === '13',
+      'w-[150px] h-[143px]': volume === '14',
+      'w-[160px] h-[152px]': volume === '15',
+      'w-[180px] h-[170px]': volume === '17',
+      'w-[201px] h-[188px]': volume === '19',
+      'w-[240px] h-[224px]': volume === '23',
+    },
+  );
 
   return (
     <div className={stylesName}>
