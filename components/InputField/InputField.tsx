@@ -9,7 +9,7 @@ type InputFieldPropsType = {
   name: keyof FormData;
   label: string;
   placeholder: string;
-  type?: 'text' | 'phone' | 'email' | 'textarea' | 'checkbox';
+  type: 'text' | 'phone' | 'email' | 'textarea' | 'checkbox';
   className?: string;
 };
 

@@ -7,6 +7,8 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <EXAMPLE />
+      <ExampleModal />
       <Advantages />
       {/* {/* <About />
       <Flowerpots />
@@ -15,8 +17,6 @@ export default function Home() {
       <Reviews />
       <Questions />
       <Contacts /> */}
-      <EXAMPLE />
-      <ExampleModal />
     </>
   );
 }
