@@ -27,7 +27,7 @@ export const Modal = ({
   isPopUp,
 }: ModalPropsTypes) => {
   const styesName = classNames({
-    'fixed inset-y-0 right-0 flex w-[360px]': isBurgerMenu,
+    'fixed inset-y-0 right-0 flex w-[100%] sm:w-[360px]': isBurgerMenu,
     'flex min-h-full items-center justify-center': isPopUp,
   });
 
@@ -80,7 +80,7 @@ export const Modal = ({
                     type="button"
                     onClick={closeModal}
                     className={classNames(
-                      'absolute block text-main hover:text-btnSecondHover focus:text-btnSecondHover active:text-btnSecondActive transition-all duration-300',
+                      'absolute block text-main hover:text-subtitle transition-all duration-300',
                       closeBtnStyles,
                     )}
                     aria-label={ariaLabel}
