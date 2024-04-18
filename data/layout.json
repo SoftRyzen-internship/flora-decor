@@ -9,6 +9,7 @@
   "ariaLBurger": "Відкрити мобільне меню",
   "ariaLMenuMobileClose": "Закрити мобільне меню",
   "labelLink": "Залишити заявку",
+
   "location": {
     "label": "Львів, Майорівка.",
     "labelSpan": "Вул. Пасічна 53"
@@ -19,13 +20,39 @@
       "name": "mail",
       "label": "olenka_b@ukr.net",
       "href": "mailto:olenka_b@ukr.net",
-      "ariaLabel": "іконка пошти"
+      "ariaLabel": "посилання на пошту"
     },
     {
       "name": "phone",
       "label": "+380501576337",
       "href": "tel:+380501576337",
-      "ariaLabel": "іконка телефону"
+      "ariaLabel": "посилання на номер телефону"
     }
-  ]
+  ],
+
+  "delivery": "Способи доставки:",
+  "deliveryIcons": [
+    {
+      "name": "ukr"
+    },
+    {
+      "name": "nova"
+    }
+  ],
+  "companyIcons": [
+    {
+      "name": "goit",
+      "path": "https://goit.global/ua/",
+      "ariaLabel": "посилання на веб-сайт GoIT"
+    },
+    {
+      "name": "softryzen",
+      "path": "https://www.softryzen.com/",
+      "ariaLabel": "посилання на веб-сайт SoftRyzen"
+    }
+  ],
+
+  "subtitle": "Створено при підтримці",
+  "homeBtn": "Головна",
+  "policyBtn": "Політика конфіденційності"
 }

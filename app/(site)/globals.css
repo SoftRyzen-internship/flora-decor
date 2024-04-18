@@ -146,3 +146,22 @@ input[type='checkbox']:checked:focus + label .custom-checkbox {
 }
 
 /*advantages end*/
+
+/*footer*/
+
+.footer-item:hover .footer-icon {
+  background-color: #508050;
+  @apply transition;
+}
+
+.border-container::before {
+  content: '';
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  width: 100vw;
+  height: 0.5px;
+  @apply bg-bgMain;
+}
+
+/*footer end*/
