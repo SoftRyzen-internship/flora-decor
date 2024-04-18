@@ -16,8 +16,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   price,
 }) => {
   return (
-    <div className="bg-transparent w-full sm:w-[480px] md:w-[320px] xl:w-[430px] ">
-      <div className="flex justify-center items-center rounded-xl bg-white  overflow-hidden w-full sm:w-[440px] md:w-[320px] xl:w-[430px]   xl:h-[500px]  ">
+    <div className="bg-transparent w-full sm:w-[480px] md:w-[320px] xl:w-[430px] mb-[30px] xl:mb-[21px] ">
+      <div className="flex justify-center items-center rounded-xl bg-white  overflow-hidden w-full sm:w-[440px] md:w-[320px] xl:w-[430px] mb-5   xl:h-[500px]  ">
         <Image
           width={430}
           height={500}
@@ -29,7 +29,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           className="object-cover"
         />
       </div>
-      <div className="flex flex-col items-start w-full py-5">
+      <div className="flex flex-col items-start w-full">
         <div className="flex flex-col items-start w-full gap-[10px] xl:flex-row-reverse xl:justify-between mb-[10px]">
           <ul className="flex flex-row gap-[7px]">
             {volumes.map((volume, index) => {
@@ -49,7 +49,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             {product}
           </h3>
         </div>
-        <p className="font-geologica text-[14px] leading-[1.4] tracking-[-0.28px] xl:text-subtitleMd text-main">
+        <p className="font-geologica text-[14px] leading-[1.4] tracking-[-0.28px] xl:text-subtitleMd text-main ">
           від <span>{price} </span>грн
         </p>
       </div>
