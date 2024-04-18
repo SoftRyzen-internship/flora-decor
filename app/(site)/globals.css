@@ -151,13 +151,13 @@ input[type='checkbox']:checked:focus + label .custom-checkbox {
 .simplebar-horizontal .simplebar-scrollbar {
   background-color: #224722;
   height: 6px;
-  width: 44px !important;
   border-radius: 15px;
 }
 
-.simplebar-track.simplebar-horizontal {
+.simplebar-track {
+  background: rgba(34, 71, 34, 0.32);
   height: 6px !important;
   border-radius: 15px;
-  background: rgba(34, 71, 34, 0.32);
-  bottom: -30px;
 }
+
+/* SimpleBar Styles end*/

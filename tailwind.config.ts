@@ -150,6 +150,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('tailwind-scrollbar')],
+  plugins: [require('@tailwindcss/typography')],
 };
 export default config;
