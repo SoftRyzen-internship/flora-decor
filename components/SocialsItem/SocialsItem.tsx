@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import FacebookIcon from '@/public/icons/facebook.svg';
 import InstagramIcon from '@/public/icons/instagram.svg';
 
@@ -11,13 +9,13 @@ type SocialsItemProps = {
 
 export const SocialsItem = ({ name, href, ariaL }: SocialsItemProps) => {
   return (
-    <li key={name}>
-      <Link
+    <li className="w-10 h-10">
+      <a
         href={href}
         aria-label={ariaL}
         target="_blank"
         rel="noopener noreferrer nofollow"
-        className="inline-flex text-bgMain hover:text-bgSecond focus:text-bgSecond active:text-activeLink transition"
+        className="inline-flex text-bgMain hover:text-bgSecond focus:text-bgSecond active:text-activeLink transition rounded-full"
       >
         {name === 'facebook' && (
           <FacebookIcon width={40} height={40} className="fill-current" />
@@ -25,7 +23,7 @@ export const SocialsItem = ({ name, href, ariaL }: SocialsItemProps) => {
         {name === 'instagram' && (
           <InstagramIcon width={40} height={40} className="fill-current" />
         )}
-      </Link>
+      </a>
     </li>
   );
 };

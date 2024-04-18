@@ -8,9 +8,16 @@ import common from '@/data/common.json';
 type LogoProps = {
   isHeader: boolean;
   isFooter?: boolean;
+  className?: string;
+  onClick?: () => void;
 };
 
-export const Logo = ({ isHeader, isFooter }: LogoProps) => {
+export const Logo = ({
+  isHeader,
+  isFooter,
+  onClick,
+  className = '',
+}: LogoProps) => {
   const { logoAriaText } = common;
 
   const logoClassName = classNames(' stroke-current fill-current', {
@@ -24,10 +31,16 @@ export const Logo = ({ isHeader, isFooter }: LogoProps) => {
       'text-main': isHeader,
       'text-white': isFooter,
     },
+    className,
   );
 
   return (
-    <Link href="/" className={LinkClassName} aria-label={logoAriaText}>
+    <Link
+      href="/"
+      className={LinkClassName}
+      aria-label={logoAriaText}
+      onClick={onClick}
+    >
       <LogoIcon
         className={logoClassName}
         strokeMiterlimit="10"

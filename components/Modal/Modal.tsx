@@ -1,43 +1,38 @@
-import { Fragment, ReactNode, useState } from 'react';
+import { Fragment, ReactNode } from 'react';
 
 import { Dialog, Transition } from '@headlessui/react';
 import classNames from 'classnames';
-
-import { Logo } from '../Logo';
 
 import CloseIcon from '@/public/icons/close.svg';
 
 type ModalPropsTypes = {
   children: ReactNode;
   isOpen: boolean;
+  closeModal: () => void;
   closeBtnStyles: string;
   ariaLabel: string;
   modalStyles: string;
-  isBurgerMenu: boolean;
+  isBurgerMenu?: boolean;
   isPopUp?: boolean;
 };
 
 export const Modal = ({
   children,
   isOpen,
+  closeModal,
   closeBtnStyles,
   ariaLabel,
   modalStyles,
   isBurgerMenu,
   isPopUp,
 }: ModalPropsTypes) => {
-  const [isOpenModal, setIsOpenModal] = useState(isOpen);
-
   const styesName = classNames({
-    'fixed inset-y-0 right-0 flex max-w-full': isBurgerMenu,
+    'fixed inset-y-0 right-0 flex w-[100%] sm:w-[360px]': isBurgerMenu,
     'flex min-h-full items-center justify-center': isPopUp,
   });
 
-  function closeModal() {
-    setIsOpenModal(false);
-  }
   return (
-    <Transition appear show={isOpenModal} as={Fragment}>
+    <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={closeModal}>
         <Transition.Child
           as={Fragment}
@@ -80,13 +75,12 @@ export const Modal = ({
                   modalStyles)
                 }
               >
-                <div className="flex items-center">
-                  {isBurgerMenu && <Logo isHeader />}
+                <div className="relative">
                   <button
                     type="button"
                     onClick={closeModal}
                     className={classNames(
-                      'ml-auto block text-main hover:text-btnSecondHover focus:text-btnSecondHover active:text-btnSecondActive transition-all duration-300',
+                      'absolute block text-main hover:text-subtitle transition-all duration-300',
                       closeBtnStyles,
                     )}
                     aria-label={ariaLabel}
@@ -97,9 +91,8 @@ export const Modal = ({
                       className="stroke-current"
                     />
                   </button>
+                  {children}
                 </div>
-
-                {children}
               </Dialog.Panel>
             </Transition.Child>
           </div>
