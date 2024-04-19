@@ -5,6 +5,7 @@ import { About } from '../About';
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
+import { Accordion } from '@/components/Accordion';
 
 // import { AdvantagesCard } from '@/components/AdvantagesCard';
 
@@ -21,8 +22,9 @@ export const EXAMPLE = () => {
     <>
       <About />
       <Goods />
-      <Section sectionId="hero" className="bg-bgSecond" variant="heroSection">
+      <Section sectionId="hero" className="" variant="heroSection">
         <Container>
+          <Accordion />
           <SectionTitle
             label="Section Title"
             center="center"
