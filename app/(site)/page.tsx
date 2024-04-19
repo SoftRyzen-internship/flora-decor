@@ -1,21 +1,23 @@
 import { Advantages } from '@/sections/Advantages';
 import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
 import { ExampleModal } from '@/sections/ExampleModal/ExampleModal';
+import { Hero } from '@/sections/Hero';
+import { Flowerpots } from '@/sections/Flowerpots';
 
 export default function Home() {
   return (
     <>
-      {/* <Hero /> */}
-      <Advantages />
-      {/* <About />
-      <Flowerpots />
-      <Goods />
-      <Gallery />
-      <Reviews />
-      <Questions />
-      <Contacts /> */}
+      <Hero />
       <EXAMPLE />
       <ExampleModal />
+      <Advantages />
+      {/* <About /> */}
+      <Flowerpots />
+      {/* <Goods /> */}
+      {/* <Gallery /> */}
+      {/* <Reviews /> */}
+      {/* <Questions /> */}
+      {/* <Contacts />  */}
     </>
   );
 }

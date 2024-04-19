@@ -56,6 +56,8 @@ const config: Config = {
         backdropCol: 'rgba(48, 48, 54, 0.25)',
         activeLink: '#D5DDC9',
         border: '#8EA58E',
+        subtitleMdCol: '#407040',
+        sliderBtnHover: '#2F5C2F',
       },
 
       fontSize: {
@@ -124,6 +126,14 @@ const config: Config = {
             letterSpacing: '0.64',
           },
         ],
+        subtitleXs: [
+          '14px',
+          {
+            lineHeight: '1.4',
+            fontWeight: '500',
+            letterSpacing: '-0.28px',
+          },
+        ],
 
         titleAboutMd: [
           '25px',
@@ -133,7 +143,7 @@ const config: Config = {
             letterSpacing: '-0.5px',
           },
         ],
-        description: [
+        descriptionFontSize: [
           '18px',
           {
             lineHeight: '1.3',
