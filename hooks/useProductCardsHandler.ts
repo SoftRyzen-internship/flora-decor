@@ -1,12 +1,21 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import { getProducts } from '@/sanity/requests/getProducts';
 import { Product } from '@/sections/Goods/types';
 
-export const useProductCardsHandler = () => {
+type ProductCardsHandler = {
+  cards: Product[];
+  isMore: boolean;
+  loadMoreCards: () => void;
+  hideExtraCards: () => void;
+};
+
+export const useProductCardsHandler = (
+  buttonRef: React.RefObject<HTMLButtonElement>,
+): ProductCardsHandler => {
   const [products, setProducts] = useState([] as Product[]);
   const [cards, setCards] = useState([] as Product[]);
   const [isMore, setIsMore] = useState(true);
@@ -73,6 +82,11 @@ export const useProductCardsHandler = () => {
     } else if (currentScreen === 'mobile') {
       setCards(products.slice(0, 3));
       setIsMore(true);
+    }
+    console.log(buttonRef);
+
+    if (buttonRef.current) {
+      buttonRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 

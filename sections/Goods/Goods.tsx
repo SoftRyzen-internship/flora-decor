@@ -1,4 +1,5 @@
 'use client';
+import { useRef } from 'react';
 
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
@@ -11,8 +12,9 @@ import { useProductCardsHandler } from '@/hooks/useProductCardsHandler';
 import goods from '@/data/goods.json';
 
 export const Goods = () => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const { cards, isMore, loadMoreCards, hideExtraCards } =
-    useProductCardsHandler();
+    useProductCardsHandler(buttonRef);
 
   const { label, text } = goods;
 
@@ -46,6 +48,7 @@ export const Goods = () => {
         </div>
 
         <Button
+          ref={buttonRef}
           isLink={false}
           isBtn
           onClick={isMore ? loadMoreCards : hideExtraCards}
