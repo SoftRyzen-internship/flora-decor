@@ -27,19 +27,21 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({
       isOpen={isBurgerOpen}
       closeBtnStyles="top-[33px] right-0"
       ariaLabel={ariaLMenuMobileClose}
-      modalStyles="bg-bgMain max-w-[480px] w-full mx-auto px-[20px] z-50"
+      modalStyles="w-full mx-auto px-[20px] max-w-[480px] z-50"
     >
       <Logo isHeader onClick={onBurgerMenuClose} className="pt-[20px]" />
       <Navbar onClickCloseModal={onBurgerMenuClose} className="mt-[65px]" />
-      <Button
-        isLink
-        isHeaderLink
-        isDisabled={false}
-        onClick={onBurgerMenuClose}
-        className="mt-[100px] max-w-[480px]"
-      >
-        {labelLink}
-      </Button>
+      <div className="flex justify-center items-center mt-[100px]">
+        <Button
+          isLink
+          isHeaderLink
+          isDisabled={false}
+          onClick={onBurgerMenuClose}
+          className="max-w-[440px]"
+        >
+          {labelLink}
+        </Button>
+      </div>
     </Modal>
   );
 };
