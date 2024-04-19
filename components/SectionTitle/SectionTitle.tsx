@@ -18,7 +18,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
   const stylesSectionTitle = classNames(
     'font-geologica not-italic text-main',
     {
-      'text-titleSm': variant === 'otherTitle',
+      'xl:text-titleContactXl': variant === 'otherTitle',
       'text-left': center === 'left',
       'text-center': center === 'center',
       'text-titleContactSm': variant === 'contactTitle',
