@@ -7,7 +7,7 @@ export const formSchema = yup.object().shape({
     .min(2, 'Мінімальна довжина 2 символи')
     .max(30, 'Максимальна довжина 30 символів')
     .matches(/^[\sA-Za-zА-Яа-яҐґЄєІіЇїʼ`-]+$/, "Введіть коректне ім'я")
-    .transform(value => value.trim()),
+    .trim(),
   phone: yup
     .string()
     .required("Номер телефону обов'язковий")
@@ -24,7 +24,7 @@ export const formSchema = yup.object().shape({
     .string()
     .required("Ваше повідомлення обов'язкове")
     .max(500, 'У тексті має бути не більше 500 символів')
-    .transform(value => value.trim()),
+    .trim(),
   checkbox: yup
     .boolean()
     .required('required')

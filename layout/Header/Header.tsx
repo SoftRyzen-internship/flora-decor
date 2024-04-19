@@ -42,7 +42,12 @@ export const Header = () => {
 
   const stylesHeader = classNames(
     'py-[10px] xl:py-8 fixed top-0 left-0 w-full z-10',
-    { 'bg-bgMain': scrolled },
+    {
+      'bg-bgMain':
+        (scrolled && isDesktop) ||
+        (scrolled && !isDesktop) ||
+        (!scrolled && !isDesktop),
+    },
   );
 
   return (
