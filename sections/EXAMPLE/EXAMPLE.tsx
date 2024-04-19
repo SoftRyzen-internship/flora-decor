@@ -9,13 +9,13 @@ import { SectionTitle } from '@/components/SectionTitle';
 // import { AdvantagesCard } from '@/components/AdvantagesCard';
 
 // import { Form } from '@/components/Form';
-import { PotWithVolume } from '@/components/PotWithVolume';
+// import { PotWithVolume } from '@/components/PotWithVolume';
 
 // import { Ultra } from 'next/font/google';
 
 export const EXAMPLE = () => {
   // const { icons } = advantages;
-  const pots = ['11', '12', '13', '14', '15', '17', '19', '23'];
+  // const pots = ['11', '12', '13', '14', '15', '17', '19', '23'];
 
   return (
     <>
@@ -94,11 +94,11 @@ export const EXAMPLE = () => {
           })}
         </ul> */}
 
-          <ul className="flex flex-col items-end gap-[40px] md:gap-[70px] w-1/2 mt-8">
-            {pots.map((pot: string) => {
-              return <PotWithVolume key={pot} volume={pot} />;
-            })}
-          </ul>
+          {/* <ul className="flex items-end gap-[40px] md:gap-[70px] w-[1482px] md:w-[1786px] xl:w-[1853]">
+          {pots.map((pot: string) => {
+            return <PotWithVolume key={pot} volume={pot} />;
+          })}
+        </ul> */}
         </Container>
       </Section>
     </>
