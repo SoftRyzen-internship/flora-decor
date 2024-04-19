@@ -27,7 +27,8 @@ export const Modal = ({
   isPopUp,
 }: ModalPropsTypes) => {
   const styesName = classNames({
-    'fixed inset-y-0 right-0 flex w-[100%] sm:w-[360px]': isBurgerMenu,
+    'fixed inset-y-0 right-0 flex w-[100vw] md:w-[360px] bg-bgMain':
+      isBurgerMenu,
     'flex min-h-full items-center justify-center': isPopUp,
   });
 

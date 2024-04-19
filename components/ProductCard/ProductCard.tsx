@@ -17,16 +17,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   return (
     <div className="bg-transparent w-full sm:w-[480px] md:w-[320px] xl:w-[430px] mb-[30px] xl:mb-[21px] ">
-      <div className="flex justify-center items-center rounded-xl bg-white  overflow-hidden w-full sm:w-[440px] md:w-[320px] xl:w-[430px] mb-5   xl:h-[500px]  ">
+      <div className="flex justify-center items-center rounded-xl bg-white object-cover aspect-ratio overflow-hidden w-full md:w-[320px] xl:w-[430px] xl:h-[500px]  ">
         <Image
-          width={430}
-          height={500}
+          width={440}
+          height={495}
           alt={product}
           src={image}
-          priority={true}
           placeholder="blur"
           blurDataURL={image}
-          className="object-cover"
         />
       </div>
       <div className="flex flex-col items-start w-full">
