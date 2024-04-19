@@ -11,7 +11,7 @@ export type PotPropsType = {
 
 export const PotWithVolume = ({ volume }: PotPropsType) => {
   const stylesName = classNames(
-    'flex flex-col  items-center justify-between ',
+    'flex flex-col  items-center justify-between mb-[36px] md:mb-[56px] xl:mb-[70px]',
     {
       'w-[120px] h-[116px]': volume === '11',
       'w-[130px] h-[125px]': volume === '12',
@@ -25,7 +25,7 @@ export const PotWithVolume = ({ volume }: PotPropsType) => {
   );
 
   return (
-    <li className={stylesName}>
+    <div className={stylesName}>
       <PotTopIcon width={'100%'} />
       <div className="w-[81.67%] h-[69%] relative">
         <PotBottomIcon width={'100%'} height={'100%'} />
@@ -33,6 +33,6 @@ export const PotWithVolume = ({ volume }: PotPropsType) => {
           {volume}
         </span>
       </div>
-    </li>
+    </div>
   );
 };

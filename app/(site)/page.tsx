@@ -1,6 +1,7 @@
 import { Hero } from '@/sections/Hero';
 import { Advantages } from '@/sections/Advantages';
 import { About } from '@/sections/About';
+import { Flowerpots } from '@/sections/Flowerpots';
 import { Goods } from '@/sections/Goods';
 import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
 import { ExampleModal } from '@/sections/ExampleModal/ExampleModal';
@@ -11,15 +12,15 @@ export default function Home() {
       <Hero />
       <Advantages />
       <About />
+      <Flowerpots />
       <Goods />
       <EXAMPLE />
       <ExampleModal />
-      {/* <Flowerpots /> */}
 
       {/* <Gallery /> */}
       {/* <Reviews /> */}
       {/* <Questions /> */}
-      {/* <Contacts /> */}
+      {/* <Contacts />  */}
     </>
   );
 }

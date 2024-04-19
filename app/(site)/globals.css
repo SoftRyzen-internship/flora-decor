@@ -256,3 +256,37 @@ input[type='checkbox']:focus-visible + label .custom-checkbox {
 }
 
 /*-----Hero styles end-------*/
+
+/*Pots Slider styles*/
+.swiper-scrollbar-drag {
+  border-radius: 15px !important;
+  background-color: #224722 !important;
+  height: 6px !important;
+}
+
+.swiper-scrollbar {
+  border-radius: 15px !important;
+  background: rgba(34, 71, 34, 0.32) !important;
+  height: 6px !important;
+  bottom: 0 !important;
+}
+
+.slider .swiper-slide {
+  width: auto;
+  margin-right: 40px;
+  display: flex;
+  align-items: flex-end;
+}
+
+@media (min-width: 768px) {
+  .slider .swiper-slide {
+    margin-right: 70px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .slider .swiper-slide {
+    margin-right: 76px;
+  }
+}
+/*Pots Slider styles end*/
