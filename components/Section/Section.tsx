@@ -22,7 +22,7 @@ export const Section: React.FC<SectionProps> = ({
 }) => {
   const classname = classNames(
     {
-      'pt-[318px] pb-[60px] md:pt-[155px] md:pb-[155px] xl:pt-[231px] xl:pb-[231px]':
+      'pt-[318px] pb-[60px] md:pt-[155px] md:pb-[145px] xl:pt-[231px] xl:pb-[231px]':
         variant === 'heroSection',
       'pt-[60px] pb-[60px] md:pt-[70px] md:pb-[70px] xl:pt-[150px] xl:pb-[150px]':
         variant === 'flowerpotsSection',

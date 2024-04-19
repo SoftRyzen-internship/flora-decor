@@ -16,12 +16,7 @@ export const Goods = async () => {
     <Section sectionId="goods" variant="otherSection" className="bg-bgSecond">
       <Container>
         <div className="flex flex-col gap-[15px] md:gap-5 xl:flex-row xl:justify-between mb-[30px] md:mb-[50px] xl:mb-[64px] ">
-          <SectionTitle
-            label={label}
-            center={'left'}
-            variant={'otherTitle'}
-            className="text-main md:text-titleMd xl:text-[60px] "
-          />
+          <SectionTitle label={label} center={'left'} variant={'otherTitle'} />
           <p className="text-[14px] leading-[1.4] tracking-[-0.28px] text-main font-geologica font-medium  md:text-subtitleMd text-left md:w-[416px] xl:w-[480px] xl:mr-[172px] ">
             {text}
           </p>
