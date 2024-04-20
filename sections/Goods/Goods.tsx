@@ -1,17 +1,23 @@
 'use client';
+import { useRef } from 'react';
+
+import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Section } from '@/components/Section';
 import { Product } from './types';
 import { ProductCard } from '@/components/ProductCard';
 import { SectionTitle } from '@/components/SectionTitle';
+import { useProductCardsHandler } from '@/hooks/useProductCardsHandler';
 
-import { getProducts } from '@/sanity/requests/getProducts';
 import goods from '@/data/goods.json';
-import { Button } from '@/components/Button';
 
-export const Goods = async () => {
-  const products = await getProducts();
+export const Goods = () => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const { cards, isMore, loadMoreCards, hideExtraCards } =
+    useProductCardsHandler(buttonRef);
+
   const { label, text } = goods;
+
   return (
     <Section sectionId="goods" variant="otherSection" className="bg-bgSecond">
       <Container>
@@ -22,8 +28,8 @@ export const Goods = async () => {
           </p>
         </div>
 
-        <div className="flex flex-row flex-wrap gap-[15px] justify-between items-start xl:justify-start mb-[30px] md:mb-[50px] xl:mb-0 ">
-          {products.map(({ _id, product, image, volumes, price }: Product) => {
+        <div className="flex flex-row flex-wrap xl:gap-[15px] justify-between items-start xl:justify-start  xl:mb-0 ">
+          {cards.map(({ _id, product, image, volumes, price }: Product) => {
             return (
               <ProductCard
                 key={_id}
@@ -37,13 +43,15 @@ export const Goods = async () => {
         </div>
 
         <Button
+          ref={buttonRef}
           isLink={false}
           isBtn
+          onClick={isMore ? loadMoreCards : hideExtraCards}
           isDisabled={false}
           type="button"
           className="xl:hidden"
         >
-          Більше
+          {isMore ? 'Більше' : 'Сховати'}
         </Button>
       </Container>
     </Section>
