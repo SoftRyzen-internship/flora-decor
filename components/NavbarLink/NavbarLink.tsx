@@ -28,7 +28,7 @@ export const NavbarLink: React.FC<NavbarLinkProps> = ({
     <li>
       {pathname === '/policy' ? (
         <Link
-          href={`/${path}`}
+          href={`/#${path}`}
           onClick={onClickCloseModal}
           className={stylesLink}
         >

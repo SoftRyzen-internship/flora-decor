@@ -16,7 +16,7 @@ export const About = () => {
     >
       <Container>
         <div className=" relative w-full  md:m-auto md:w-[561px] xl:ml-[688px] xl:mr-[63px] xl:w-[589px]">
-          <div className=" about "></div>
+          <div className="about"></div>
 
           <SectionTitle
             className="w-full text-[20px] leading-[1.2] font-semibold tracking-[-0.4px] md:text-titleAboutMd mb-[15px] md:mb-5  md:w-[561px] xl:w-[589px]"
