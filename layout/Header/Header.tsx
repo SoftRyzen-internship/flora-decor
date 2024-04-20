@@ -41,7 +41,7 @@ export const Header = () => {
   const { ariaLBurger, labelLink } = data;
 
   const stylesHeader = classNames(
-    'py-[10px] xl:py-8 fixed top-0 left-0 w-full z-10',
+    'py-[10px] xl:py-8 fixed top-0 left-0 w-full z-10 transition',
     {
       'bg-bgMain':
         (scrolled && isDesktop) ||

@@ -26,9 +26,8 @@ export const Modal = ({
   isBurgerMenu,
   isPopUp,
 }: ModalPropsTypes) => {
-  const styesName = classNames({
-    'fixed inset-y-0 right-0 flex w-[100vw] md:w-[360px] bg-bgMain':
-      isBurgerMenu,
+  const stylesName = classNames({
+    'fixed inset-y-0 right-0 flex': isBurgerMenu,
     'flex min-h-full items-center justify-center': isPopUp,
   });
 
@@ -48,7 +47,7 @@ export const Modal = ({
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
-          <div className={styesName}>
+          <div className={stylesName}>
             <Transition.Child
               as={Fragment}
               enter={
@@ -76,7 +75,7 @@ export const Modal = ({
                   modalStyles)
                 }
               >
-                <div className="relative">
+                <div className="relative max-w-[440px] mx-auto">
                   <button
                     type="button"
                     onClick={closeModal}

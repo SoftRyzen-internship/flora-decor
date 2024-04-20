@@ -29,7 +29,6 @@ export const NavbarLink: React.FC<NavbarLinkProps> = ({
       {pathname === '/policy' ? (
         <Link
           href={`/#${path}`}
-          passHref
           onClick={onClickCloseModal}
           className={stylesLink}
           style={{ scrollMarginTop: '100px' }}

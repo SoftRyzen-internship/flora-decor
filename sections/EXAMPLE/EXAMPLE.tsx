@@ -12,7 +12,9 @@ export const EXAMPLE = () => {
     <Section sectionId="hero" className="" variant="heroSection">
       <Container>
         <Accordion />
-        <Form />
+        <div className="bg-[#E7EDDD] mt-4">
+          <Form />
+        </div>
       </Container>
     </Section>
   );
