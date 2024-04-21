@@ -311,7 +311,14 @@ input[type='checkbox']:focus-visible + label .custom-checkbox {
 @media (min-width: 768px) {
   .border-container::before {
     content: '';
-    bottom: 32%;
+    bottom: 23%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .border-container::before {
+    content: '';
+    bottom: 33%;
   }
 }
 

@@ -29,7 +29,7 @@ export const Logo = ({
     'cursor-pointer inline-block  hover:text-subtitle focus:text-subtitle transition',
     {
       'text-main': isHeader,
-      'text-white': isFooter,
+      'text-white w-[123px] h-[130px]': isFooter,
     },
     className,
   );
