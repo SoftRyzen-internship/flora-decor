@@ -14,7 +14,7 @@ export const Flowerpots = () => {
   const pots = ['11', '12', '13', '14', '15', '17', '19', '23'];
 
   return (
-    <Section variant="flowerpotsSection">
+    <Section variant="flowerpotsSection" className="bg-bgMain">
       <Container>
         <Swiper
           direction="horizontal"
