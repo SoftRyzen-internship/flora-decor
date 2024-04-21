@@ -295,26 +295,37 @@ input[type='checkbox']:focus-visible + label .custom-checkbox {
 
 .gallery-list li:nth-child(1) {
   border-radius: 0px 0px 100px 0px;
-  overflow: hidden;
 }
 
 .gallery-list li:nth-child(2),
 .gallery-list li:nth-child(3) {
   border-radius: 38px 38px 38px 0px;
-  overflow: hidden;
 }
 
 .gallery-list li:nth-child(4) {
   border-radius: 0px 0px 0px 100px;
-  overflow: hidden;
 }
 
 .gallery-list li:nth-child(5) {
   border-radius: 0px 0px 100px 0px;
-  overflow: hidden;
 }
 
 .gallery-list li:nth-child(6) {
   border-radius: 0px 100px;
-  overflow: hidden;
+}
+
+@media (min-width: 1400px) {
+  .gallery-list li {
+    width: 317px;
+    height: 300px;
+    border-radius: 0px 0px 100px 0px;
+  }
+
+  .gallery-list li:nth-child(4) {
+    height: 615px;
+  }
+
+  .gallery-list li:nth-child(5) {
+    width: 652px;
+  }
 }

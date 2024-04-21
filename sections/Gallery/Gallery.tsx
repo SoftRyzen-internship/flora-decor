@@ -1,12 +1,20 @@
+'use client';
+
+import { useMediaQuery } from 'react-responsive';
+
 import { Container } from '@/components/Container';
 import { Section } from '@/components/Section';
 import { SectionTitle } from '@/components/SectionTitle';
 import { GalleryImgItem } from '@/components/GalleryImgItem';
 
-import { galleryImg } from '@/data/gallery';
+import { galleryImg, galleryImgDesktop } from '@/data/gallery';
 import data from '@/data/common.json';
 
 export const Gallery = () => {
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1400px)',
+  });
+
   const { gallery } = data;
 
   return (
@@ -21,10 +29,14 @@ export const Gallery = () => {
         <p className="text-subtitleXs font-geologica not-italic text-subtitle mt-[15px] mb-[30px] md:mb-[50px] xl:mt-5 xl:mb-16 md:w-[430px] ml-auto mr-auto md:text-center xl:w-[681px]">
           {gallery.subtitle}
         </p>
-        <ul className="flex flex-col gap-[15px] gallery-list md:flex-row md:flex-wrap md:gap-6 justify-center">
-          {galleryImg.map(({ img, alt }) => (
-            <GalleryImgItem img={img} alt={alt} />
-          ))}
+        <ul className="flex flex-col gap-[15px] gallery-list md:flex-row md:flex-wrap md:gap-6 justify-center xl:gap-[15px]">
+          {isDesktop
+            ? galleryImgDesktop.map(({ img, alt }, index) => (
+                <GalleryImgItem key={index} img={img} alt={alt} />
+              ))
+            : galleryImg.map(({ img, alt }, index) => (
+                <GalleryImgItem key={index} img={img} alt={alt} />
+              ))}
         </ul>
       </Container>
     </Section>
