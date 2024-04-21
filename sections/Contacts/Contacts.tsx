@@ -11,15 +11,16 @@ export const Contacts = () => {
     <Section
       sectionId="contacts"
       variant="aboutOrContactSection"
-      className="bg-bgSecond"
+      className="bg-bgSecond pt-[420px] md:pt-[555px] xl:py-[101px]"
     >
       <Container>
-        <div className="w-full pt-[420px] md:pt-[555px] xl:py-[101px] xl:w-[541px] xl:mr-[111px] xl:ml-auto ">
+        <div className="relative w-full  xl:w-[541px] xl:mr-[111px] xl:ml-auto ">
+          <div className="contacts"></div>
           <SectionTitle
             label={label}
             center={'left'}
             variant={'contactTitle'}
-            className="w-[298px] md:w-[449px] text-main md:text-[30px] md:font-semibold md:leading-[1.2] tracking-[-0.6px] xl:w-[512px] mb-[30px] md:mb-[40px] xl:mb-[50px] "
+            className="w-[298px] md:w-[449px] text-main md:text-[30px] md:font-semibold md:leading-[1.2] tracking-[-0.6px] xl:w-[512px] mb-[30px] md:mb-[50px] xl:mb-[40px] "
           />
           <Form />
         </div>
