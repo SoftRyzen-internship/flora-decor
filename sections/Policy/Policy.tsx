@@ -16,8 +16,8 @@ export const Policy: React.FC<PolicyProps> = ({ data }) => {
     <Section variant="policySection">
       <Container>
         <div
-          className="xl:w-[986px] xl:mr-[111px] xl:ml-auto prose max-w-none
-          [&>p:nth-child(5)]:mb-5  [&>p:nth-child(19)]:mb-0
+          className="xl:w-[986px] xl:mr-[111px] xl:ml-auto 
+          
           prose-h1:font-geologica prose-h1:mb-[64px] prose-h1:text-[20px] prose-h1:font-semibold
           prose-h1:text-main prose-h1:leading-[1.2] prose-h1:tracking-[-0.4px] prose-h1:uppercase
           md:prose-h1:text-titleAboutMd xl:prose-h1:text-titleContactXl
@@ -29,12 +29,12 @@ export const Policy: React.FC<PolicyProps> = ({ data }) => {
           prose-h3:text-main prose-h3:mb-7
           
           prose-p:text-description 
-          prose-p:font-geologica prose-p:text-subtitleXs prose-p:mb-6 md:prose-p:mb-6
+          prose-p:font-geologica prose-p:text-subtitleXs prose-p:mb-6 prose-p:mt-0 xl:prose-p:text-subtitleMd 
             prose-ul:m-0
-            prose-li:m-0 prose-ul:text-description prose-li:text-sm
-             prose-li:marker:text-description prose-a:font-geologica
-              prose-a:text-description prose-a:text-sm 
-                 xl:prose-p:text-subtitleMd  "
+            prose-li:m-0 prose-ul:text-description prose-li:text-subtitleXs
+             prose-li:marker:text-description prose-a:font-geologica xl:pros-li:text-subtitleMd
+              prose-a:text-description prose-a:text-subtitleXs xl:prose-a:text-subtitleMd
+                  "
         >
           <PortableText value={data} components={CustomComponents} />
         </div>
