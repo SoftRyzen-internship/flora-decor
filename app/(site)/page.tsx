@@ -5,6 +5,9 @@ import { Flowerpots } from '@/sections/Flowerpots';
 import { Goods } from '@/sections/Goods';
 import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
 import { ExampleModal } from '@/sections/ExampleModal/ExampleModal';
+
+import { Contacts } from '@/sections/Contacts';
+
 import { Questions } from '@/sections/Questions';
 
 export default function Home() {
@@ -16,13 +19,12 @@ export default function Home() {
       <Flowerpots />
       <Goods />
       <Questions />
-
+      <Contacts />
       <EXAMPLE />
       <ExampleModal />
 
       {/* <Gallery /> */}
       {/* <Reviews /> */}
-      {/* <Contacts />  */}
     </>
   );
 }
