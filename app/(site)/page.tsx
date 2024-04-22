@@ -3,12 +3,9 @@ import { Advantages } from '@/sections/Advantages';
 import { About } from '@/sections/About';
 import { Flowerpots } from '@/sections/Flowerpots';
 import { Goods } from '@/sections/Goods';
-import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
-import { ExampleModal } from '@/sections/ExampleModal/ExampleModal';
-
-import { Contacts } from '@/sections/Contacts';
-
 import { Questions } from '@/sections/Questions';
+import { Contacts } from '@/sections/Contacts';
+import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
 
 export default function Home() {
   return (
@@ -21,7 +18,6 @@ export default function Home() {
       <Questions />
       <Contacts />
       <EXAMPLE />
-      <ExampleModal />
 
       {/* <Gallery /> */}
       {/* <Reviews /> */}
