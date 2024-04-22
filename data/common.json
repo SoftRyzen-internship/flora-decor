@@ -1,6 +1,7 @@
 {
   "pathToFeedback": "feedback",
   "logoAriaText": "логотип",
+
   "socials": [
     {
       "name": "facebook",
@@ -12,5 +13,17 @@
       "path": "https://www.instagram.com/olena8826?igsh=amkyYzRyYWZpNnhw",
       "ariaLabel": "перейти на сторінку в Інстаграм"
     }
-  ]
+  ],
+
+  "modalError": {
+    "title": "Щось пішло не так...",
+    "description": {
+      "first": "Ми не змогли отримати Вашу заявку.",
+      "second": "Будь ласка, спробуйте ще раз."
+    }
+  },
+  "modalSuccess": {
+    "title": "Ваше повідомлення успішно відправлено!",
+    "description": "Ми зв'яжемося з вами найближчим часом."
+  }
 }

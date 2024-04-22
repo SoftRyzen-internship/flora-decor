@@ -3,6 +3,8 @@
 import { useState } from 'react';
 
 import { Modal } from '@/components/Modal';
+import { ModalError } from '@/components/ModalError';
+import { ModalSuccess } from '@/components/ModalSuccess';
 
 export const ExampleModal = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);

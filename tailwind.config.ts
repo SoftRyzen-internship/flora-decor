@@ -57,6 +57,7 @@ const config: Config = {
         activeLink: '#D5DDC9',
         border: '#8EA58E',
         subtitleMdCol: '#407040',
+        sliderBtnHover: '#2F5C2F',
         footerColor: '#ABB999',
       },
 
@@ -71,6 +72,13 @@ const config: Config = {
 
         titleMd: [
           '50px',
+          {
+            lineHeight: '1.1',
+            fontWeight: '600',
+          },
+        ],
+        titleXl: [
+          '60px',
           {
             lineHeight: '1.1',
             fontWeight: '600',
@@ -105,7 +113,7 @@ const config: Config = {
         heroTitleXl: [
           '90px',
           {
-            lineHeight: '0.9',
+            lineHeight: '0.99',
             fontWeight: '600',
           },
         ],
