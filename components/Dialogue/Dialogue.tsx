@@ -33,13 +33,15 @@ export const Dialogue: React.FC<DialogueProps> = ({
         )}
       </div>
 
-      {activeDialogue && (
-        <div className="w-[210px] md:w-[500px] xl:w-[750px]">
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out grid ${activeDialogue ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+      >
+        <div className="overflow-hidden w-[210px] md:w-[500px] xl:w-[750px]">
           <p className="text-subtitleXs text-description xl:text-subtitleMd mt-[10px] ">
             {answer}
           </p>
         </div>
-      )}
+      </div>
     </div>
   );
 };
