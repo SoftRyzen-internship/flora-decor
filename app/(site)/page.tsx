@@ -3,7 +3,7 @@ import { Advantages } from '@/sections/Advantages';
 import { About } from '@/sections/About';
 import { Flowerpots } from '@/sections/Flowerpots';
 import { Goods } from '@/sections/Goods';
-import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
+// import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
 import { ExampleModal } from '@/sections/ExampleModal/ExampleModal';
 
 import { Contacts } from '@/sections/Contacts';
@@ -23,7 +23,7 @@ export default async function Home() {
       <Goods products={products} />
       <Questions />
       <Contacts />
-      <EXAMPLE />
+      {/* <EXAMPLE /> */}
       <ExampleModal />
 
       {/* <Gallery /> */}

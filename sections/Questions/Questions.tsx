@@ -9,7 +9,7 @@ export const Questions = () => {
   const { label } = questions;
 
   return (
-    <Section variant="otherSection">
+    <Section variant="otherSection" className="md:h-[811px] xl:h-[834px]">
       <Container>
         <SectionTitle
           label={label}
