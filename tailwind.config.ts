@@ -15,7 +15,7 @@ const config: Config = {
       xl: '1400px',
 
       smOnly: { max: '767.98px' },
-      mdOnly: { min: '768px', max: '1279.98px' },
+      mdOnly: { min: '768px', max: '1399.97px' },
       notXL: { max: '1399.98px' },
     },
 
@@ -58,6 +58,7 @@ const config: Config = {
         border: '#8EA58E',
         subtitleMdCol: '#407040',
         sliderBtnHover: '#2F5C2F',
+        footerColor: '#ABB999',
       },
 
       fontSize: {
