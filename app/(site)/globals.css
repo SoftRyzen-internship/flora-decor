@@ -219,7 +219,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox {
     background-size:
       1046px 536px,
       cover;
-    background-position: top 0px right 0px;
+    background-position: top 74px right 0px;
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -233,7 +233,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox {
 
 @media (min-width: 1046px) {
   .hero {
-    background-position: center top 0px;
+    background-position: center top 74px;
   }
 }
 
@@ -243,6 +243,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox {
     background-size:
       1440px 800px,
       cover;
+    background-position: center top 0;
   }
 
   @media (min-device-pixel-ratio: 2),

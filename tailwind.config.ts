@@ -76,6 +76,13 @@ const config: Config = {
             fontWeight: '600',
           },
         ],
+        titleXl: [
+          '60px',
+          {
+            lineHeight: '1.1',
+            fontWeight: '600',
+          },
+        ],
 
         titleContactXl: [
           '35px',
@@ -105,7 +112,7 @@ const config: Config = {
         heroTitleXl: [
           '90px',
           {
-            lineHeight: '0.9',
+            lineHeight: '0.99',
             fontWeight: '600',
           },
         ],
