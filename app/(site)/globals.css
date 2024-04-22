@@ -409,6 +409,39 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 
 /*Reviews Slider styles end*/
 
+/*footer*/
+
+.footer-item:hover .footer-icon {
+  background-color: #508050;
+  @apply transition;
+}
+
+.border-container::before {
+  content: '';
+  position: absolute;
+  bottom: 27%;
+  left: 0;
+  width: 100vw;
+  height: 0.5px;
+  @apply bg-bgMain;
+}
+
+@media (min-width: 768px) {
+  .border-container::before {
+    content: '';
+    bottom: 23%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .border-container::before {
+    content: '';
+    bottom: 33%;
+  }
+}
+
+/*footer end*/
+
 /*Gallery*/
 
 .gallery-list li:nth-child(1) {
