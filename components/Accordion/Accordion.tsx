@@ -14,13 +14,12 @@ export const Accordion: React.FC = () => {
   return (
     <ul className="w-full xl:w-[875px] flex flex-col gap-4 xl:mx-auto">
       {accordion.map((item, index) => (
-        <li key={index}>
-          <Dialogue
-            text={item}
-            activeDialogue={index === activeDialogue}
-            handleDialogue={() => handleDialogue(index)}
-          />
-        </li>
+        <Dialogue
+          key={index}
+          text={item}
+          activeDialogue={index === activeDialogue}
+          handleDialogue={() => handleDialogue(index)}
+        />
       ))}
     </ul>
   );

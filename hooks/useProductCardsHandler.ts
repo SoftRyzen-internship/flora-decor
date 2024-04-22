@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-import { getProducts } from '@/sanity/requests/getProducts';
+// import { getProducts } from '@/sanity/requests/getProducts';
 import { Product } from '@/sections/Goods/types';
 
 type ProductCardsHandler = {
@@ -14,12 +14,12 @@ type ProductCardsHandler = {
 };
 
 export const useProductCardsHandler = (
-  buttonRef: React.RefObject<HTMLButtonElement>,
+  buttonRef: React.RefObject<HTMLUListElement>,
+  products: Product[],
 ): ProductCardsHandler => {
-  const [products, setProducts] = useState([] as Product[]);
+  // const [products, setProducts] = useState([] as Product[]);
   const [cards, setCards] = useState([] as Product[]);
   const [isMore, setIsMore] = useState(true);
-  const [currentScreen, setCurrentScreen] = useState('');
 
   const isDesktop = useMediaQuery({
     query: '(min-width: 1400px)',
@@ -29,42 +29,32 @@ export const useProductCardsHandler = (
     query: '(max-width: 767.99px)',
   });
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const products = await getProducts();
-      setProducts(products);
-    };
-    fetchProducts();
-  }, []);
+  // useEffect(() => {
+  //   const fetchProducts = async () => {
+  //     const products = await getProducts();
+  //     setProducts(products);
+  //   };
+  //   fetchProducts();
+  // }, []);
 
   useEffect(() => {
     if (isDesktop) {
-      setCurrentScreen('desktop');
-    } else if (isTablet) {
-      setCurrentScreen('tablet');
-    } else if (isMobile) {
-      setCurrentScreen('mobile');
-    }
-  }, [isDesktop, isTablet, isMobile]);
-
-  useEffect(() => {
-    if (currentScreen === 'desktop') {
       setCards(products);
-    } else if (currentScreen === 'tablet') {
+    } else if (isTablet) {
       setCards(products.slice(0, 4));
-    } else if (currentScreen === 'mobile') {
+    } else if (isMobile) {
       setCards(products.slice(0, 3));
     }
-  }, [products, currentScreen]);
+  }, [isDesktop, isMobile, isTablet, products]);
 
   const loadMoreCards = () => {
-    if (currentScreen === 'tablet') {
+    if (isTablet) {
       const newCards = products.slice(0, cards.length + 4);
       setCards(newCards);
       if (newCards.length === products.length) {
         setIsMore(false);
       }
-    } else if (currentScreen === 'mobile') {
+    } else if (isMobile) {
       const newCards = products.slice(0, cards.length + 3);
       setCards(newCards);
       if (newCards.length === products.length) {
@@ -74,19 +64,19 @@ export const useProductCardsHandler = (
   };
 
   const hideExtraCards = () => {
-    if (currentScreen === 'desktop') {
+    if (isDesktop) {
       setCards(products);
-    } else if (currentScreen === 'tablet') {
+    } else if (isTablet) {
       setCards(products.slice(0, 4));
       setIsMore(true);
-    } else if (currentScreen === 'mobile') {
+    } else if (isMobile) {
       setCards(products.slice(0, 3));
       setIsMore(true);
     }
     console.log(buttonRef);
 
     if (buttonRef.current) {
-      buttonRef.current.scrollIntoView({ behavior: 'smooth' });
+      buttonRef.current.scrollTo({ top: 100, behavior: 'smooth' });
     }
   };
 

@@ -16,7 +16,7 @@ export const Dialogue: React.FC<DialogueProps> = ({
 }) => {
   const { question, answer } = text;
   return (
-    <div
+    <li
       className="w-full bg-bgSecond cursor-pointer p-6 rounded-lg"
       onClick={handleDialogue}
     >
@@ -42,6 +42,6 @@ export const Dialogue: React.FC<DialogueProps> = ({
           </p>
         </div>
       </div>
-    </div>
+    </li>
   );
 };

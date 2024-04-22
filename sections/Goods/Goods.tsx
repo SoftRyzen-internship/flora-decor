@@ -1,5 +1,5 @@
 'use client';
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
@@ -11,10 +11,13 @@ import { useProductCardsHandler } from '@/hooks/useProductCardsHandler';
 
 import goods from '@/data/goods.json';
 
-export const Goods = () => {
-  const buttonRef = useRef<HTMLButtonElement>(null);
+type ProductsProps = {
+  products: Product[];
+};
+export const Goods: React.FC<ProductsProps> = ({ products }) => {
+  const buttonRef = useRef<HTMLUListElement>(null);
   const { cards, isMore, loadMoreCards, hideExtraCards } =
-    useProductCardsHandler(buttonRef);
+    useProductCardsHandler(buttonRef, products);
 
   const { label, text } = goods;
 
@@ -28,7 +31,10 @@ export const Goods = () => {
           </p>
         </div>
 
-        <div className="flex flex-row flex-wrap xl:gap-[15px] justify-between items-start xl:justify-start  xl:mb-0 ">
+        <ul
+          ref={buttonRef}
+          className="flex flex-row flex-wrap xl:gap-[15px] justify-between items-start xl:justify-start  xl:mb-0 "
+        >
           {cards.map(({ _id, product, image, volumes, price }: Product) => {
             return (
               <ProductCard
@@ -40,10 +46,9 @@ export const Goods = () => {
               />
             );
           })}
-        </div>
+        </ul>
 
         <Button
-          ref={buttonRef}
           isLink={false}
           isBtn
           onClick={isMore ? loadMoreCards : hideExtraCards}
