@@ -3,12 +3,9 @@ import { Advantages } from '@/sections/Advantages';
 import { About } from '@/sections/About';
 import { Flowerpots } from '@/sections/Flowerpots';
 import { Goods } from '@/sections/Goods';
-// import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
-import { ExampleModal } from '@/sections/ExampleModal/ExampleModal';
-
-import { Contacts } from '@/sections/Contacts';
-
 import { Questions } from '@/sections/Questions';
+import { Contacts } from '@/sections/Contacts';
+import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
 
 import { getProducts } from '@/sanity/requests/getProducts';
 
@@ -23,8 +20,8 @@ export default async function Home() {
       <Goods products={products} />
       <Questions />
       <Contacts />
-      {/* <EXAMPLE /> */}
-      <ExampleModal />
+
+      <EXAMPLE />
 
       {/* <Gallery /> */}
       {/* <Reviews /> */}

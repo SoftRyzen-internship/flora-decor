@@ -33,6 +33,7 @@ export const Goods: React.FC<ProductsProps> = ({ products }) => {
             {text}
           </p>
         </div>
+
         <Showcase
           cards={cards}
           isMore={isMore}
