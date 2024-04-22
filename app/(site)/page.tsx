@@ -5,6 +5,7 @@ import { Flowerpots } from '@/sections/Flowerpots';
 import { Goods } from '@/sections/Goods';
 import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
 import { ExampleModal } from '@/sections/ExampleModal/ExampleModal';
+import { Questions } from '@/sections/Questions';
 
 export default function Home() {
   return (
@@ -14,12 +15,13 @@ export default function Home() {
       <About />
       <Flowerpots />
       <Goods />
+      <Questions />
+
       <EXAMPLE />
       <ExampleModal />
 
       {/* <Gallery /> */}
       {/* <Reviews /> */}
-      {/* <Questions /> */}
       {/* <Contacts />  */}
     </>
   );
