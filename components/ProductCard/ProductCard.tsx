@@ -16,8 +16,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   price,
 }) => {
   return (
-    <li className="bg-transparent w-full sm:w-[480px] md:w-[320px] xl:w-[430px] mb-[30px] xl:mb-[21px] ">
-      <div className="mb-5 flex justify-center items-center rounded-xl bg-white object-cover aspect-ratio overflow-hidden w-full md:w-[320px] xl:w-[430px] xl:h-[500px]  ">
+    <li className="bg-transparent w-full sm:w-[480px] md:w-[320px] xl:w-[430px] ">
+      <div className="mb-5  rounded-xl bg-white  overflow-hidden w-full md:w-[320px] xl:w-[430px] xl:h-[500px]  ">
         <Image
           width={440}
           height={495}
@@ -25,6 +25,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           src={image}
           placeholder="blur"
           blurDataURL={image}
+          className="object-cover"
         />
       </div>
       <div className="flex flex-col items-start w-full">

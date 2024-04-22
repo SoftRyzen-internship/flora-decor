@@ -1,11 +1,11 @@
 'use client';
 import React, { useRef } from 'react';
 
-import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Product } from './types';
-import { ProductCard } from '@/components/ProductCard';
 import { SectionTitle } from '@/components/SectionTitle';
+import { Showcase } from '@/components/Showcase';
+
 import { useProductCardsHandler } from '@/hooks/useProductCardsHandler';
 
 import goods from '@/data/goods.json';
@@ -33,31 +33,12 @@ export const Goods: React.FC<ProductsProps> = ({ products }) => {
             {text}
           </p>
         </div>
-
-        <ul className="flex flex-row flex-wrap xl:gap-[15px] justify-between items-start xl:justify-start  xl:mb-0 ">
-          {cards.map(({ _id, product, image, volumes, price }: Product) => {
-            return (
-              <ProductCard
-                key={_id}
-                product={product}
-                image={image}
-                volumes={volumes}
-                price={price}
-              />
-            );
-          })}
-        </ul>
-
-        <Button
-          isLink={false}
-          isBtn
-          onClick={isMore ? loadMoreCards : hideExtraCards}
-          isDisabled={false}
-          type="button"
-          className="xl:hidden"
-        >
-          {isMore ? 'Більше' : 'Сховати'}
-        </Button>
+        <Showcase
+          cards={cards}
+          isMore={isMore}
+          loadMoreCards={loadMoreCards}
+          hideExtraCards={hideExtraCards}
+        />
       </Container>
     </section>
   );
