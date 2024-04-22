@@ -3,7 +3,6 @@ import React, { useRef } from 'react';
 
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
-import { Section } from '@/components/Section';
 import { Product } from './types';
 import { ProductCard } from '@/components/ProductCard';
 import { SectionTitle } from '@/components/SectionTitle';
@@ -15,14 +14,18 @@ type ProductsProps = {
   products: Product[];
 };
 export const Goods: React.FC<ProductsProps> = ({ products }) => {
-  const buttonRef = useRef<HTMLUListElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const { cards, isMore, loadMoreCards, hideExtraCards } =
-    useProductCardsHandler(buttonRef, products);
+    useProductCardsHandler(sectionRef, products);
 
   const { label, text } = goods;
 
   return (
-    <Section sectionId="goods" variant="otherSection" className="bg-bgSecond">
+    <section
+      id="goods"
+      className="bg-bgSecond pt-[60px] pb-[60px] md:pt-[70px] md:pb-[70px] xl:pt-[120px] xl:pb-[120px]"
+      ref={sectionRef}
+    >
       <Container>
         <div className="flex flex-col gap-[15px] md:gap-5 xl:flex-row xl:justify-between mb-[30px] md:mb-[50px] xl:mb-[64px] ">
           <SectionTitle label={label} center={'left'} variant={'otherTitle'} />
@@ -31,10 +34,7 @@ export const Goods: React.FC<ProductsProps> = ({ products }) => {
           </p>
         </div>
 
-        <ul
-          ref={buttonRef}
-          className="flex flex-row flex-wrap xl:gap-[15px] justify-between items-start xl:justify-start  xl:mb-0 "
-        >
+        <ul className="flex flex-row flex-wrap xl:gap-[15px] justify-between items-start xl:justify-start  xl:mb-0 ">
           {cards.map(({ _id, product, image, volumes, price }: Product) => {
             return (
               <ProductCard
@@ -59,6 +59,6 @@ export const Goods: React.FC<ProductsProps> = ({ products }) => {
           {isMore ? 'Більше' : 'Сховати'}
         </Button>
       </Container>
-    </Section>
+    </section>
   );
 };

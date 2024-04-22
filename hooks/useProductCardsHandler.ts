@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-// import { getProducts } from '@/sanity/requests/getProducts';
 import { Product } from '@/sections/Goods/types';
 
 type ProductCardsHandler = {
@@ -14,10 +13,9 @@ type ProductCardsHandler = {
 };
 
 export const useProductCardsHandler = (
-  buttonRef: React.RefObject<HTMLUListElement>,
+  sectionRef: React.RefObject<HTMLElement>,
   products: Product[],
 ): ProductCardsHandler => {
-  // const [products, setProducts] = useState([] as Product[]);
   const [cards, setCards] = useState([] as Product[]);
   const [isMore, setIsMore] = useState(true);
 
@@ -28,14 +26,6 @@ export const useProductCardsHandler = (
   const isMobile = useMediaQuery({
     query: '(max-width: 767.99px)',
   });
-
-  // useEffect(() => {
-  //   const fetchProducts = async () => {
-  //     const products = await getProducts();
-  //     setProducts(products);
-  //   };
-  //   fetchProducts();
-  // }, []);
 
   useEffect(() => {
     if (isDesktop) {
@@ -73,11 +63,12 @@ export const useProductCardsHandler = (
       setCards(products.slice(0, 3));
       setIsMore(true);
     }
-    console.log(buttonRef);
 
-    if (buttonRef.current) {
-      buttonRef.current.scrollTo({ top: 100, behavior: 'smooth' });
-    }
+    setTimeout(() => {
+      if (sectionRef.current) {
+        sectionRef.current.scrollIntoView({ block: 'end', behavior: 'smooth' });
+      }
+    }, 0);
   };
 
   return { cards, isMore, loadMoreCards, hideExtraCards };

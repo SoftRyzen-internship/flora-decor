@@ -19,10 +19,10 @@ export const About = () => {
           <div className="about"></div>
 
           <SectionTitle
-            className="w-full text-[20px] leading-[1.2] font-semibold tracking-[-0.4px] md:text-titleAboutMd mb-[15px] md:mb-5  md:w-[561px] xl:w-[589px]"
             label={label}
             center={'left'}
-            variant={'otherTitle'}
+            variant={'contactTitle'}
+            className="w-full md:text-titleAboutMd mb-[15px] md:mb-5  md:w-[561px] xl:w-[589px]"
           />
           <p className="w-full mb-[15px] md:mb-[20px] md:w-[485px]  text-description text-[14px] leading-[1.4] tracking-[-0.28px] font-geologica font-medium  xl:text-subtitleMd text-left  xl:w-[544px]">
             {text1}
