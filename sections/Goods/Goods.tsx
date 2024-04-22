@@ -28,7 +28,7 @@ export const Goods = () => {
           </p>
         </div>
 
-        <div className="flex flex-row flex-wrap xl:gap-[15px] justify-between items-start xl:justify-start  xl:mb-0 ">
+        <ul className="flex flex-row flex-wrap xl:gap-[15px] justify-between items-start xl:justify-start  xl:mb-0 ">
           {cards.map(({ _id, product, image, volumes, price }: Product) => {
             return (
               <ProductCard
@@ -40,7 +40,7 @@ export const Goods = () => {
               />
             );
           })}
-        </div>
+        </ul>
 
         <Button
           ref={buttonRef}

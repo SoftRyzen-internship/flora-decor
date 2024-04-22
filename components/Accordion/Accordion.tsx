@@ -12,7 +12,7 @@ export const Accordion: React.FC = () => {
     setActiveDialogue(index);
   };
   return (
-    <ul className="w-full xl:w-[875px] flex flex-col gap-4">
+    <ul className="w-full xl:w-[875px] flex flex-col gap-4 xl:mx-auto">
       {accordion.map((item, index) => (
         <li key={index}>
           <Dialogue

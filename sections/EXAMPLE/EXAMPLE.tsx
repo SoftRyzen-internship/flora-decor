@@ -3,16 +3,16 @@ import React from 'react';
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 
-import { Accordion } from '@/components/Accordion';
+import { Slider } from '@/components/Slider';
+import { getReviews } from '@/sanity/requests/getReviews';
 
-import { Form } from '@/components/Form';
+export const EXAMPLE = async () => {
+  const reviews = await getReviews();
 
-export const EXAMPLE = () => {
   return (
-    <Section sectionId="hero" className="" variant="heroSection">
+    <Section variant="otherSection" className="bg-bgSecond">
       <Container>
-        <Accordion />
-        <Form />
+        <Slider reviews={reviews} />
       </Container>
     </Section>
   );

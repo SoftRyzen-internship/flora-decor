@@ -4,8 +4,9 @@ import { About } from '@/sections/About';
 import { Flowerpots } from '@/sections/Flowerpots';
 import { Goods } from '@/sections/Goods';
 import { Gallery } from '@/sections/Gallery';
+import { Questions } from '@/sections/Questions';
+import { Contacts } from '@/sections/Contacts';
 import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
-import { ExampleModal } from '@/sections/ExampleModal/ExampleModal';
 
 export default function Home() {
   return (
@@ -16,12 +17,11 @@ export default function Home() {
       <Flowerpots />
       <Goods />
       <Gallery />
+      <Questions />
+      <Contacts />
       <EXAMPLE />
-      <ExampleModal />
 
       {/* <Reviews /> */}
-      {/* <Questions /> */}
-      {/* <Contacts />  */}
     </>
   );
 }

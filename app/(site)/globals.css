@@ -60,6 +60,11 @@ input[type='checkbox']:focus-visible + label .custom-checkbox {
   outline-offset: 3px;
 }
 
+input[type='checkbox']:focus-visible + label .custom-checkbox-error {
+  outline: 3px solid #527252;
+  outline-offset: 3px;
+}
+
 /*Buttons styles*/
 
 .order-link::after {
@@ -190,6 +195,73 @@ input[type='checkbox']:focus-visible + label .custom-checkbox {
 
 /*about section end*/
 
+/*contacts section */
+
+.contacts {
+  position: absolute;
+  top: -420px;
+  left: calc(100% - 480px);
+  height: 391px;
+  width: 480px;
+  background-image: url('../../public/images/feedback/feedbackBG-mobile.jpg');
+  background-position: left 43px bottom 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom-right-radius: 230px;
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .contacts {
+    background-image: url('../../public/images/feedback/feedbackBG-mobile@2.jpg');
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    position: absolute;
+    top: -555px;
+    left: -42px;
+    height: 485px;
+    width: 768px;
+    background-image: url('../../public/images/feedback/feedbackBG-tablet.jpg');
+    background-position: right -7px bottom 0;
+    background-size: 960px 606px;
+    border-bottom-right-radius: 300px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .contacts {
+      background-image: url('../../public/images/feedback/feedbackBG-tablet@2.jpg');
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .contacts {
+    position: absolute;
+    top: -101px;
+    left: -937px;
+    height: 898px;
+    width: 825px;
+    background-image: url('../../public/images/feedback/feedbackBG-desktop.jpg');
+    background-position: center;
+    background-size: cover;
+    border-bottom-right-radius: 300px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .contacts {
+      background-image: url('../../public/images/feedback/feedbackBG-desktop@2.jpg');
+    }
+  }
+}
+
+/*contacts section end */
+
 /*-----Hero styles start-------*/
 .hero {
   background-image: url('../../public/images/hero/heroBG-mobile.jpg');
@@ -218,9 +290,9 @@ input[type='checkbox']:focus-visible + label .custom-checkbox {
   .hero {
     background-image: url('../../public/images/hero/heroBG-tablet.jpg');
     background-size:
-      1046px 586px,
+      1046px 596px,
       cover;
-    background-position: top 0px right 0px;
+    background-position: top 74px right 0px;
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -234,7 +306,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox {
 
 @media (min-width: 1046px) {
   .hero {
-    background-position: center top 0px;
+    background-position: center top 74px;
   }
 }
 
@@ -244,6 +316,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox {
     background-size:
       1440px 800px,
       cover;
+    background-position: center top 0;
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -290,6 +363,51 @@ input[type='checkbox']:focus-visible + label .custom-checkbox {
   }
 }
 /*Pots Slider styles end*/
+
+/*Reviews Slider styles*/
+.reviews-slider .swiper-button-next,
+.reviews-slider .swiper-button-prev {
+  border-radius: 50% !important;
+  @apply top-[23px] xl:top-[182px] w-[42px] h-[42px];
+}
+.reviews-slider .swiper-button-next {
+  @apply left-[131px];
+}
+
+.reviews-slider .swiper-button-prev {
+  @apply left-0;
+}
+.reviews-slider .swiper-button-prev:disabled,
+.reviews-slider .swiper-button-next:disabled {
+  background-color: #8ea58e !important;
+}
+
+.reviews-slider .swiper-wrapper {
+  @apply mt-[71px] md:mt-[91px] xl:ml-[584px] xl:mt-0;
+}
+
+.reviews-slider .swiper-button-next::after {
+  content: '';
+  background-image: url('/icons/chevron-left.svg');
+  @apply top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 absolute w-[21px] h-[21px];
+}
+
+.reviews-slider .swiper-button-prev::after {
+  content: '';
+  background-image: url('/icons/chevron-left.svg');
+  @apply top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 absolute w-[21px] h-[21px] rotate-180;
+}
+
+.reviews-slider .swiper-pagination-fraction {
+  font-size: 24px;
+  @apply top-[4px] left-[62px] xl:top-[163px] text-description font-semibold leading-normal w-[49px];
+}
+
+.reviews-slider .swiper-pagination-current {
+  @apply text-main;
+}
+
+/*Reviews Slider styles end*/
 
 /*Gallery*/
 
