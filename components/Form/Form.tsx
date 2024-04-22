@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useForm, FormProvider, SubmitHandler } from 'react-hook-form';
 
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -8,6 +8,7 @@ import { formSchema } from '@/utils/formSchema';
 
 import { InputField } from '../InputField';
 import { Button } from '../Button';
+import { Loader } from '@/components/Loader';
 
 import { FormData } from '../InputField/types';
 import { FormInput } from './types';
@@ -15,14 +16,11 @@ import { FormInput } from './types';
 import form from '@/data/form.json';
 
 export const Form = () => {
-  const [isDisabled, setIsDisabled] = useState<boolean>(true);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-
   const methods = useForm<FormData>({
     resolver: yupResolver(formSchema),
   });
 
-  const { errors } = methods.formState;
+  const { errors, isSubmitting } = methods.formState;
 
   const formData = form as {
     inputFieldsUp: FormInput[];
@@ -34,21 +32,17 @@ export const Form = () => {
 
   const onSubmit: SubmitHandler<FormData> = () => {
     try {
-      setIsLoading(true);
-
       methods.reset();
       localStorage.removeItem('FormData');
     } catch (error) {
-      setIsLoading(false);
-    } finally {
-      setIsLoading(false);
+      console.log('error');
     }
   };
 
+  const isDisabled = !methods.watch().checkbox;
+
   methods.watch(data => {
     localStorage.setItem('FormData', JSON.stringify(data));
-
-    setIsDisabled(!data.checkbox);
   });
 
   useEffect(() => {
@@ -95,7 +89,7 @@ export const Form = () => {
               );
             })}
           </div>
-          <div className="relative flex gap-4 items-center ml-2 flex-row mb-[30px]">
+          <div className="relative flex gap-4 items-center ml-2 flex-row mb-[30px] xl:mb-[40px]">
             <input
               type="checkbox"
               {...methods.register('checkbox')}
@@ -112,7 +106,7 @@ export const Form = () => {
             </label>
           </div>
           <Button isLink={false} isBtn isDisabled={isDisabled} type="submit">
-            {labelBtn} {isLoading && <p>load</p>}
+            {isSubmitting ? <Loader /> : labelBtn}
           </Button>
         </form>
       </FormProvider>
