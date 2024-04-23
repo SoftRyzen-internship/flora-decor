@@ -1,6 +1,6 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Scrollbar, Mousewheel } from 'swiper/modules';
+import { FreeMode, Scrollbar } from 'swiper/modules';
 
 import { Container } from '@/components/Container';
 import { PotWithVolume } from '@/components/PotWithVolume';
@@ -37,9 +37,8 @@ export const Flowerpots = () => {
           slidesPerView="auto"
           freeMode={true}
           scrollbar={{ draggable: true }}
-          mousewheel={true}
           className="slider h-[260px] md:h-[280px] xl:h-[294px] w-full"
-          modules={[FreeMode, Scrollbar, Mousewheel]}
+          modules={[FreeMode, Scrollbar]}
         >
           {pots.map(pot => {
             return (
