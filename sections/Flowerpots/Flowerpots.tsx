@@ -1,6 +1,6 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Scrollbar, Mousewheel } from 'swiper/modules';
+import { FreeMode, Scrollbar } from 'swiper/modules';
 
 import { Container } from '@/components/Container';
 import { PotWithVolume } from '@/components/PotWithVolume';
@@ -18,7 +18,7 @@ export const Flowerpots = () => {
   const { title, subtitle } = data;
 
   return (
-    <Section variant="flowerpotsSection">
+    <Section variant="flowerpotsSection" className="bg-bgMain">
       <Container>
         <div className="flex flex-col gap-[15px] mb-[30px] md:gap-5 md:mb-[50px] xl:flex-row xl:gap-[170px] xl:items-center">
           <SectionTitle
@@ -37,9 +37,8 @@ export const Flowerpots = () => {
           slidesPerView="auto"
           freeMode={true}
           scrollbar={{ draggable: true }}
-          mousewheel={true}
           className="slider h-[260px] md:h-[280px] xl:h-[294px] w-full"
-          modules={[FreeMode, Scrollbar, Mousewheel]}
+          modules={[FreeMode, Scrollbar]}
         >
           {pots.map(pot => {
             return (

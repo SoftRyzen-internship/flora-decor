@@ -12,7 +12,7 @@ export const Reviews = async () => {
   return (
     <Section variant="otherSection" className="bg-bgSecond relative">
       <Container>
-        <div className="flex flex-col gap-[15px] mb-[15px] md:gap-5 md:mb-[50px] xl:absolute xl:top-[120px]">
+        <div className="flex flex-col gap-[15px] mb-[15px] md:gap-5 md:mb-[50px] xl:absolute xl:top-[120px] xl:mb-5">
           <SectionTitle
             label={title}
             center="left"

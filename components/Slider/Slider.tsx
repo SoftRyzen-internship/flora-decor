@@ -4,7 +4,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, EffectFade } from 'swiper/modules';
 
-import { ReviewCard } from '@/components/ReviewCard';
+import { ReviewsCard } from '@/components/ReviewsCard';
 
 import data from '@/data/reviews.json';
 
@@ -45,7 +45,7 @@ export const Slider = ({ reviews }: SliderProps) => {
         {reviews.map(review => {
           return (
             <SwiperSlide key={review._id}>
-              <ReviewCard
+              <ReviewsCard
                 name={review.name}
                 city={review.city}
                 text={review.text}

@@ -342,13 +342,16 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
   background: rgba(34, 71, 34, 0.32) !important;
   height: 6px !important;
   bottom: 0 !important;
+  width: 100% !important;
+  left: 0 !important;
 }
 
 .slider .swiper-slide {
-  width: auto;
-  margin-right: 40px;
-  display: flex;
-  align-items: flex-end;
+  @apply flex mr-10 w-auto items-end;
+}
+
+.slider .swiper-slide:last-child {
+  @apply mr-0;
 }
 
 @media (min-width: 768px) {
@@ -368,7 +371,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 .reviews-slider .swiper-button-next,
 .reviews-slider .swiper-button-prev {
   border-radius: 50% !important;
-  @apply top-[23px] xl:top-[182px] w-[42px] h-[42px];
+  @apply top-[23px] xl:top-[172px] w-[42px] h-[42px];
 }
 .reviews-slider .swiper-button-next {
   @apply left-[131px];
@@ -383,7 +386,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 }
 
 .reviews-slider .swiper-wrapper {
-  @apply mt-[71px] md:mt-[91px] xl:ml-[584px] xl:mt-0;
+  @apply mt-[71px] md:mt-[91px] xl:ml-[584px] xl:mt-0 xl:mb-[44px];
 }
 
 .reviews-slider .swiper-button-next::after {
@@ -400,7 +403,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 
 .reviews-slider .swiper-pagination-fraction {
   font-size: 24px;
-  @apply top-[4px] left-[62px] xl:top-[163px] text-description font-semibold leading-normal w-[49px];
+  @apply top-[4px] left-[62px] xl:top-[153px] text-description font-semibold leading-normal w-[49px];
 }
 
 .reviews-slider .swiper-pagination-current {
@@ -421,7 +424,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
   position: absolute;
   bottom: 27%;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 0.5px;
   @apply bg-bgMain;
 }
@@ -441,3 +444,87 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 }
 
 /*footer end*/
+
+/*Reviews*/
+
+.reviews-card::before {
+  content: '';
+  @apply bg-no-repeat absolute w-[62px] h-[41px] top-[37px];
+  background-image: url('/icons/quotes.svg');
+}
+@media (min-width: 768px) {
+  .reviews-card::before {
+    @apply w-[82px] h-[55px] top-[70px];
+  }
+}
+
+.text-hidden {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*Reviews end*/
+
+/*Gallery*/
+
+.gallery-list li:nth-child(1) {
+  border-radius: 0px 0px 100px 0px;
+}
+
+.gallery-list li:nth-child(2),
+.gallery-list li:nth-child(3) {
+  border-radius: 38px 38px 38px 0px;
+}
+
+.gallery-list li:nth-child(4) {
+  border-radius: 0px 0px 0px 100px;
+}
+
+.gallery-list li:nth-child(5) {
+  border-radius: 0px 0px 100px 0px;
+}
+
+.gallery-list li:nth-child(6) {
+  border-radius: 0px 100px;
+}
+
+@media (min-width: 1400px) {
+  .gallery-list li {
+    width: 317px;
+    height: 300px;
+    border-radius: 0px 0px 100px 0px;
+  }
+
+  .gallery-list li:nth-child(1) {
+    border-radius: 0px 0px 200px 0px;
+  }
+
+  .gallery-list li:nth-child(2) {
+    border-radius: 0px 0px 0px 200px;
+  }
+
+  .gallery-list li:nth-child(4) {
+    height: 615px;
+    border-radius: 0px 0px 200px 0px;
+  }
+
+  .gallery-list li:nth-child(5) {
+    border-radius: 0px 200px;
+    width: 652px;
+    position: absolute;
+    top: 315px;
+    left: 0;
+  }
+
+  .gallery-list li:nth-child(6) {
+    border-radius: 38px 38px 38px 0px;
+    position: absolute;
+    top: 315px;
+    left: 667px;
+  }
+}
+
+/*gallery end*/
