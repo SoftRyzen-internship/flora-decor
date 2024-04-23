@@ -1,7 +1,7 @@
 'use client';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { ReactNode, RefObject } from 'react';
+import { ReactNode } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 
 import classNames from 'classnames';
@@ -11,7 +11,6 @@ import ChevronLeft from '@/public/icons/chevron-left.svg';
 import common from '@/data/common.json';
 
 type ButtonProps = {
-  ref?: RefObject<HTMLButtonElement>;
   children: ReactNode;
   isDisabled: boolean;
   className?: string;

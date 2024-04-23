@@ -6,7 +6,11 @@ import { advantagesIcons } from '@/data/advantagesIcons';
 
 export const Advantages = () => {
   return (
-    <Section variant="otherSection" sectionId={'advantages'}>
+    <Section
+      variant="otherSection"
+      sectionId={'advantages'}
+      className="bg-bgMain"
+    >
       <Container>
         <ul className="flex flex-col md:flex-row  md:mx-[2px] gap-[70px] md:gap-[82px] advantage-list xl:gap-[124px]">
           {advantagesIcons.map((icon, id) => {
