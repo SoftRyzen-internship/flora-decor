@@ -15,7 +15,7 @@ export const FooterLinks: React.FC<FooterLinksProps> = ({
   ariaLabel,
 }) => {
   return (
-    <li key={name}>
+    <li>
       <a
         href={path}
         aria-label={ariaLabel}

@@ -10,12 +10,13 @@
   "ariaLMenuMobileClose": "Закрити мобільне меню",
   "labelLink": "Залишити заявку",
 
-  "location": {
-    "label": "Львів, Майорівка.",
-    "labelSpan": "Вул. Пасічна 53"
-  },
-
   "footerLinkContact": [
+    {
+      "name": "location",
+      "label": "Львів, Майорівка.\nВул. Пасічна 53",
+      "href": "https://www.google.com/maps",
+      "ariaLabel": "посилання на карту"
+    },
     {
       "name": "mail",
       "label": "olenka_b@ukr.net",

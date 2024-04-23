@@ -18,7 +18,7 @@ export const Flowerpots = () => {
   const { title, subtitle } = data;
 
   return (
-    <Section variant="flowerpotsSection">
+    <Section variant="flowerpotsSection" className="bg-bgMain">
       <Container>
         <div className="flex flex-col gap-[15px] mb-[30px] md:gap-5 md:mb-[50px] xl:flex-row xl:gap-[170px] xl:items-center">
           <SectionTitle
