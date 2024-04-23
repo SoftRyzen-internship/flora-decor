@@ -18,7 +18,7 @@ const {
   icons,
   robots,
 } = metaInfo;
-const baseUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/` as string;
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL as string;
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
