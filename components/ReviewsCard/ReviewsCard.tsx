@@ -59,7 +59,7 @@ export const ReviewsCard = ({ name, city, text }: ReviewCardProps) => {
 
         {isReadMoreBtnVisible && (
           <button
-            className="font-mulish text-descriptionFontSize leading-[1.5] text-buttonIcon block ml-auto md:text-descriptionFontSize font-normal md:font-normal hover:underline hover:underline-offset-2 focus:underline focus:underline-offset-2 transition xl:leading-[1.5]"
+            className="font-mulish text-descriptionFontSize leading-[1.5] text-buttonIcon block ml-auto md:text-descriptionFontSize font-normal md:font-normal  hover:text-readMoreBtnHover focus:text-readMoreBtnFocus active:text-readMoreBtnActive transition xl:leading-[1.5]"
             onClick={onReadMoreBtnClick}
           >
             {readMoreBtnText}
