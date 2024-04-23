@@ -26,8 +26,8 @@ export const Modal = ({
   isBurgerMenu,
   isPopUp,
 }: ModalPropsTypes) => {
-  const styesName = classNames({
-    'fixed inset-y-0 right-0 flex w-[360px]': isBurgerMenu,
+  const stylesName = classNames({
+    'fixed inset-y-0 right-0 flex': isBurgerMenu,
     'flex min-h-full items-center justify-center': isPopUp,
   });
 
@@ -47,7 +47,7 @@ export const Modal = ({
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
-          <div className={styesName}>
+          <div className={stylesName}>
             <Transition.Child
               as={Fragment}
               enter={
@@ -75,12 +75,12 @@ export const Modal = ({
                   modalStyles)
                 }
               >
-                <div className="relative">
+                <div className="relative max-w-[440px] mx-auto">
                   <button
                     type="button"
                     onClick={closeModal}
                     className={classNames(
-                      'absolute block text-main hover:text-btnSecondHover focus:text-btnSecondHover active:text-btnSecondActive transition-all duration-300',
+                      'absolute block text-main hover:text-subtitle transition-all duration-300',
                       closeBtnStyles,
                     )}
                     aria-label={ariaLabel}

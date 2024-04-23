@@ -16,12 +16,14 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
   variant,
 }) => {
   const stylesSectionTitle = classNames(
-    'font-geologica not-italic text-main',
+    'font-geologica not-italic text-main font-semibold',
     {
-      'text-titleSm': variant === 'otherTitle',
+      'text-titleSm md:text-titleMd xl:text-6xl xl:leading-[1.1]':
+        variant === 'otherTitle',
       'text-left': center === 'left',
       'text-center': center === 'center',
-      'text-titleContactSm': variant === 'contactTitle',
+      'text-xl tracking-[-0.4px] leading-6 md:text-text-3xl md:tracking-[-0.6px] xl:text-titleContactXl':
+        variant === 'contactTitle',
     },
     className,
   );

@@ -6,7 +6,7 @@ import LogoIcon from '@/public/icons/logo.svg';
 import common from '@/data/common.json';
 
 type LogoProps = {
-  isHeader: boolean;
+  isHeader?: boolean;
   isFooter?: boolean;
   className?: string;
   onClick?: () => void;
@@ -29,7 +29,7 @@ export const Logo = ({
     'cursor-pointer inline-block  hover:text-subtitle focus:text-subtitle transition',
     {
       'text-main': isHeader,
-      'text-white': isFooter,
+      'text-white w-[123px] h-[130px]': isFooter,
     },
     className,
   );

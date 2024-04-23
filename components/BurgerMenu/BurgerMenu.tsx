@@ -6,7 +6,6 @@ import { Modal } from '@/components/Modal';
 import { Logo } from '../Logo';
 import { Navbar } from '@/components/Navbar';
 import { Button } from '@/components/Button';
-import { Container } from '@/components/Container';
 
 import data from '@/data/layout.json';
 
@@ -26,23 +25,23 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({
       isBurgerMenu={true}
       closeModal={onBurgerMenuClose}
       isOpen={isBurgerOpen}
-      closeBtnStyles="top-[15px] right-[20px]"
+      closeBtnStyles="top-[13px] right-0"
       ariaLabel={ariaLMenuMobileClose}
-      modalStyles="w-full bg-bgMain h-[640px] md:h-[610px] pt-[15px] z-50"
+      modalStyles="w-screen bg-bgMain mx-auto md:w-[360px] px-[20px] pt-[20px] z-50"
     >
-      <Container>
-        <Logo isHeader onClick={onBurgerMenuClose} />
-        <Navbar onClickCloseModal={onBurgerMenuClose} className="mt-[65px]" />
+      <Logo isHeader onClick={onBurgerMenuClose} />
+      <Navbar onClickCloseModal={onBurgerMenuClose} className="mt-[65px]" />
+      <div className="flex justify-center items-center mt-[100px]">
         <Button
           isLink
           isHeaderLink
           isDisabled={false}
           onClick={onBurgerMenuClose}
-          className="mt-[100px]"
+          className="max-w-[440px]"
         >
           {labelLink}
         </Button>
-      </Container>
+      </div>
     </Modal>
   );
 };

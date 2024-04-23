@@ -28,9 +28,10 @@ export const NavbarLink: React.FC<NavbarLinkProps> = ({
     <li>
       {pathname === '/policy' ? (
         <Link
-          href={`/${path}`}
+          href={`/#${path}`}
           onClick={onClickCloseModal}
           className={stylesLink}
+          style={{ scrollMarginTop: '100px' }}
         >
           {title}
         </Link>
@@ -39,7 +40,7 @@ export const NavbarLink: React.FC<NavbarLinkProps> = ({
           to={path}
           smooth={true}
           href="/"
-          offset={-10}
+          offset={-73}
           spy={true}
           duration={500}
           onClick={onClickCloseModal}
