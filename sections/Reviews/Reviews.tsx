@@ -10,7 +10,11 @@ export const Reviews = async () => {
   const { title, subtitle } = data;
   const reviews = await getReviews();
   return (
-    <Section variant="otherSection" className="bg-bgSecond relative">
+    <Section
+      variant="otherSection"
+      className="bg-bgSecond relative"
+      sectionId="reviews"
+    >
       <Container>
         <div className="flex flex-col gap-[15px] mb-[15px] md:gap-5 md:mb-[50px] xl:absolute xl:top-[120px] xl:mb-5">
           <SectionTitle

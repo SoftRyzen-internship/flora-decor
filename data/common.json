@@ -1,5 +1,5 @@
 {
-  "pathToFeedback": "feedback",
+  "pathToFeedback": "contacts",
   "logoAriaText": "логотип",
 
   "socials": [
@@ -20,11 +20,13 @@
     "description": {
       "first": "Ми не змогли отримати Вашу заявку.",
       "second": "Будь ласка, спробуйте ще раз."
-    }
+    },
+    "ariaLabel": "Закрити модальне вікно"
   },
   "modalSuccess": {
     "title": "Ваше повідомлення успішно відправлено!",
-    "description": "Ми зв'яжемося з вами найближчим часом."
+    "description": "Ми зв'яжемося з вами найближчим часом.",
+    "ariaLabel": "Закрити модальне вікно"
   },
 
   "gallery": {

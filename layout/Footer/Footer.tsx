@@ -70,7 +70,7 @@ export const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="flex flex-col smOnly:gap-[35px] md:flex-row mdOnly:gap-[70px] xl:flex-row-reverse xl:gap-[225px]">
+          <div className="flex flex-col items-center smOnly:gap-[35px] md:flex-row mdOnly:gap-[70px] xl:flex-row-reverse xl:gap-[225px]">
             <FooterLinkHomePolicy policy={policyBtn} home={homeBtn} />
             <p className="font-geologica text-footerColor text-subtitleXs">
               &copy; {copirate}
