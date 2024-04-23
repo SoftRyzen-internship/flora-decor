@@ -71,7 +71,7 @@ export const ReviewsCard = ({ name, city, text }: ReviewCardProps) => {
         closeModal={closeReviewsModal}
         closeBtnStyles="top-[-20px] right-[-12px]"
         ariaLabel={modalBtnAria}
-        modalStyles="bg-white rounded-tl-[50px] rounded-br-[50px] w-[320px] md:w-[684px] xl:w-[868px] py-[37px] px-[26px] reviews-card relative md:rounded-tl-[150px] md:rounded-br-[150px] md:py-[70px] md:px-[80px]"
+        modalStyles="bg-white rounded-tl-[50px] rounded-br-[50px] w-[320px] min-h-[327px] max-h-[500px] md:w-[684px] md:min-h-[464px] md:max-h-[700px] xl:w-[868px] xl:min-h-[398px] py-[37px] px-[26px] reviews-card relative md:rounded-tl-[150px] md:rounded-br-[150px] md:py-[70px] md:px-[80px] overflow-y-auto"
         isPopUp
       >
         <ReviewsCardText
