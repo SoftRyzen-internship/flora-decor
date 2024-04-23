@@ -55,7 +55,8 @@ export const Button = ({
           {children}
         </Link>
       );
-    } else {
+    }
+    if (pathname === '/') {
       return (
         <ScrollLink
           href="/"

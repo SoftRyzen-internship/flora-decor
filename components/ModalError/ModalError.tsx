@@ -23,7 +23,7 @@ export const ModalError: React.FC<ModalErrorProps> = ({
       isPopUp={true}
       closeModal={closeModal}
       closeBtnStyles="top-[-105px] right-[-8px] md:right-[-70px] md:top-[-85px] xl:right-[-159px]"
-      ariaLabel=""
+      ariaLabel={modalError.ariaLabel}
       modalStyles="w-[328px] h-[438px] bg-bgMain rounded-[10px] text-center px-[35px] py-[132px] md:w-[624px] md:px-[97px] md:py-[112px] xl:w-[802px] xl:px-[186px] xl:pb-[100px]"
     >
       <IconError className="w-[70px] h-[70px] md:w-[100px] md:h-[100px] ml-auto mr-auto mb-6" />
