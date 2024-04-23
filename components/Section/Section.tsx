@@ -29,7 +29,7 @@ export const Section: React.FC<SectionProps> = ({
       'pb-[60px] md:pb-[70px]': variant === 'aboutOrContactSection',
       'pt-[60px] pb-[60px] md:pt-[70px] md:pb-[70px] xl:pt-[120px] xl:pb-[120px]':
         variant === 'otherSection',
-      'pt-[50px] pb-[50px] md:pt-[70px] md:pb-[70px] xl:pt-[102px] xl:pb-[89px]':
+      'pt-[124px] pb-[50px] md:pt-[144px] md:pb-[70px] xl:pt-[222px] xl:pb-[89px]':
         variant === 'policySection',
     },
     className,

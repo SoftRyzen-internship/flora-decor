@@ -9,17 +9,21 @@ import { Gallery } from '@/sections/Gallery';
 
 import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
 
-export default function Home() {
+import { getProducts } from '@/sanity/requests/getProducts';
+
+export default async function Home() {
+  const products = await getProducts();
   return (
     <>
       <Hero />
       <Advantages />
       <About />
       <Flowerpots />
-      <Goods />
+      <Goods products={products} />
       <Gallery />
       <Questions />
       <Contacts />
+
       <EXAMPLE />
 
       {/* <Reviews /> */}
