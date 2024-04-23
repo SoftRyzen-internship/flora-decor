@@ -9,7 +9,14 @@ type GalleryImgItemProps = {
 export const GalleryImgItem: React.FC<GalleryImgItemProps> = ({ img, alt }) => {
   return (
     <li className="object-cover aspect-ratio overflow-hidden md:w-[330px]">
-      <Image src={img} width={652} height={615} priority alt={alt} />
+      <Image
+        src={img}
+        width={652}
+        height={615}
+        priority
+        alt={alt}
+        className="w-full h-full object-cover"
+      />
     </li>
   );
 };

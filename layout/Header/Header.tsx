@@ -18,6 +18,7 @@ import data from '@/data/layout.json';
 export const Header = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false);
+  const [headerStyles, setHeaderStyles] = useState<string>('');
 
   const onBurgerMenuClose = () => setIsBurgerOpen(false);
 
@@ -40,18 +41,21 @@ export const Header = () => {
 
   const { ariaLBurger, labelLink } = data;
 
-  const stylesHeader = classNames(
-    'py-[10px] xl:py-8 fixed top-0 left-0 w-full z-10 transition',
-    {
-      'bg-bgMain':
-        (scrolled && isDesktop) ||
-        (scrolled && !isDesktop) ||
-        (!scrolled && !isDesktop),
-    },
-  );
+  useEffect(() => {
+    const stylesHeader = classNames(
+      'py-[10px] xl:py-8 fixed top-0 left-0 w-full z-10 transition',
+      {
+        'bg-bgMain':
+          (scrolled && isDesktop) ||
+          (!scrolled && !isDesktop) ||
+          (scrolled && !isDesktop),
+      },
+    );
+    setHeaderStyles(stylesHeader);
+  }, [scrolled, isDesktop]);
 
   return (
-    <header className={stylesHeader}>
+    <header className={headerStyles}>
       <Container className="relative flex items-center justify-between">
         <Navbar className="notXL:hidden" />
         <Logo
