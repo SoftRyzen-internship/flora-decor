@@ -1,14 +1,18 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm, FormProvider, SubmitHandler } from 'react-hook-form';
 
 import { yupResolver } from '@hookform/resolvers/yup';
 import { formSchema } from '@/utils/formSchema';
 
+import { sendMessage } from '@/api/telegram';
+
 import { InputField } from '../InputField';
 import { Button } from '../Button';
 import { Loader } from '@/components/Loader';
+import { ModalSuccess } from '../ModalSuccess';
+import { ModalError } from '../ModalError';
 
 import { FormData } from '../InputField/types';
 import { FormInput } from './types';
@@ -16,6 +20,9 @@ import { FormInput } from './types';
 import form from '@/data/form.json';
 
 export const Form = () => {
+  const [showSuccessModal, setShowSuccessModal] = useState<boolean>(false);
+  const [showErrorModal, setShowErrorModal] = useState<boolean>(false);
+
   const methods = useForm<FormData>({
     resolver: yupResolver(formSchema),
   });
@@ -30,12 +37,16 @@ export const Form = () => {
   };
   const { inputFieldsUp, inputFieldsDown, checkText, labelBtn } = formData;
 
-  const onSubmit: SubmitHandler<FormData> = () => {
+  const onSubmit: SubmitHandler<FormData> = async data => {
     try {
+      const message = `Ім'я: ${data.name} %0AТелефон: ${data.phone} %0AПошта: ${data.email} %0AПовідомлення: ${data.message}`;
+      await sendMessage(message);
+
       methods.reset();
       localStorage.removeItem('FormData');
+      setShowSuccessModal(true);
     } catch (error) {
-      console.log('error');
+      setShowErrorModal(true);
     }
   };
 
@@ -55,6 +66,11 @@ export const Form = () => {
       methods.setValue('message', result.message);
     }
   }, [methods]);
+
+  const onClickCloseModal = () => {
+    setShowSuccessModal(false);
+    setShowErrorModal(false);
+  };
 
   return (
     <div>
@@ -110,6 +126,15 @@ export const Form = () => {
           </Button>
         </form>
       </FormProvider>
+      {showSuccessModal && (
+        <ModalSuccess
+          isOpen={showSuccessModal}
+          closeModal={onClickCloseModal}
+        />
+      )}
+      {showErrorModal && (
+        <ModalError isOpen={showErrorModal} closeModal={onClickCloseModal} />
+      )}
     </div>
   );
 };

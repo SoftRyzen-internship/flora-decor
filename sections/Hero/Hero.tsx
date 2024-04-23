@@ -4,7 +4,7 @@ import { Section } from '@/components/Section';
 
 export const Hero = () => {
   return (
-    <Section sectionId="hero" variant="heroSection" className="hero ">
+    <Section sectionId="hero" variant="heroSection" className="hero">
       <Container>
         <h1 className="text-titleMd font-geologica text-main mb-[15px] md:mb-5 md:text-heroTitleMd xl:text-heroTitleXl xl:w-[558px]">
           Оживіть свій простір

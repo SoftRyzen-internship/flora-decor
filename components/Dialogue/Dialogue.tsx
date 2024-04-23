@@ -8,20 +8,28 @@ type DialogueProps = {
   activeDialogue: boolean;
   handleDialogue: () => void;
 };
-
+//w-[215px] md:w-[530px]
 export const Dialogue: React.FC<DialogueProps> = ({
   text,
   activeDialogue,
   handleDialogue,
 }) => {
   const { question, answer } = text;
+  const handleKeyDown = (event: any) => {
+    if (event.key === ' ' || event.key === 'Enter') {
+      event.preventDefault();
+      handleDialogue();
+    }
+  };
   return (
-    <div
+    <li
+      onKeyDown={handleKeyDown}
       className="w-full bg-bgSecond cursor-pointer p-6 rounded-lg"
       onClick={handleDialogue}
+      tabIndex={0}
     >
-      <div className="flex flex-row justify-between items-center ">
-        <div className="w-[215px] md:w-[530px] xl:w-[773px]">
+      <div className="flex flex-row justify-between items-center gap-[16px] md:gap-[56px] ">
+        <div className="w-full">
           <p className="text-[16px] leading-[1.3] font-medium  md:font-semibold font-geologica text-main md:text-[20px] md:leading-[1.2] xl:text-descriptionDesktop ">
             {question}
           </p>
@@ -36,12 +44,12 @@ export const Dialogue: React.FC<DialogueProps> = ({
       <div
         className={`overflow-hidden transition-all duration-300 ease-in-out grid ${activeDialogue ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
       >
-        <div className="overflow-hidden w-[210px] md:w-[500px] xl:w-[750px]">
+        <div className="overflow-hidden w-[75%]  md:w-[500px] xl:w-[750px]">
           <p className="text-subtitleXs text-description xl:text-subtitleMd mt-[10px] ">
             {answer}
           </p>
         </div>
       </div>
-    </div>
+    </li>
   );
 };

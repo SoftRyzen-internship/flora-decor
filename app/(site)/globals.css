@@ -60,6 +60,11 @@ input[type='checkbox']:focus-visible + label .custom-checkbox {
   outline-offset: 3px;
 }
 
+input[type='checkbox']:focus-visible + label .custom-checkbox-error {
+  outline: 3px solid #527252;
+  outline-offset: 3px;
+}
+
 /*Buttons styles*/
 
 .order-link::after {
@@ -285,7 +290,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox {
   .hero {
     background-image: url('../../public/images/hero/heroBG-tablet.jpg');
     background-size:
-      1046px 586px,
+      1046px 596px,
       cover;
     background-position: top 74px right 0px;
   }
@@ -406,6 +411,39 @@ input[type='checkbox']:focus-visible + label .custom-checkbox {
 }
 
 /*Reviews Slider styles end*/
+
+/*footer*/
+
+.footer-item:hover .footer-icon {
+  background-color: #508050;
+  @apply transition;
+}
+
+.border-container::before {
+  content: '';
+  position: absolute;
+  bottom: 27%;
+  left: 0;
+  width: 100vw;
+  height: 0.5px;
+  @apply bg-bgMain;
+}
+
+@media (min-width: 768px) {
+  .border-container::before {
+    content: '';
+    bottom: 23%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .border-container::before {
+    content: '';
+    bottom: 33%;
+  }
+}
+
+/*footer end*/
 
 /*Reviews*/
 
