@@ -1,6 +1,6 @@
 import React from 'react';
 
-import data from '@/data/meta.json';
+import data from '@/data/meta/admin.json';
 
 export const metadata = {
   title: `${data.metadataAdmin.title}`,

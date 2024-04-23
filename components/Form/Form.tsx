@@ -42,7 +42,13 @@ export const Form = () => {
       const message = `Ім'я: ${data.name} %0AТелефон: ${data.phone} %0AПошта: ${data.email} %0AПовідомлення: ${data.message}`;
       await sendMessage(message);
 
-      methods.reset();
+      methods.reset({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+        checkbox: false,
+      });
       localStorage.removeItem('FormData');
       setShowSuccessModal(true);
     } catch (error) {

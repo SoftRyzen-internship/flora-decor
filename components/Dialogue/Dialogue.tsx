@@ -8,7 +8,6 @@ type DialogueProps = {
   activeDialogue: boolean;
   handleDialogue: () => void;
 };
-//w-[215px] md:w-[530px]
 export const Dialogue: React.FC<DialogueProps> = ({
   text,
   activeDialogue,

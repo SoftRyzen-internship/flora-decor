@@ -2,6 +2,8 @@ import Image from 'next/image';
 
 import React from 'react';
 
+import productCard from '@/data/productCard.json';
+
 type ProductCardProps = {
   product: string;
   image: string;
@@ -15,6 +17,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   volumes,
   price,
 }) => {
+  const { from, currency } = productCard;
+
   return (
     <li className="bg-transparent w-full sm:w-[480px] md:w-[320px] xl:w-[430px] ">
       <div className="mb-5  rounded-xl bg-white  overflow-hidden w-full md:w-[320px] xl:w-[430px] xl:h-[500px]  ">
@@ -49,7 +53,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           </h3>
         </div>
         <p className="font-geologica text-[14px] leading-[1.4] tracking-[-0.28px] xl:text-subtitleMd text-main ">
-          від <span>{price} </span>грн
+          {from} <span>{price} </span>
+          {currency}
         </p>
       </div>
     </li>

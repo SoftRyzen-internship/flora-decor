@@ -7,7 +7,7 @@ import { SectionTitle } from '@/components/SectionTitle';
 import about from '@/data/about.json';
 
 export const About = () => {
-  const { label, text1, text2 } = about;
+  const { label, text1, text2, btnText } = about;
   return (
     <Section
       sectionId="about"
@@ -30,8 +30,8 @@ export const About = () => {
           <p className="w-[304px] mb-[30px] md:mb-[40px]  md:w-[450px]  text-description text-[14px] leading-[1.4] tracking-[-0.28px] font-geologica font-medium xl:text-subtitleMd  text-left  xl:w-[490px]">
             {text2}
           </p>
-          <Button isBtn isDisabled={false}>
-            Замовити
+          <Button isLink isOrderLink isDisabled={false}>
+            {btnText}
           </Button>
         </div>
       </Container>
