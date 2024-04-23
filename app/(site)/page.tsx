@@ -10,6 +10,7 @@ import { Gallery } from '@/sections/Gallery';
 import { EXAMPLE } from '@/sections/EXAMPLE/EXAMPLE';
 
 import { getProducts } from '@/sanity/requests/getProducts';
+import { Reviews } from '@/sections/Reviews';
 
 export default async function Home() {
   const products = await getProducts();
@@ -21,12 +22,11 @@ export default async function Home() {
       <Flowerpots />
       <Goods products={products} />
       <Gallery />
+      <Reviews />
       <Questions />
       <Contacts />
 
       <EXAMPLE />
-
-      {/* <Reviews /> */}
     </>
   );
 }

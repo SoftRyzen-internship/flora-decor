@@ -371,7 +371,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 .reviews-slider .swiper-button-next,
 .reviews-slider .swiper-button-prev {
   border-radius: 50% !important;
-  @apply top-[23px] xl:top-[182px] w-[42px] h-[42px];
+  @apply top-[23px] xl:top-[172px] w-[42px] h-[42px];
 }
 .reviews-slider .swiper-button-next {
   @apply left-[131px];
@@ -386,7 +386,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 }
 
 .reviews-slider .swiper-wrapper {
-  @apply mt-[71px] md:mt-[91px] xl:ml-[584px] xl:mt-0;
+  @apply mt-[71px] md:mt-[91px] xl:ml-[584px] xl:mt-0 xl:mb-[44px];
 }
 
 .reviews-slider .swiper-button-next::after {
@@ -403,7 +403,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 
 .reviews-slider .swiper-pagination-fraction {
   font-size: 24px;
-  @apply top-[4px] left-[62px] xl:top-[163px] text-description font-semibold leading-normal w-[49px];
+  @apply top-[4px] left-[62px] xl:top-[153px] text-description font-semibold leading-normal w-[49px];
 }
 
 .reviews-slider .swiper-pagination-current {
