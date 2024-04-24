@@ -225,8 +225,8 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
     height: 485px;
     width: 768px;
     background-image: url('../../public/images/feedback/feedbackBG-tablet.jpg');
-    background-position: right -7px bottom 0;
-    background-size: 960px 606px;
+    background-position: center;
+    background-size: cover;
     border-bottom-right-radius: 300px;
   }
   @media (min-device-pixel-ratio: 2),
