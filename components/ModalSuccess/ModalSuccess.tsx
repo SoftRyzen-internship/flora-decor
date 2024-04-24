@@ -22,8 +22,8 @@ export const ModalSuccess: React.FC<ModalSuccessProps> = ({
       isOpen={isOpen}
       isPopUp={true}
       closeModal={closeModal}
-      closeBtnStyles="top-[-93px] right-0 md:right-[-68px] md:top-[-81px] xl:right-[-149px] xl:top-[-85px]"
-      ariaLabel=""
+      closeBtnStyles="top-[-93px] right-0 md:right-[-68px] md:top-[-81px] xl:right-[-80px] xl:top-[-85px]"
+      ariaLabel={modalSuccess.ariaLabel}
       modalStyles="w-[328px] h-[438px] bg-bgMain rounded-[10px] text-center px-[30px] py-[120px] md:w-[624px] md:px-[95px] md:py-[108px] xl:w-[802px] xl:px-[116px] xl:pb-[80px] xl:pt-[112px]"
     >
       <IconSuccess className="w-[70px] h-[70px] md:w-[100px] md:h-[100px] ml-auto mr-auto mb-6" />

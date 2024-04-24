@@ -26,14 +26,14 @@ export const InputField: React.FC<InputFieldPropsType> = ({
 
   if (type === 'textarea') {
     return (
-      <div className="relative flex flex-col gap-[10px]">
+      <div className="relative flex flex-col gap-[4px]">
         <label className="font-geologica text-[16px] leading-[1.3] font-medium md:text-subtitleMd text-subtitle">
           {label}
         </label>
         <textarea
           {...register(name)}
           placeholder={placeholder}
-          className={`box-border rounded-[10px] border-2  utilities focus:border-[#8EA58E] resize-none h-[150px] outline-none ${errors[name] ? 'border-error' : 'border-transparent'} px-4 py-[16px] w-full font-geologica text-[16px] leading-[1.3] font-medium md:text-subtitleMd text-main placeholder:text-placeholder `}
+          className={`box-border rounded-[10px] border-2 utilities focus:border-[#8EA58E] resize-none h-[150px] outline-none ${errors[name] ? 'border-error' : 'border-transparent'} px-4 py-[18px] w-full font-geologica text-[16px] leading-[1.3] font-medium md:text-subtitleMd text-main placeholder:text-placeholder `}
         />
         {errors[name] && (
           <p className="error-message absolute bottom-[-18px] md:bottom-[-24px] left-5 text-[12px] font-geologica font-normal leading-[1.25]  text-error ">
@@ -45,7 +45,7 @@ export const InputField: React.FC<InputFieldPropsType> = ({
   }
 
   return (
-    <div className="relative flex flex-col w-full gap-[10px]">
+    <div className="relative flex flex-col w-full gap-[4px]">
       <label className="font-geologica text-[16px] leading-[1.3] font-medium md:text-subtitleMd text-subtitle">
         {label}
       </label>
@@ -53,7 +53,7 @@ export const InputField: React.FC<InputFieldPropsType> = ({
         type={type}
         {...register(name)}
         placeholder={placeholder}
-        className={`box-border rounded-[10px] border-2  utilities focus:border-[#8EA58E] outline-none ${errors[name] ? 'border-error' : 'border-transparent'} px-4 py-[16px] w-full font-geologica text-[16px] leading-[1.3] font-medium md:text-subtitleMd text-main placeholder:text-placeholder `}
+        className={`box-border rounded-[10px] border-2  utilities focus:border-[#8EA58E] outline-none ${errors[name] ? 'border-error' : 'border-transparent'} px-4 py-[18px] w-full font-geologica text-[16px] leading-[1.3] font-medium md:text-subtitleMd text-main placeholder:text-placeholder `}
       />
       {errors[name] && (
         <p className="error-message absolute bottom-[-18px] md:bottom-[-24px] left-5 text-[12px] font-geologica font-normal leading-[1.25]  text-error ">

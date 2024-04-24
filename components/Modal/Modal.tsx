@@ -31,6 +31,10 @@ export const Modal = ({
     'flex min-h-full items-center justify-center': isPopUp,
   });
 
+  const wrapStyles = classNames('relative', {
+    ' max-w-[440px] mx-auto': isBurgerMenu,
+  });
+
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -75,7 +79,7 @@ export const Modal = ({
                   modalStyles)
                 }
               >
-                <div className="relative max-w-[440px] mx-auto">
+                <div className={wrapStyles}>
                   <button
                     type="button"
                     onClick={closeModal}

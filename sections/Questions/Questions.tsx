@@ -11,7 +11,7 @@ export const Questions = () => {
   return (
     <Section
       variant="otherSection"
-      className="sm:h-[826px] md:h-[811px] xl:h-[834px]"
+      className="sm:h-[826px] md:h-[811px] xl:h-[834px] bg-bgMain"
     >
       <Container>
         <SectionTitle

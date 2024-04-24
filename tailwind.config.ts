@@ -59,6 +59,9 @@ const config: Config = {
         subtitleMdCol: '#407040',
         sliderBtnHover: '#2F5C2F',
         footerColor: '#ABB999',
+        readMoreBtnHover: '#E38C33',
+        readMoreBtnFocus: '#F9932B',
+        readMoreBtnActive: '#DF601B',
       },
 
       fontSize: {

@@ -1,0 +1,19 @@
+{
+  "title": "Політика конфіденційності",
+  "slug": "policy",
+  "openGraph": {
+    "title": "Flora Decor",
+    "description": "Ексклюзивні квіти в вазонах для вашого дому або офісу!",
+    "siteName": "Flora Decor",
+    "locale": "uk_UA",
+    "type": "website",
+    "images": [
+      {
+        "url": "/meta/ogp/og-image.jpg",
+        "width": 1200,
+        "height": 630,
+        "alt": "Flora Decor"
+      }
+    ]
+  }
+}
