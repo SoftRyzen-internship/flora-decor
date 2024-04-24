@@ -13,7 +13,7 @@ type PolicyProps = {
 
 export const Policy: React.FC<PolicyProps> = ({ data }) => {
   return (
-    <Section variant="policySection">
+    <Section variant="policySection" className="bg-bgMain">
       <Container>
         <div
           className="xl:w-[986px] xl:mr-[111px] xl:ml-auto 

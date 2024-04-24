@@ -18,11 +18,10 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
   const stylesSectionTitle = classNames(
     'font-geologica not-italic text-main font-semibold',
     {
-      'text-titleSm md:text-titleMd xl:text-6xl xl:leading-[1.1]':
-        variant === 'otherTitle',
+      'text-titleSm md:text-titleMd xl:text-titleXl': variant === 'otherTitle',
       'text-left': center === 'left',
       'text-center': center === 'center',
-      'text-xl tracking-[-0.4px] leading-6 md:text-text-3xl md:tracking-[-0.6px] xl:text-titleContactXl':
+      'text-xl tracking-[-0.4px] leading-6  xl:text-titleContactXl':
         variant === 'contactTitle',
     },
     className,

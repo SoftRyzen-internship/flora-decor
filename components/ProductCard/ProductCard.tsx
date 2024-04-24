@@ -21,7 +21,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
   return (
     <li className="bg-transparent w-full sm:w-[480px] md:w-[320px] xl:w-[430px] ">
-      <div className="mb-5  rounded-xl bg-white  overflow-hidden w-full md:w-[320px] xl:w-[430px] xl:h-[500px]  ">
+      <div className="mb-5  rounded-xl bg-white  overflow-hidden w-full md:w-[320px] xl:w-[430px] md:h-[360px] xl:h-[500px] ">
         <Image
           width={440}
           height={495}
@@ -29,7 +29,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           src={image}
           placeholder="blur"
           blurDataURL={image}
-          className="object-cover"
+          className="object-cover w-full h-full"
         />
       </div>
       <div className="flex flex-col items-start w-full">
@@ -41,7 +41,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                   key={index}
                   className="w-[39px] h-[24px] rounded-xl bg-transparent border border-main flex justify-center items-center"
                 >
-                  <span className="text-[14px] leading-[1.4] tracking-[-0.28px] text-main  font-geologica">
+                  <span className="font-medium text-[14px] leading-[1.4] tracking-[-0.28px] text-main  font-geologica">
                     {volume}
                   </span>
                 </div>

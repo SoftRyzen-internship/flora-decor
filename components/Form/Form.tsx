@@ -111,7 +111,7 @@ export const Form = () => {
               );
             })}
           </div>
-          <div className="relative flex gap-4 items-center ml-2 flex-row mb-[30px] xl:mb-[40px]">
+          <div className="relative flex gap-4 items-center ml-2 flex-row mb-[30px] md:mb-[40px]">
             <input
               type="checkbox"
               {...methods.register('checkbox')}
