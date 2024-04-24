@@ -20,14 +20,14 @@ export const Flowerpots = () => {
   return (
     <Section variant="flowerpotsSection" className="bg-bgMain">
       <Container>
-        <div className="flex flex-col gap-[15px] mb-[30px] md:gap-5 md:mb-[50px] xl:flex-row xl:gap-[170px] xl:items-center">
+        <div className="flex flex-col gap-[15px] mb-[30px] md:gap-5 md:mb-[50px] xl:mb-[64px] xl:flex-row xl:gap-[170px] xl:items-center">
           <SectionTitle
             label={title}
             center="left"
             variant="otherTitle"
             className="text-titleSm md:text-heroTitleSm md:leading-[1.1] xl:text-titleXl"
           />
-          <p className="font-geologica text-main text-subtitleXs md:text-subtitleMd md:w-[322px]">
+          <p className="font-geologica text-main text-subtitleXs md:text-subtitleMd w-[281px] md:w-[322px] xl:w-[281px]">
             {subtitle}
           </p>
         </div>
