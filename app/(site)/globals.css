@@ -243,7 +243,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
     position: absolute;
     top: -101px;
     left: -937px;
-    height: 898px;
+    height: 897.5px;
     width: 825px;
     background-image: url('../../public/images/feedback/feedbackBG-desktop.jpg');
     background-position: center;

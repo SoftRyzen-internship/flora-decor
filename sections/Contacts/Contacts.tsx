@@ -20,7 +20,7 @@ export const Contacts = () => {
             label={label}
             center={'left'}
             variant={'contactTitle'}
-            className="w-[298px] md:w-[449px] text-main md:text-[30px] md:font-semibold md:leading-[1.2] tracking-[-0.6px] xl:w-[512px] mb-[30px] md:mb-[50px] xl:mb-[40px] "
+            className="w-[298px] md:w-[449px] text-main md:text-[30px] md:font-semibold md:leading-[1.2] tracking-[-0.4px] md:tracking-[-0.6px] xl:w-[512px] mb-[30px] md:mb-[50px] xl:mb-[40px] "
           />
           <Form />
         </div>

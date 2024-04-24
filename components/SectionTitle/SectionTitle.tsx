@@ -21,7 +21,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
       'text-titleSm md:text-titleMd xl:text-titleXl': variant === 'otherTitle',
       'text-left': center === 'left',
       'text-center': center === 'center',
-      'text-xl tracking-[-0.4px] leading-6 md:text-titleAboutMd md:tracking-[-0.6px] xl:text-titleContactXl':
+      'text-xl tracking-[-0.4px] leading-6  xl:text-titleContactXl':
         variant === 'contactTitle',
     },
     className,
