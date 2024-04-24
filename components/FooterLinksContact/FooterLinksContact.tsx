@@ -21,10 +21,10 @@ export const FooterLinksContact: React.FC<FooterLinksContactProps> = ({
     <li className="footer-item transition">
       <a
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener noreferrer nofollow"
         href={href}
         aria-label={ariaLabel}
-        className="text-bgSecond font-geologica whitespace-pre-wrap text-start text-sm not-italic font-medium leading-[1.4] tracking-[-0.28px] hover:text-subtitle focus:text-subtitle transition flex items-center gap-[15px]"
+        className="text-bgSecond font-geologica whitespace-pre-wrap text-start text-subtitleXs not-italic md:text-subtitleMd hover:text-subtitle focus:text-subtitle transition flex items-center gap-[15px]"
       >
         {name === 'location' && (
           <div className="w-10 h-10 bg-bgMain flex footer-icon justify-center items-center rounded-full">
