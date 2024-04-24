@@ -66,7 +66,7 @@ export const Button = ({
           onClick={onClick}
           smooth={true}
           spy={true}
-          offset={0}
+          offset={-73}
         >
           {children}
           {isOrderLink && (
