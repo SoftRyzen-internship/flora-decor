@@ -27,9 +27,9 @@ export const Dialogue: React.FC<DialogueProps> = ({
       onClick={handleDialogue}
       tabIndex={0}
     >
-      <div className="flex flex-row justify-between items-center gap-[16px] md:gap-[56px] ">
+      <div className="flex flex-row justify-between items-center gap-[40px] md:gap-[56px] ">
         <div className="w-full">
-          <p className="text-[16px] leading-[1.3] font-medium  md:font-semibold font-geologica text-main md:text-[20px] md:leading-[1.2] xl:text-descriptionDesktop ">
+          <p className="text-[16px] leading-[1.3] font-medium md:tracking-[-0.4px] xl:tracking-normal md:font-semibold font-geologica text-main md:text-[20px] md:leading-[1.2] xl:text-descriptionDesktop ">
             {question}
           </p>
         </div>

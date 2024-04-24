@@ -114,7 +114,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
     content: '';
     width: 0.5px;
     height: 235px;
-    @apply right-[-41px];
+    @apply right-[-41px] top-[-20px];
   }
 }
 
@@ -123,8 +123,12 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
     content: '';
     width: 0.5px;
     height: 235px;
-    @apply right-[-62px];
+    @apply right-[-62px] top-[-24px];
   }
+}
+
+.advantages-item:first-child p {
+  @apply w-[159px] xl:w-[243px];
 }
 
 /*advantages end*/
@@ -225,8 +229,8 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
     height: 485px;
     width: 768px;
     background-image: url('../../public/images/feedback/feedbackBG-tablet.jpg');
-    background-position: right -7px bottom 0;
-    background-size: 960px 606px;
+    background-position: center;
+    background-size: cover;
     border-bottom-right-radius: 300px;
   }
   @media (min-device-pixel-ratio: 2),
@@ -243,7 +247,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
     position: absolute;
     top: -101px;
     left: -937px;
-    height: 898px;
+    height: 897.5px;
     width: 825px;
     background-image: url('../../public/images/feedback/feedbackBG-desktop.jpg');
     background-position: center;
@@ -292,7 +296,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
     background-size:
       1046px 596px,
       cover;
-    background-position: top 74px right 0px;
+    background-position: top 15px right 0px;
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -306,7 +310,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 
 @media (min-width: 1046px) {
   .hero {
-    background-position: center top 74px;
+    background-position: center top 15px;
   }
 }
 
@@ -358,11 +362,20 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
   .slider .swiper-slide {
     margin-right: 70px;
   }
+  .slider .swiper-wrapper {
+    margin-right: 2px !important;
+    margin-left: 2px !important;
+  }
 }
 
 @media (min-width: 1400px) {
   .slider .swiper-slide {
     margin-right: 76px;
+  }
+
+  .slider .swiper-wrapper {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
 }
 /*Pots Slider styles end*/

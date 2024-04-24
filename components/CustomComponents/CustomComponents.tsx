@@ -12,5 +12,8 @@ export const CustomComponents: PortableTextComponents = {
         </a>
       );
     },
+    email: ({ value, children }) => {
+      return <a href={`mailto:${value.email}`}>{children}</a>;
+    },
   },
 };

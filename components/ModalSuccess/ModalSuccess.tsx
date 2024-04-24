@@ -30,7 +30,7 @@ export const ModalSuccess: React.FC<ModalSuccessProps> = ({
       <h3 className="mb-4 font-geologica not-italic text-main text-xl leading-[1.2] font-semibold tracking-[-0.4px] md:text-titleAboutMd xl:text-titleContactXl">
         {modalSuccess.title}
       </h3>
-      <p className="font-geologica not-italic text-subtitleXs text-main">
+      <p className="font-geologica not-italic text-subtitleXs text-main md:text-subtitleMd smOnly:whitespace-pre-wrap">
         {modalSuccess.description}
       </p>
     </Modal>
