@@ -40,7 +40,7 @@ export const Button = ({
     className,
     'uppercase rounded-[100px] transition-all duration-300',
     {
-      'font-mulish text-heroButton text-center text-main bg-bgSecond inline-block w-full md:w-[320px] xl:w-[240px]  py-4 px-[30px]  hover:bg-btnSecondHover focus:bg-btnSecondHover active:bg-btnSecondActive ':
+      'font-mulish text-heroButton text-center text-main bg-bgSecond inline-block w-full md:w-[320px] xl:w-[245px] py-4 px-[30px]  hover:bg-btnSecondHover focus:bg-btnSecondHover active:bg-btnSecondActive ':
         isHeaderLink,
       'custom-button bg-button order-link hover:bg-btnHover focus:bg-btnHover active:bg-btnHover':
         isOrderLink || (isBtn && !isDisabled),
@@ -66,7 +66,7 @@ export const Button = ({
           onClick={onClick}
           smooth={true}
           spy={true}
-          offset={0}
+          offset={-73}
         >
           {children}
           {isOrderLink && (

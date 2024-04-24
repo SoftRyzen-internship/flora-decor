@@ -27,7 +27,7 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({
       isOpen={isBurgerOpen}
       closeBtnStyles="top-[13px] right-0"
       ariaLabel={ariaLMenuMobileClose}
-      modalStyles="w-screen bg-bgMain mx-auto md:w-[360px] px-[20px] pt-[20px] z-50"
+      modalStyles="w-screen bg-bgMain mx-auto md:w-[360px] px-[20px] pt-[15px] z-50"
     >
       <Logo isHeader onClick={onBurgerMenuClose} />
       <Navbar onClickCloseModal={onBurgerMenuClose} className="mt-[65px]" />

@@ -15,53 +15,53 @@ import img6Desktop from '@/public/images/gallery/desktop/picture_6@2.jpg';
 export const galleryImg = [
   {
     img: img1,
-    alt: '',
+    alt: 'вазон стоіть біля вікна',
   },
   {
     img: img2,
-    alt: '',
+    alt: 'вазон стоїть на полу',
   },
   {
     img: img3,
-    alt: '',
+    alt: 'вазони стоять на поличці',
   },
   {
     img: img4,
-    alt: '',
+    alt: 'вазони на фоні салатової стіни',
   },
   {
     img: img5,
-    alt: '',
+    alt: 'вазон на фоні зеленої стіни',
   },
   {
     img: img6,
-    alt: '',
+    alt: 'вазони стоять на столику біля дивану',
   },
 ];
 
 export const galleryImgDesktop = [
   {
     img: img1Desktop,
-    alt: '',
+    alt: 'вазон стоіть біля вікна',
   },
   {
     img: img2Desktop,
-    alt: '',
+    alt: 'вазон стоїть на полу',
   },
   {
     img: img3Desktop,
-    alt: '',
+    alt: 'вазони стоять на поличці',
   },
   {
     img: img4Desktop,
-    alt: '',
+    alt: 'вазони на фоні салатової стіни',
   },
   {
     img: img5Desktop,
-    alt: '',
+    alt: 'вазон на фоні зеленої стіни',
   },
   {
     img: img6Desktop,
-    alt: '',
+    alt: 'вазони стоять на столику біля дивану',
   },
 ];
