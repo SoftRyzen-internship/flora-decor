@@ -29,7 +29,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           src={image}
           placeholder="blur"
           blurDataURL={image}
-          className="object-cover"
+          className="object-cover w-full h-full"
         />
       </div>
       <div className="flex flex-col items-start w-full">

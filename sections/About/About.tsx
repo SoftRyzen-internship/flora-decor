@@ -22,7 +22,7 @@ export const About = () => {
             label={label}
             center={'left'}
             variant={'contactTitle'}
-            className="w-full md:text-titleAboutMd mb-[15px] md:mb-5  md:w-[561px] xl:w-[589px]"
+            className="w-full md:text-titleAboutMd md:tracking-[-0.5px] mb-[15px] md:mb-5  md:w-[561px] xl:w-[589px]"
           />
           <p className="w-full mb-[15px] md:mb-[20px] md:w-[485px]  text-description text-[14px] leading-[1.4] tracking-[-0.28px] font-geologica font-medium  xl:text-subtitleMd text-left  xl:w-[544px]">
             {text1}
