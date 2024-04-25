@@ -21,7 +21,7 @@ export const ReviewsCardText = ({
   const textClassName = classNames(
     'font-geologica text-subtitleMd leading-[1.3] text-main  md:text-descriptionDesktop tracking-normal ',
     {
-      'mb-[16px] text-hidden h-[107px] md:h-[156px]': isCardText,
+      'mb-[16px] text-hidden h-[104px] md:h-[156px]': isCardText,
       'overflow-y-auto max-h-[291px] md:max-h-[343px]': isModalText,
     },
   );

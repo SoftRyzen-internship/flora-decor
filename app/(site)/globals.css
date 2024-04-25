@@ -399,7 +399,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 }
 
 .reviews-slider .swiper-wrapper {
-  @apply mt-[71px] md:mt-[91px] xl:ml-[584px] xl:mt-0 xl:mb-[44px];
+  @apply mt-[71px] md:mt-[91px] xl:ml-[584px] xl:mt-0;
 }
 
 .reviews-slider .swiper-button-next::after {

@@ -10,7 +10,10 @@ export const Reviews = async () => {
   const { title, subtitle } = data;
   const reviews = await getReviews();
   return (
-    <Section variant="otherSection" className="bg-bgSecond relative">
+    <Section
+      variant="otherSection"
+      className="bg-bgSecond relative xl:pb-[164px]"
+    >
       <div className="relative">
         <div className="absolute top-[-119px] left-0" id="reviews"></div>
       </div>
