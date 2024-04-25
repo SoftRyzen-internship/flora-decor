@@ -24,10 +24,11 @@ export const Goods: React.FC<ProductsProps> = ({ products }) => {
     <section
       className="bg-bgSecond pt-[60px] pb-[60px] md:pt-[70px] md:pb-[70px] xl:pt-[120px] xl:pb-[120px]"
       ref={sectionRef}
+      id="goods"
     >
-      <div className="relative">
+      {/* <div className="relative">
         <div className="absolute top-[-130px] left-0" id="goods"></div>
-      </div>
+      </div> */}
       <Container>
         <div className="flex flex-col gap-[15px] md:gap-5 xl:flex-row xl:justify-between mb-[30px] md:mb-[50px] xl:mb-[64px] ">
           <SectionTitle label={label} center={'left'} variant={'otherTitle'} />

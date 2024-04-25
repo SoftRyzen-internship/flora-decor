@@ -13,10 +13,14 @@ export const Reviews = async () => {
     <Section
       variant="otherSection"
       className="bg-bgSecond relative xl:pb-[164px]"
+      sectionId="reviews"
     >
-      <div className="relative">
-        <div className="absolute top-[-119px] left-0" id="reviews"></div>
-      </div>
+      {/* <div className="relative">
+        <div
+          className="absolute top-[-150px] left-0 w-2 h-2 bg-black"
+          id="reviews"
+        ></div>
+      </div> */}
       <Container>
         <div className="flex flex-col gap-[15px] mb-[15px] md:gap-5 md:mb-[50px] xl:absolute xl:top-[120px] xl:mb-5">
           <SectionTitle

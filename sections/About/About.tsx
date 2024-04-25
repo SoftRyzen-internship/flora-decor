@@ -12,10 +12,11 @@ export const About = () => {
     <Section
       variant="aboutOrContactSection"
       className="bg-bgSecond pt-[377px]   md:pt-[459px]  xl:py-[133px]"
+      sectionId="about"
     >
-      <div className="relative">
+      {/* <div className="relative">
         <div className="absolute top-[-170px] left-0" id="about"></div>
-      </div>
+      </div> */}
       <Container>
         <div className=" relative w-full  md:m-auto md:w-[561px] xl:ml-[688px] xl:mr-[63px] xl:w-[589px]">
           <div className="about"></div>
