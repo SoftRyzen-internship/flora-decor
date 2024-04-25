@@ -33,7 +33,7 @@ export const Policy: React.FC<PolicyProps> = ({ data }) => {
             prose-ul:m-0 prose-ul:list-disc prose-ul:list-inside prose-ul:text-description
             prose-li:m-0  prose-li:text-subtitleXs prose-li:font-geologica xl:prose-li:text-subtitleMd 
              prose-li:marker:text-description prose-a:font-geologica xl:pros-li:text-subtitleMd
-              prose-a:text-red-500 prose-a:text-subtitleXs xl:prose-a:text-subtitleMd"
+              prose-a:text-description  prose-a:text-subtitleXs xl:prose-a:text-subtitleMd"
         >
           <PortableText value={data} components={CustomComponents} />
         </div>
