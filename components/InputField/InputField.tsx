@@ -9,7 +9,7 @@ type InputFieldPropsType = {
   name: keyof FormData;
   label: string;
   placeholder: string;
-  type: 'text' | 'phone' | 'email' | 'textarea' | 'checkbox';
+  type: 'text' | 'tel' | 'email' | 'textarea' | 'checkbox';
   className?: string;
 };
 
@@ -23,8 +23,6 @@ export const InputField: React.FC<InputFieldPropsType> = ({
     register,
     formState: { errors },
   } = useFormContext<FormData>();
-
-  const inputType = type === 'phone' ? 'tel' : type;
 
   if (type === 'textarea') {
     return (
@@ -52,7 +50,7 @@ export const InputField: React.FC<InputFieldPropsType> = ({
         {label}
       </label>
       <input
-        type={inputType}
+        type={type}
         {...register(name)}
         placeholder={placeholder}
         className={`box-border rounded-[10px] border-2  utilities focus:border-[#8EA58E] outline-none ${errors[name] ? 'border-error' : 'border-transparent'} px-4 py-[18.5px] md:py-[18px] w-full font-geologica text-[16px] leading-[1.3] font-medium md:text-subtitleMd text-main placeholder:text-placeholder `}

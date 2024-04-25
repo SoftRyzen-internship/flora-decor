@@ -39,13 +39,13 @@ export const Form = () => {
 
   const onSubmit: SubmitHandler<FormData> = async data => {
     try {
-      const message = `Ім'я: ${data.name} %0AТелефон: ${data.phone} %0AПошта: ${data.email} %0AПовідомлення: ${data.message}`;
+      const message = `Ім'я: ${data.name} %0AТелефон: ${data.tel} %0AПошта: ${data.email} %0AПовідомлення: ${data.message}`;
       await sendMessage(message);
 
       methods.reset({
         name: '',
         email: '',
-        phone: '',
+        tel: '',
         message: '',
         checkbox: false,
       });
@@ -67,7 +67,7 @@ export const Form = () => {
     if (savedFormData !== null) {
       const result = JSON.parse(savedFormData);
       methods.setValue('name', result.name);
-      methods.setValue('phone', result.phone);
+      methods.setValue('tel', result.tel);
       methods.setValue('email', result.email);
       methods.setValue('message', result.message);
     }

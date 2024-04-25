@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useRef } from 'react';
 
 import { Container } from '@/components/Container';
@@ -22,9 +23,9 @@ export const Goods: React.FC<ProductsProps> = ({ products }) => {
 
   return (
     <section
-      id="goods"
-      className="bg-bgSecond pt-[60px] pb-[60px] md:pt-[70px] md:pb-[70px] xl:pt-[120px] xl:pb-[120px]"
+      className="bg-bgSecond pt-[60px] pb-[60px] md:pt-[70px] md:pb-[70px] xl:pt-[120px] xl:pb-[120px] scroll-mt-[75px]"
       ref={sectionRef}
+      id="goods"
     >
       <Container>
         <div className="flex flex-col gap-[15px] md:gap-5 xl:flex-row xl:justify-between mb-[30px] md:mb-[50px] xl:mb-[64px] ">
