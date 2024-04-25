@@ -7,10 +7,10 @@
       "type": "text"
     },
     {
-      "name": "phone",
+      "name": "tel",
       "label": "Телефон *",
       "placeholder": "+380988888545",
-      "type": "phone"
+      "type": "tel"
     }
   ],
   "inputFieldsDown": [
