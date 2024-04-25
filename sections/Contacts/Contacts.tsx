@@ -9,10 +9,12 @@ export const Contacts = () => {
   const { label } = contacts;
   return (
     <Section
-      sectionId="contacts"
       variant="aboutOrContactSection"
       className="bg-bgSecond pt-[420px] md:pt-[555px] xl:py-[101px]"
     >
+      <div className="relative">
+        <div className="absolute top-[-150px] left-0" id="contacts"></div>
+      </div>
       <Container>
         <div className="relative w-full  xl:w-[541px] xl:mr-[111px] xl:ml-auto ">
           <div className="contacts"></div>
