@@ -31,7 +31,6 @@ export const NavbarLink: React.FC<NavbarLinkProps> = ({
           href={`/#${path}`}
           onClick={onClickCloseModal}
           className={stylesLink}
-          style={{ scrollMarginTop: '100px' }}
         >
           {title}
         </Link>

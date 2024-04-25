@@ -13,7 +13,7 @@ export const GalleryImgItem: React.FC<GalleryImgItemProps> = ({ img, alt }) => {
         src={img}
         width={652}
         height={615}
-        loading="lazy"
+        priority
         alt={alt}
         className="w-full h-full object-cover"
       />
