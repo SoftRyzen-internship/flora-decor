@@ -85,7 +85,7 @@ export const Form = () => {
           onSubmit={methods.handleSubmit(onSubmit)}
           className="w-full xl:w-[541px]"
         >
-          <div className="w-full flex flex-col xl:flex-row  justify-center gap-5 mb-5 md:mb-[30px] md:gap-[30px] xl:gap-[17px]">
+          <div className="w-full flex flex-col xl:flex-row  justify-center mb-[36px] gap-[36px] xl:gap-[17px]">
             {inputFieldsUp.map(input => {
               return (
                 <InputField
@@ -98,7 +98,7 @@ export const Form = () => {
               );
             })}
           </div>
-          <div className="flex flex-col gap-5 mb-[30px] md:gap-[30px]">
+          <div className="flex flex-col mb-[36px] gap-[36px]">
             {inputFieldsDown.map(input => {
               return (
                 <InputField
@@ -111,6 +111,7 @@ export const Form = () => {
               );
             })}
           </div>
+
           <div className="relative flex gap-4 items-center ml-2 flex-row mb-[30px] md:mb-[40px]">
             <input
               type="checkbox"
@@ -127,6 +128,7 @@ export const Form = () => {
               ></span>
             </label>
           </div>
+
           <Button isLink={false} isBtn isDisabled={isDisabled} type="submit">
             {isSubmitting ? <Loader /> : labelBtn}
           </Button>
