@@ -20,8 +20,8 @@
 
 .custom-checkbox {
   position: absolute;
-  top: 0;
-  left: -3px;
+  top: 14px;
+  left: 3px;
   width: 24px;
   height: 24px;
   background-color: white;
@@ -33,8 +33,8 @@
 
 .custom-checkbox-error {
   position: absolute;
-  top: 0;
-  left: -3px;
+  top: 14px;
+  left: 3px;
   width: 24px;
   height: 24px;
   background-color: white;
@@ -63,6 +63,18 @@ input[type='checkbox']:focus-visible + label .custom-checkbox {
 input[type='checkbox']:focus-visible + label .custom-checkbox-error {
   outline: 3px solid #527252;
   outline-offset: 3px;
+}
+
+@media screen and (min-width: 394px) {
+  .custom-checkbox {
+    top: 3px;
+    left: -7px;
+  }
+
+  .custom-checkbox-error {
+    top: 3px;
+    left: -7px;
+  }
 }
 
 /*Buttons styles*/
@@ -246,9 +258,9 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
   .contacts {
     position: absolute;
     top: -101px;
-    left: -937px;
-    height: 897.5px;
-    width: 825px;
+    left: -955px;
+    height: 916px;
+    width: 838px;
     background-image: url('../../public/images/feedback/feedbackBG-desktop.jpg');
     background-position: center;
     background-size: cover;
