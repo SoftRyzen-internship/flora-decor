@@ -24,6 +24,8 @@ export const InputField: React.FC<InputFieldPropsType> = ({
     formState: { errors },
   } = useFormContext<FormData>();
 
+  const inputType = type === 'phone' ? 'tel' : type;
+
   if (type === 'textarea') {
     return (
       <div className="relative flex flex-col gap-[7.5px] md:gap-[7px] ">
@@ -50,7 +52,7 @@ export const InputField: React.FC<InputFieldPropsType> = ({
         {label}
       </label>
       <input
-        type={type}
+        type={inputType}
         {...register(name)}
         placeholder={placeholder}
         className={`box-border rounded-[10px] border-2  utilities focus:border-[#8EA58E] outline-none ${errors[name] ? 'border-error' : 'border-transparent'} px-4 py-[18.5px] md:py-[18px] w-full font-geologica text-[16px] leading-[1.3] font-medium md:text-subtitleMd text-main placeholder:text-placeholder `}
