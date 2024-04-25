@@ -111,12 +111,13 @@ export const Form = () => {
               );
             })}
           </div>
+
           <div className="relative flex gap-4 items-center ml-2 flex-row mb-[30px] md:mb-[40px]">
             <input
               type="checkbox"
               {...methods.register('checkbox')}
               id="checkbox"
-              className="w-4 h-4 mr-4 opacity-0 relative"
+              className="w-4 h-4 mr-4 opacity-0"
             />
             <label htmlFor="checkbox">
               <span className="cursor-pointer text-justify font-geologica text-[14px] leading-[1.4] tracking-[-0.28px] font-medium md:text-subtitleMd text-main">
@@ -127,6 +128,7 @@ export const Form = () => {
               ></span>
             </label>
           </div>
+
           <Button isLink={false} isBtn isDisabled={isDisabled} type="submit">
             {isSubmitting ? <Loader /> : labelBtn}
           </Button>
