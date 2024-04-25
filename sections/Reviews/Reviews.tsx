@@ -12,7 +12,7 @@ export const Reviews = async () => {
   return (
     <Section
       variant="otherSection"
-      className="bg-bgSecond relative"
+      className="bg-bgSecond relative xl:pb-[164px]"
       sectionId="reviews"
     >
       <Container>
