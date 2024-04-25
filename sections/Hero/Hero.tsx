@@ -8,7 +8,11 @@ export const Hero = () => {
   const { title, subtitle, btnText } = data;
 
   return (
-    <Section sectionId="hero" variant="heroSection" className="hero">
+    <Section
+      sectionId="hero"
+      variant="heroSection"
+      className="hero scroll-mt-[75px]"
+    >
       <Container>
         <h1 className="text-titleMd leading-[0.9] h-[99px] md:h-[141px] xl:h-[178px] font-geologica text-main mb-[15px] md:mb-5 md:text-heroTitleMd xl:text-heroTitleXl md:w-[455px] xl:w-[558px]">
           {title}

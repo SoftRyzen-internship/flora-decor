@@ -1,6 +1,6 @@
 export type FormData = {
   name: string;
-  phone: string;
+  tel: string;
   email: string;
   message: string;
   checkbox: boolean;

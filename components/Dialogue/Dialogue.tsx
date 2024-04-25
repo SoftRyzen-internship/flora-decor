@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { IDialogue } from './types';
 import PlusIcon from '@/public/icons/plus.svg';
 import MinusIcon from '@/public/icons/minus.svg';
@@ -27,16 +28,20 @@ export const Dialogue: React.FC<DialogueProps> = ({
       onClick={handleDialogue}
       tabIndex={0}
     >
-      <div className="flex flex-row justify-between items-center gap-[40px] md:gap-[56px] ">
+      <div className="flex flex-row justify-between items-center gap-[35px] md:gap-[135px] ">
         <div className="w-full">
           <p className="text-[16px] leading-[1.3] font-medium md:tracking-[-0.4px] xl:tracking-normal md:font-semibold font-geologica text-main md:text-[20px] md:leading-[1.2] xl:text-descriptionDesktop ">
             {question}
           </p>
         </div>
         {activeDialogue ? (
-          <MinusIcon width={22} height={22} className="fill-current" />
+          <div className="p-1">
+            <MinusIcon width={22} height={22} className="fill-current" />
+          </div>
         ) : (
-          <PlusIcon width={22} height={22} className="fill-current" />
+          <div className="p-1">
+            <PlusIcon width={22} height={22} className="fill-current" />
+          </div>
         )}
       </div>
 

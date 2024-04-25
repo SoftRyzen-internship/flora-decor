@@ -9,9 +9,9 @@ export const Contacts = () => {
   const { label } = contacts;
   return (
     <Section
-      sectionId="contacts"
       variant="aboutOrContactSection"
-      className="bg-bgSecond pt-[420px] md:pt-[555px] xl:py-[101px]"
+      className="bg-bgSecond pt-[420px] md:pt-[555px] xl:py-[101px] scroll-mt-[75px]"
+      sectionId="contacts"
     >
       <Container>
         <div className="relative w-full  xl:w-[541px] xl:mr-[111px] xl:ml-auto ">
