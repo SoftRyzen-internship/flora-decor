@@ -7,6 +7,9 @@
 This repository contains the source code for a Next.js application named "Flora
 Decor". The web application was created for a Ukrainian indoor plant store.
 
+Explore [the site](https://flora-decor.vercel.app/) and the
+[Figma layout](https://www.figma.com/file/UEeglZ9wIXEqpDxlELq0xF/Flora-Decor?type=design&node-id=1386-1431&mode=design).
+
 ## Technologies Used
 
 - **Next.js:** is a reactive framework for developing web applications based on
