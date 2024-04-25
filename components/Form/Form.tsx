@@ -85,7 +85,7 @@ export const Form = () => {
           onSubmit={methods.handleSubmit(onSubmit)}
           className="w-full xl:w-[541px]"
         >
-          <div className="w-full flex flex-col xl:flex-row  justify-center gap-5 mb-5 md:mb-[30px] md:gap-[30px] xl:gap-[17px]">
+          <div className="w-full flex flex-col xl:flex-row  justify-center mb-[36px] gap-[36px] xl:gap-[17px]">
             {inputFieldsUp.map(input => {
               return (
                 <InputField
@@ -98,7 +98,7 @@ export const Form = () => {
               );
             })}
           </div>
-          <div className="flex flex-col gap-5 mb-[30px] md:gap-[30px]">
+          <div className="flex flex-col mb-[36px] gap-[36px]">
             {inputFieldsDown.map(input => {
               return (
                 <InputField
@@ -116,7 +116,7 @@ export const Form = () => {
               type="checkbox"
               {...methods.register('checkbox')}
               id="checkbox"
-              className="w-4 h-4 mr-4 opacity-0"
+              className="w-4 h-4 mr-4 opacity-0 relative"
             />
             <label htmlFor="checkbox">
               <span className="cursor-pointer text-justify font-geologica text-[14px] leading-[1.4] tracking-[-0.28px] font-medium md:text-subtitleMd text-main">
