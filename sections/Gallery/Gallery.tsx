@@ -39,10 +39,22 @@ export const Gallery = () => {
           <ul className="grid gallery-list md:grid-cols-2 xl:grid-cols-4 relative gap-5 md:gap-6 xl:gap-[15px]">
             {isDesktop
               ? galleryImgDesktop.map(({ img, alt }, index) => (
-                  <GalleryImgItem key={index} img={img} alt={alt} />
+                  <GalleryImgItem
+                    key={index}
+                    img={img}
+                    alt={alt}
+                    width={652}
+                    height={615}
+                  />
                 ))
               : galleryImg.map(({ img, alt }, index) => (
-                  <GalleryImgItem key={index} img={img} alt={alt} />
+                  <GalleryImgItem
+                    key={index}
+                    img={img}
+                    alt={alt}
+                    width={330}
+                    height={220}
+                  />
                 ))}
           </ul>
         )}
