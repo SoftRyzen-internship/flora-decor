@@ -147,18 +147,90 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 
 /*about section */
 
-/* .about {
+.about {
   background-image: url('../../public/images/about/aboutBG-mobile.png');
-  background-position: top 0 right;
-  background-size: 480px 347px;
+  background-position: right 0;
+  background-size: auto 347px;
   background-repeat: no-repeat;
   @apply bg-bgSecond;
-} */
-.about {
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .about {
+    background-image: url('../../public/images/about/aboutBG-mobile@2.png');
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .about {
+    background-image: url('../../public/images/about/aboutBG-tablet.png');
+    background-position: right 0;
+    background-size: auto 429px;
+    padding-top: 459px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .about {
+      background-image: url('../../public/images/about/aboutBG-tablet@2.png');
+    }
+  }
+}
+
+@media screen and (min-width: 620px) {
+  .about {
+    background-image: url('../../public/images/about/aboutBG-desktop.png');
+    background-position: right 0;
+    background-size: auto 515px;
+    padding-top: 540px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .about {
+      background-image: url('../../public/images/about/aboutBG-desktop@2.png');
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    background-position: center top 0;
+    background-size: auto 515px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .about {
+      background-image: url('../../public/images/about/aboutBG-desktop@2.png');
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .about {
+    background-image: url('../../public/images/about/bg-desktop.png');
+    background-size: auto 100%;
+
+    background-position: right calc(50% + 405px) top 0;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .about {
+      background-image: url('../../public/images/about/bg-desktop@2.png');
+    }
+  }
+}
+
+/* .about {
   position: relative;
   @apply bg-bgSecond;
-}
-@media (max-width: 479.98px) {
+} */
+/* @media (max-width: 479.98px) {
   .about::before {
     content: '';
     position: absolute;
@@ -171,8 +243,8 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 
     background-size: 480px 347px;
   }
-}
-@media (min-width: 480px) and (max-width: 767.98px) {
+} */
+/* @media (min-width: 480px) and (max-width: 767.98px) {
   .about::before {
     content: '';
     position: absolute;
@@ -193,8 +265,8 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
       background-repeat: no-repeat;
     }
   }
-}
-@media (min-width: 768px) and (max-width: 1399.98px) {
+} */
+/* @media (min-width: 768px) and (max-width: 1399.98px) {
   .about::before {
     content: '';
     position: absolute;
@@ -205,15 +277,15 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
     height: 429px;
     background-size: 768px 429px;
     background-repeat: no-repeat;
-  }
-  /* @media (min-device-pixel-ratio: 2),
+  } */
+/* @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .about {
       background-image: url('../../public/images/about/aboutBG-tablet@2.png');
     }
   } */
-}
+/* } */
 /* @media screen and (min-width: 768px) {
   .about {
     background-image: url('../../public/images/about/aboutBG-tablet.png');
@@ -256,8 +328,8 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 
 .contacts {
   background-image: url('../../public/images/feedback/feedbackBG-mobile.png');
-  background-position: right 0 top 0;
-  background-size: 587px 391px;
+  background-position: right 0;
+  background-size: auto 391px;
   background-repeat: no-repeat;
   @apply bg-bgSecond;
 }
@@ -269,11 +341,12 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .contacts {
     background-image: url('../../public/images/feedback/feedbackBG-tablet.png');
-    background-position: center top 0;
-    background-size: 770px 485px;
+    background-position: right 10% top 0;
+    background-size: auto 485px;
+    padding-top: 514px;
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -284,11 +357,51 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
   }
 }
 
+@media screen and (min-width: 550px) {
+  .contacts {
+    background-position: right 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    /* background-image: url('../../public/images/feedback/feedbackBG-tablet.png'); */
+    background-position: center top 0;
+    /* background-size: 770px 485px; */
+  }
+  /* @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .contacts {
+      background-image: url('../../public/images/feedback/feedbackBG-tablet@2.png');
+    }
+  } */
+}
+
 @media (min-width: 1400px) {
   .contacts {
+    /* background-image: url('../../public/images/feedback/feedbackBG-desktop.png'); */
+    background-image: url('../../public/images/feedback/bg-desktop.png');
+    background-size: auto 100%;
+
+    /* background-position: right calc(50% + 700px) top 0; */
+    background-position: right calc(50% + 405px) top 0;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .contacts {
+      background-image: url('../../public/images/feedback/bg-desktop@2.png');
+    }
+  }
+}
+
+/* @media (min-width: 1400px) {
+  .contacts {
     background-image: url('../../public/images/feedback/feedbackBG-desktop.png');
-    /* background-size: 1245px 917px; */
-    /* background-position: left -629px top 0; */
+    background-size: 1245px 917px;
+    background-position: left -629px top 0;
 
     background-position:
       right calc(43% + 780px) top 0,
@@ -305,7 +418,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
       background-image: url('../../public/images/feedback/feedbackBG-desktop@2.png');
     }
   }
-}
+} */
 
 /*contacts section end */
 
@@ -361,7 +474,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
   .hero {
     background-image: url('../../public/images/hero/heroBG-desktop.jpg');
     background-size:
-      1440px 800px,
+      1440px 100%,
       cover;
     background-position: center top 0;
   }
