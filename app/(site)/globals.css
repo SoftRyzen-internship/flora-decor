@@ -226,102 +226,6 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
   }
 }
 
-/* .about {
-  position: relative;
-  @apply bg-bgSecond;
-} */
-/* @media (max-width: 479.98px) {
-  .about::before {
-    content: '';
-    position: absolute;
-    top: -377px;
-    right: -20px;
-    width: 480px;
-    height: 347px;
-    background-repeat: no-repeat;
-    background-image: url('../../public/images/about/aboutBG-mobile.png');
-
-    background-size: 480px 347px;
-  }
-} */
-/* @media (min-width: 480px) and (max-width: 767.98px) {
-  .about::before {
-    content: '';
-    position: absolute;
-    top: -377px;
-    left: -20px;
-    background-image: url('../../public/images/about/aboutBG-mobile.png');
-    width: 480px;
-    height: 347px;
-    background-size: 480px 347px;
-    background-repeat: no-repeat;
-  }
-
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .about {
-      background-image: url('../../public/images/about/aboutBG-mobile@2.png');
-      background-repeat: no-repeat;
-    }
-  }
-} */
-/* @media (min-width: 768px) and (max-width: 1399.98px) {
-  .about::before {
-    content: '';
-    position: absolute;
-    top: -459px;
-    left: -106px;
-    background-image: url('../../public/images/about/aboutBG-tablet.png');
-    width: 768px;
-    height: 429px;
-    background-size: 768px 429px;
-    background-repeat: no-repeat;
-  } */
-/* @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .about {
-      background-image: url('../../public/images/about/aboutBG-tablet@2.png');
-    }
-  } */
-/* } */
-/* @media screen and (min-width: 768px) {
-  .about {
-    background-image: url('../../public/images/about/aboutBG-tablet.png');
-    background-position: top 0 center;
-    background-size: 770px 429px;
-  }
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .about {
-      background-image: url('../../public/images/about/aboutBG-tablet@2.png');
-    }
-  }
-} */
-
-/* @media (min-width: 1400px) {
-  .about {
-    background-image: url('../../public/images/about/aboutBG-desktop.png');
-    background-size: 1043px 703px;
-    background-position:
-      right calc(43% + 700px) top 0,
-      top;
-    background-size:
-      1043px 703px,
-      auto;
-  }
-
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .about {
-      background-image: url('../../public/images/about/aboutBG-desktop@2.png');
-    }
-  }
-} */
-
 /*about section end*/
 
 /*contacts section */
@@ -365,26 +269,14 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 
 @media screen and (min-width: 768px) {
   .contacts {
-    /* background-image: url('../../public/images/feedback/feedbackBG-tablet.png'); */
     background-position: center top 0;
-    /* background-size: 770px 485px; */
   }
-  /* @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .contacts {
-      background-image: url('../../public/images/feedback/feedbackBG-tablet@2.png');
-    }
-  } */
 }
 
 @media (min-width: 1400px) {
   .contacts {
-    /* background-image: url('../../public/images/feedback/feedbackBG-desktop.png'); */
     background-image: url('../../public/images/feedback/bg-desktop.png');
     background-size: auto 100%;
-
-    /* background-position: right calc(50% + 700px) top 0; */
     background-position: right calc(50% + 405px) top 0;
   }
 
@@ -396,29 +288,6 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
     }
   }
 }
-
-/* @media (min-width: 1400px) {
-  .contacts {
-    background-image: url('../../public/images/feedback/feedbackBG-desktop.png');
-    background-size: 1245px 917px;
-    background-position: left -629px top 0;
-
-    background-position:
-      right calc(43% + 780px) top 0,
-      top;
-    background-size:
-      1245px 917px,
-      auto;
-  }
-
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .contacts {
-      background-image: url('../../public/images/feedback/feedbackBG-desktop@2.png');
-    }
-  }
-} */
 
 /*contacts section end */
 
