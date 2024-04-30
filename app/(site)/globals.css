@@ -408,7 +408,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 
 .reviews-slider .swiper-pagination-fraction {
   font-size: 24px;
-  @apply top-[4px] left-[62px] xl:top-[153px] text-description font-semibold leading-normal w-[49px];
+  @apply top-[4px] left-[42px] xl:top-[153px] text-description font-semibold leading-normal w-[89px];
 }
 
 .reviews-slider .swiper-pagination-current {
