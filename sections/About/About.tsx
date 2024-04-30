@@ -11,7 +11,7 @@ export const About = () => {
   return (
     <Section
       variant="aboutOrContactSection"
-      className=" pt-[377px] about bg-bgSecond xl:py-[133px] scroll-mt-[75px]"
+      className="pt-[377px] about bg-bgSecond md:pt-[459px] xl:py-[133px] scroll-mt-[75px]"
       sectionId="about"
     >
       <Container>

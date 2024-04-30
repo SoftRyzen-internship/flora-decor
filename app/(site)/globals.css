@@ -148,7 +148,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 /*about section */
 
 .about {
-  background-image: url('../../public/images/about/aboutBG-mobile.png');
+  background-image: url('../../public/images/about/bg-mobile.webp');
   background-position: right 0;
   background-size: auto 347px;
   background-repeat: no-repeat;
@@ -159,61 +159,34 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .about {
-    background-image: url('../../public/images/about/aboutBG-mobile@2.png');
+    background-image: url('../../public/images/about/bg-mobile@2.webp');
   }
 }
 
 @media screen and (min-width: 480px) {
   .about {
-    background-image: url('../../public/images/about/aboutBG-tablet.png');
-    background-position: right 0;
-    background-size: auto 429px;
-    padding-top: 459px;
-  }
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .about {
-      background-image: url('../../public/images/about/aboutBG-tablet@2.png');
-    }
-  }
-}
-
-@media screen and (min-width: 620px) {
-  .about {
-    background-image: url('../../public/images/about/aboutBG-desktop.png');
-    background-position: right 0;
-    background-size: auto 515px;
-    padding-top: 540px;
-  }
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .about {
-      background-image: url('../../public/images/about/aboutBG-desktop@2.png');
-    }
+    background-position: center top 0;
   }
 }
 
 @media screen and (min-width: 768px) {
   .about {
-    background-position: center top 0;
-    background-size: auto 515px;
+    background-image: url('../../public/images/about/bg-tablet.webp');
+    background-size: 768px 429px;
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .about {
-      background-image: url('../../public/images/about/aboutBG-desktop@2.png');
+      background-image: url('../../public/images/about/bg-tablet@2.webp');
     }
   }
 }
 
 @media (min-width: 1400px) {
   .about {
-    background-image: url('../../public/images/about/bg-desktop.png');
+    background-image: url('../../public/images/about/bg-desktop.webp');
     background-size: auto 100%;
-
     background-position: right calc(50% + 405px) top 0;
   }
 
@@ -221,7 +194,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .about {
-      background-image: url('../../public/images/about/bg-desktop@2.png');
+      background-image: url('../../public/images/about/bg-desktop@2.webp');
     }
   }
 }
@@ -231,7 +204,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
 /*contacts section */
 
 .contacts {
-  background-image: url('../../public/images/feedback/feedbackBG-mobile.png');
+  background-image: url('../../public/images/feedback/bg-mobile.webp');
   background-position: right 0;
   background-size: auto 391px;
   background-repeat: no-repeat;
@@ -241,41 +214,35 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .contacts {
-    background-image: url('../../public/images/feedback/feedbackBG-mobile@2.png');
+    background-image: url('../../public/images/feedback/bg-mobile@2.webp');
   }
 }
 
 @media screen and (min-width: 480px) {
   .contacts {
-    background-image: url('../../public/images/feedback/feedbackBG-tablet.png');
-    background-position: right 10% top 0;
-    background-size: auto 485px;
-    padding-top: 514px;
-  }
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .contacts {
-      background-image: url('../../public/images/feedback/feedbackBG-tablet@2.png');
-    }
-  }
-}
-
-@media screen and (min-width: 550px) {
-  .contacts {
-    background-position: right 0;
+    background-position: center top 0;
   }
 }
 
 @media screen and (min-width: 768px) {
   .contacts {
-    background-position: center top 0;
+    background-image: url('../../public/images/feedback/bg-tablet.webp');
+    background-size: auto 485px;
+    background-repeat: no-repeat;
+    @apply bg-bgSecond;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .contacts {
+      background-image: url('../../public/images/feedback/bg-tablet@2.webp');
+    }
   }
 }
 
 @media (min-width: 1400px) {
   .contacts {
-    background-image: url('../../public/images/feedback/bg-desktop.png');
+    background-image: url('../../public/images/feedback/bg-desktop.webp');
     background-size: auto 100%;
     background-position: right calc(50% + 405px) top 0;
   }
@@ -284,7 +251,7 @@ input[type='checkbox']:focus-visible + label .custom-checkbox-error {
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .contacts {
-      background-image: url('../../public/images/feedback/bg-desktop@2.png');
+      background-image: url('../../public/images/feedback/bg-desktop@2.webp');
     }
   }
 }

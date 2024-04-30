@@ -10,7 +10,7 @@ export const Contacts = () => {
   return (
     <Section
       variant="aboutOrContactSection"
-      className="contacts pt-[420px] md:pt-[555px] xl:py-[101px] scroll-mt-[75px]"
+      className="contacts pt-[420px] md:pt-[555px] xl:py-[100px] scroll-mt-[75px]"
       sectionId="contacts"
     >
       <Container>
