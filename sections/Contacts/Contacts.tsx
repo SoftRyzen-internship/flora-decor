@@ -10,12 +10,11 @@ export const Contacts = () => {
   return (
     <Section
       variant="aboutOrContactSection"
-      className="bg-bgSecond pt-[420px] md:pt-[555px] xl:py-[101px] scroll-mt-[75px]"
+      className="contacts pt-[420px] md:pt-[555px] xl:py-[100px] scroll-mt-[75px]"
       sectionId="contacts"
     >
       <Container>
-        <div className="relative w-full  xl:w-[541px] xl:mr-[111px] xl:ml-auto ">
-          <div className="contacts"></div>
+        <div className="w-full  xl:w-[541px] xl:mr-[111px] xl:ml-auto ">
           <SectionTitle
             label={label}
             center={'left'}
